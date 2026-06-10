@@ -422,3 +422,43 @@ html, body {
   .r-float-badge { display: none !important; }
   .r-text-center { text-align: center !important; }
 }
+
+/* ── PHOTO GRID MOBILE FIX ── */
+@media (max-width: 767px) {
+  .photo-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.75rem !important;
+  }
+  .photo-grid > div {
+    height: 240px !important;
+    margin-top: 0 !important;
+  }
+  .two-col-section {
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem !important;
+  }
+  .four-col-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0.75rem !important;
+  }
+  .three-col-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+  .cat-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0.75rem !important;
+  }
+  .cat-grid > div {
+    height: 200px !important;
+  }
+  .fba-img {
+    height: 240px !important;
+  }
+  .step-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .hide-mobile {
+    display: none !important;
+  }
+}
