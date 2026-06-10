@@ -1,0 +1,13 @@
+{
+  "name": "Urban Pulse Wholesale LLC",
+  "short_name": "Urban Pulse",
+  "description": "Professional wholesale distribution and Amazon FBA operations.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050d1f",
+  "theme_color": "#d4a843",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
