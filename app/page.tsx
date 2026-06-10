@@ -1,317 +1,328 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowRight, CheckCircle2, Package, TrendingUp, ShieldCheck, Handshake, BarChart3, Truck, Star } from 'lucide-react'
+import { ArrowRight, CheckCircle2, Star, TrendingUp, Shield, Handshake, Package, BarChart3 } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Urban Pulse Wholesale LLC | Building Strong Wholesale Partnerships',
-  description: 'Urban Pulse Wholesale LLC partners with brands, distributors, and manufacturers to bring quality products to customers through efficient e-commerce and Amazon FBA operations.',
+  description: 'Professional wholesale distribution and Amazon FBA operations. We partner with brands and distributors to build long-term, mutually beneficial relationships.',
 }
 
-const whyUs = [
-  {
-    icon: <ShieldCheck size={28} className="text-accent" />,
-    title: 'Professional Standards',
-    desc: 'We operate with full transparency, maintaining organized purchasing records and clear communication at every stage of the business relationship.',
-  },
-  {
-    icon: <Handshake size={28} className="text-accent" />,
-    title: 'Long-Term Partnerships',
-    desc: 'We are not transactional buyers. Our goal is to build lasting supplier relationships that provide consistent, predictable order volume over time.',
-  },
-  {
-    icon: <BarChart3 size={28} className="text-accent" />,
-    title: 'Amazon FBA Expertise',
-    desc: 'With deep experience in Amazon FBA operations, we understand marketplace dynamics, customer expectations, and efficient fulfillment processes.',
-  },
-  {
-    icon: <Package size={28} className="text-accent" />,
-    title: 'Inventory Management',
-    desc: 'Systematic inventory planning allows us to forecast purchasing needs and maintain consistent order cadence with our supplier partners.',
-  },
-  {
-    icon: <TrendingUp size={28} className="text-accent" />,
-    title: 'Reliable Purchasing',
-    desc: 'We make purchasing commitments with care and follow through. Suppliers can rely on us to meet agreed terms and maintain professional account management.',
-  },
-  {
-    icon: <Truck size={28} className="text-accent" />,
-    title: 'Compliance-Focused',
-    desc: 'We respect and strictly adhere to supplier policies, minimum advertised pricing, and marketplace requirements to protect brand integrity.',
-  },
+const categories = [
+  { name: 'Home & Kitchen', emoji: '🏠', img: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80', desc: 'Cookware, appliances, décor & more' },
+  { name: 'Toys & Games', emoji: '🎮', img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80', desc: 'Educational, outdoor & family fun' },
+  { name: 'Pet Supplies', emoji: '🐾', img: 'https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=600&q=80', desc: 'Food, toys, grooming & accessories' },
+  { name: 'Grocery & Food', emoji: '🛒', img: 'https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&q=80', desc: 'Pantry staples, snacks & specialty foods' },
+  { name: 'Sports & Outdoors', emoji: '⚽', img: 'https://images.unsplash.com/photo-1517649763962-0c623066013b?w=600&q=80', desc: 'Fitness, camping & outdoor gear' },
 ]
 
-const process = [
-  { step: '01', title: 'Source & Vet', desc: 'We identify brands and products that align with our operational model and marketplace expertise.' },
-  { step: '02', title: 'Build Relationship', desc: 'We engage suppliers through professional inquiry, onboarding, and documentation processes.' },
-  { step: '03', title: 'Purchase & Receive', desc: 'We place organized purchase orders, receive inventory, and prepare for Amazon FBA preparation.' },
-  { step: '04', title: 'FBA Fulfillment', desc: 'Products are processed, labeled, and shipped to Amazon fulfillment centers for efficient customer delivery.' },
-  { step: '05', title: 'Reorder & Grow', desc: 'Strong sell-through data informs consistent reorders, deepening the supplier partnership over time.' },
+const stats = [
+  { num: '5', label: 'Product Categories', icon: '📦' },
+  { num: 'FBA', label: 'Primary Channel', icon: '🚀' },
+  { num: '100%', label: 'MAP Compliant', icon: '✅' },
+  { num: 'LLC', label: 'Registered Business', icon: '🏢' },
+]
+
+const pillars = [
+  { icon: <Shield size={24} />, title: 'Brand Protection', desc: 'Strict MAP compliance and authorized reseller agreements. Your brand integrity is always protected.' },
+  { icon: <Handshake size={24} />, title: 'Long-Term Focus', desc: 'We build lasting partnerships, not transactional relationships. Consistent orders, predictable volume.' },
+  { icon: <BarChart3 size={24} />, title: 'Data-Driven Buying', desc: 'Our purchasing is guided by sales velocity data, market research, and demand forecasting.' },
+  { icon: <TrendingUp size={24} />, title: 'Reliable Growth', desc: 'As products perform, we scale purchasing. Your success drives our continued investment.' },
+  { icon: <Package size={24} />, title: 'FBA Excellence', desc: 'Products stored in Amazon\'s fulfillment centers, shipped with Prime speed to millions of customers.' },
+  { icon: <Star size={24} />, title: 'Professional Standards', desc: 'Organized documentation, on-time payments, and transparent communication at every step.' },
 ]
 
 export default function HomePage() {
   return (
-    <div className="page-enter">
-      {/* HERO */}
-      <section className="hero-bg min-h-screen flex items-center relative grid-pattern">
-        <div className="max-w-content mx-auto px-6 py-32 w-full">
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-8">
-              <span className="w-2 h-2 rounded-full bg-accent inline-block"></span>
-              <span className="text-white/80 text-xs tracking-[0.1em] uppercase font-medium">Wholesale Distribution & Amazon FBA</span>
-            </div>
-            <h1 className="text-display text-white mb-6 leading-[1.05]">
-              Building Strong Wholesale Partnerships for Long-Term Growth
-            </h1>
-            <p className="text-white/70 text-xl leading-relaxed mb-10 max-w-2xl">
-              Urban Pulse Wholesale LLC partners with brands, distributors, and manufacturers to bring quality products to customers through efficient e-commerce and Amazon FBA operations.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Link href="/supplier-info" className="btn-primary">
-                Become a Supplier Partner
-              </Link>
-              <Link href="/about" className="btn-outline">
-                Learn About Us
-              </Link>
-            </div>
+    <div>
+      {/* ── HERO ── */}
+      <section style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', position: 'relative', overflow: 'hidden' }} className="mesh-dark noise">
+        {/* Orbs */}
+        <div className="orb" style={{ width: 600, height: 600, background: 'rgba(14,165,176,0.12)', top: '-200px', right: '-100px' }} />
+        <div className="orb" style={{ width: 400, height: 400, background: 'rgba(212,168,67,0.1)', bottom: '-100px', left: '-100px' }} />
 
-            {/* Credibility row */}
-            <div className="mt-16 pt-8 border-t border-white/10 grid grid-cols-2 sm:grid-cols-3 gap-6 max-w-lg">
-              {[
-                { label: 'E-Commerce Focus', desc: 'Amazon FBA Primary Channel' },
-                { label: 'Supplier First', desc: 'Policy-Compliant Operations' },
-                { label: 'LLC Registered', desc: 'Professional Business Entity' },
-              ].map(item => (
-                <div key={item.label}>
-                  <div className="text-accent text-xs font-semibold tracking-[0.08em] uppercase mb-1">{item.label}</div>
-                  <div className="text-white/50 text-xs">{item.desc}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+        {/* Animated grid */}
+        <div style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(212,168,67,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(212,168,67,0.04) 1px, transparent 1px)', backgroundSize: '60px 60px', zIndex: 0 }} />
 
-        {/* Decorative right panel */}
-        <div className="hidden xl:block absolute right-0 top-0 bottom-0 w-[38%] overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-l from-transparent to-[#0f2044]/80 z-10"></div>
-          <div className="absolute inset-0 flex flex-col justify-center p-12 z-20 gap-4">
-            {[
-              'Transparent business practices',
-              'Consistent purchasing commitments',
-              'Respectful of supplier policies',
-              'Professional account management',
-              'Long-term partnership mindset',
-              'Compliance with MAP policies',
-            ].map((item, i) => (
-              <div key={i} className="flex items-center gap-3 bg-white/5 border border-white/10 rounded-lg px-4 py-3">
-                <CheckCircle2 size={16} className="text-accent flex-shrink-0" />
-                <span className="text-white/80 text-sm">{item}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* COMPANY OVERVIEW */}
-      <section className="section bg-offwhite">
-        <div className="max-w-content mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="container" style={{ position: 'relative', zIndex: 2, paddingTop: '8rem', paddingBottom: '6rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }} className="lg:grid-cols-2">
+            {/* Left content */}
             <div>
-              <span className="accent-line"></span>
-              <h2 className="text-display-sm text-navy mb-6">Who We Are</h2>
-              <p className="text-charcoal-light text-lg leading-relaxed mb-5">
-                Urban Pulse Wholesale LLC is a professional wholesale distribution company operating primarily through the Amazon FBA (Fulfilled by Amazon) channel. We source products directly from authorized brands, distributors, and manufacturers, then deliver them to end consumers through Amazon's world-class fulfillment network.
+              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'rgba(212,168,67,0.12)', border: '1px solid rgba(212,168,67,0.3)', borderRadius: '100px', padding: '6px 16px', marginBottom: '1.5rem' }}>
+                <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#d4a843', display: 'inline-block' }} />
+                <span style={{ color: '#d4a843', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' }}>Wholesale Distribution & Amazon FBA</span>
+              </div>
+
+              <h1 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', color: 'white', marginBottom: '1.5rem', fontWeight: 900 }}>
+                Building Strong{' '}
+                <span className="shimmer-text">Wholesale</span>{' '}
+                Partnerships for Growth
+              </h1>
+
+              <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.15rem', lineHeight: 1.75, marginBottom: '2.5rem', maxWidth: '520px' }}>
+                Urban Pulse Wholesale LLC partners with brands, distributors, and manufacturers to bring quality products to customers through professional Amazon FBA operations.
               </p>
-              <p className="text-charcoal-light leading-relaxed mb-8">
-                Our company was established with a clear mission: to operate as a reliable, professional wholesale buyer that suppliers can trust. We understand that brand integrity, pricing compliance, and consistent communication are not optional—they are the foundation of every good business relationship.
-              </p>
-              <div className="space-y-3">
-                {[
-                  'Registered LLC business entity',
-                  'Dedicated Amazon FBA seller account',
-                  'Organized purchasing and documentation processes',
-                  'Full compliance with supplier terms and MAP policies',
-                  'Commitment to professional, timely communication',
-                ].map((item, i) => (
-                  <div key={i} className="flex items-start gap-3">
-                    <CheckCircle2 size={18} className="text-accent flex-shrink-0 mt-0.5" />
-                    <span className="text-charcoal text-sm">{item}</span>
+
+              <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '3rem' }}>
+                <Link href="/supplier-info" className="btn-gold"><span>Become a Supplier</span> <ArrowRight size={16} /></Link>
+                <Link href="/about" className="btn-outline-gold">Learn More</Link>
+              </div>
+
+              {/* Trust badges */}
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
+                {['LLC Registered', 'MAP Compliant', 'Amazon FBA Pro', 'Policy Transparent'].map(b => (
+                  <div key={b} style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                    <CheckCircle2 size={14} color="#0ea5b0" />
+                    <span style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.8rem', fontWeight: 500 }}>{b}</span>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="space-y-6">
-              <div className="bg-navy p-8 rounded-lg text-white">
-                <div className="text-accent text-xs tracking-[0.12em] uppercase font-semibold mb-3">Our Mission</div>
-                <blockquote className="text-white/90 text-lg leading-relaxed italic border-l-0 p-0">
-                  "Urban Pulse Wholesale LLC is committed to building lasting relationships with brands and distributors through professional purchasing practices, transparent communication, and responsible marketplace representation."
-                </blockquote>
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                {[
-                  { n: 'Amazon FBA', l: 'Primary Sales Channel' },
-                  { n: 'LLC', l: 'Business Structure' },
-                  { n: 'B2B', l: 'Partnership Focus' },
-                  { n: '100%', l: 'Policy Compliance' },
-                ].map(item => (
-                  <div key={item.l} className="bg-white border border-border rounded-lg p-5 text-center card-hover">
-                    <div className="stat-number text-2xl mb-1">{item.n}</div>
-                    <div className="text-charcoal-light text-xs font-medium tracking-wide uppercase">{item.l}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* WHY PARTNER */}
-      <section className="section bg-white">
-        <div className="max-w-content mx-auto px-6">
-          <div className="text-center max-w-2xl mx-auto mb-14">
-            <span className="accent-line-center"></span>
-            <h2 className="text-display-sm text-navy mb-4">Why Partner With Urban Pulse Wholesale?</h2>
-            <p className="text-charcoal-light text-lg">
-              We operate with the professionalism and transparency that suppliers deserve when evaluating wholesale account applicants.
-            </p>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {whyUs.map((item, i) => (
-              <div key={i} className="bg-offwhite rounded-lg p-7 card-hover border border-transparent hover:border-accent/20">
-                <div className="mb-4">{item.icon}</div>
-                <h3 className="text-navy font-semibold text-lg mb-2">{item.title}</h3>
-                <p className="text-charcoal-light text-sm leading-relaxed">{item.desc}</p>
+            {/* Right — 3D floating card stack */}
+            <div style={{ position: 'relative', height: '480px', display: 'flex', alignItems: 'center', justifyContent: 'center' }} className="hidden lg:flex">
+              {/* Back card */}
+              <div style={{ position: 'absolute', width: '300px', top: '20px', right: '0px', background: 'rgba(14,165,176,0.08)', border: '1px solid rgba(14,165,176,0.2)', borderRadius: '20px', padding: '1.5rem', transform: 'rotate(6deg)' }}>
+                <div style={{ color: '#0ea5b0', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.75rem' }}>Amazon FBA Channel</div>
+                <div style={{ color: 'white', fontSize: '1.8rem', fontWeight: 900, fontFamily: 'Playfair Display, serif', marginBottom: '0.25rem' }}>Prime Ready</div>
+                <div style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.8rem' }}>Millions of Amazon customers reached daily</div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* HOW WE WORK */}
-      <section className="section bg-navy relative overflow-hidden">
-        <div className="absolute inset-0 grid-pattern opacity-50"></div>
-        <div className="max-w-content mx-auto px-6 relative z-10">
-          <div className="text-center max-w-2xl mx-auto mb-14">
-            <span className="accent-line-center"></span>
-            <h2 className="text-display-sm text-white mb-4">How We Operate</h2>
-            <p className="text-white/60 text-lg">
-              From supplier onboarding to Amazon FBA fulfillment — a streamlined, professional process at every step.
-            </p>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-0 relative">
-            {/* Connector line */}
-            <div className="hidden lg:block absolute top-12 left-[10%] right-[10%] h-0.5 bg-white/10"></div>
-            {process.map((step, i) => (
-              <div key={i} className="relative text-center px-4 mb-8 lg:mb-0">
-                <div className="w-24 h-24 rounded-full border-2 border-accent/40 bg-navy-mid flex flex-col items-center justify-center mx-auto mb-5 relative z-10">
-                  <div className="text-accent text-xs font-bold tracking-widest">{step.step}</div>
-                  <div className="text-white font-semibold text-xs mt-0.5 px-2 leading-tight">{step.title}</div>
+              {/* Middle card */}
+              <div className="float2" style={{ position: 'absolute', width: '320px', top: '60px', left: '20px', background: 'rgba(212,168,67,0.08)', border: '1px solid rgba(212,168,67,0.25)', borderRadius: '20px', padding: '1.5rem', transform: 'rotate(-4deg)' }}>
+                <div style={{ color: '#d4a843', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.75rem' }}>5 Product Categories</div>
+                <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+                  {['🏠 Home', '🎮 Toys', '🐾 Pets', '🛒 Grocery', '⚽ Sports'].map(c => (
+                    <span key={c} style={{ background: 'rgba(212,168,67,0.15)', color: '#d4a843', fontSize: '0.75rem', fontWeight: 600, padding: '4px 10px', borderRadius: '100px' }}>{c}</span>
+                  ))}
                 </div>
-                <p className="text-white/55 text-xs leading-relaxed">{step.desc}</p>
+              </div>
+
+              {/* Main front card */}
+              <div className="float" style={{ position: 'absolute', bottom: '20px', left: '40px', right: '40px', background: 'linear-gradient(135deg, rgba(5,13,31,0.9) 0%, rgba(22,45,90,0.9) 100%)', border: '1px solid rgba(212,168,67,0.3)', borderRadius: '24px', padding: '2rem', backdropFilter: 'blur(20px)' }} >
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.25rem' }}>
+                  <div style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.8rem', fontWeight: 600 }}>Monthly Inventory Budget</div>
+                  <div style={{ background: 'rgba(14,165,176,0.2)', color: '#0ea5b0', fontSize: '0.7rem', fontWeight: 700, padding: '3px 10px', borderRadius: '100px' }}>ACTIVE</div>
+                </div>
+                <div style={{ color: 'white', fontSize: '2.5rem', fontWeight: 900, fontFamily: 'Playfair Display, serif', marginBottom: '0.25rem' }} className="gradient-text">$10K–$50K</div>
+                <div style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.8rem', marginBottom: '1.25rem' }}>Consistent purchasing commitment</div>
+                <div style={{ display: 'flex', gap: '8px' }}>
+                  {[85, 92, 78, 95, 88].map((v, i) => (
+                    <div key={i} style={{ flex: 1, background: 'rgba(255,255,255,0.06)', borderRadius: '4px', height: '32px', display: 'flex', alignItems: 'flex-end', padding: '3px' }}>
+                      <div style={{ width: '100%', height: `${v}%`, background: 'linear-gradient(180deg, #d4a843, #0ea5b0)', borderRadius: '2px', opacity: 0.8 }} />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Scroll indicator */}
+        <div style={{ position: 'absolute', bottom: '2rem', left: '50%', transform: 'translateX(-50%)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px', zIndex: 2 }}>
+          <span style={{ color: 'rgba(255,255,255,0.3)', fontSize: '0.7rem', letterSpacing: '0.15em', textTransform: 'uppercase' }}>Scroll</span>
+          <div style={{ width: 1, height: 40, background: 'linear-gradient(180deg, rgba(212,168,67,0.6), transparent)' }} />
+        </div>
+      </section>
+
+      {/* ── STATS BAND ── */}
+      <section style={{ background: 'linear-gradient(90deg, #050d1f 0%, #0a1930 50%, #050d1f 100%)', borderTop: '1px solid rgba(212,168,67,0.15)', borderBottom: '1px solid rgba(212,168,67,0.15)', padding: '3rem 0' }}>
+        <div className="container">
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '2rem' }}>
+            {stats.map((s, i) => (
+              <div key={i} style={{ textAlign: 'center' }}>
+                <div style={{ fontSize: '2rem', marginBottom: '0.25rem' }}>{s.icon}</div>
+                <div className="stat-num gradient-text">{s.num}</div>
+                <div style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.8rem', fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', marginTop: '4px' }}>{s.label}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* FBA HIGHLIGHT */}
-      <section className="section bg-white">
-        <div className="max-w-content mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="order-2 lg:order-1">
-              <div className="bg-offwhite rounded-xl p-8 space-y-4">
-                <div className="text-navy font-semibold text-sm tracking-wide uppercase mb-5">Amazon FBA Capabilities</div>
-                {[
-                  ['Inventory Forecasting', 'Data-driven purchasing decisions based on sales velocity and market trends.'],
-                  ['Prep & Compliance', 'All products are prepared according to Amazon FBA requirements before shipment.'],
-                  ['Account Management', 'Dedicated management of seller account health, performance metrics, and listing quality.'],
-                  ['Customer Service', 'Leveraging Amazon\'s world-class customer service infrastructure for end buyers.'],
-                  ['Returns Management', 'Professional handling of returned merchandise in line with supplier agreements.'],
-                ].map(([title, desc]) => (
-                  <div key={title} className="flex gap-4 py-3 border-b border-border last:border-0">
-                    <Star size={16} className="text-accent flex-shrink-0 mt-0.5" />
-                    <div>
-                      <div className="text-navy font-semibold text-sm mb-0.5">{title}</div>
-                      <div className="text-charcoal-light text-xs leading-relaxed">{desc}</div>
+      {/* ── WHO WE ARE ── */}
+      <section className="section" style={{ background: '#f8f9fc' }}>
+        <div className="container">
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'center' }} className="lg:grid-cols-2">
+            <div>
+              <div className="accent-bar" />
+              <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.75rem)', color: 'var(--navy)', marginBottom: '1.25rem' }}>Who We Are</h2>
+              <p style={{ color: 'var(--gray)', fontSize: '1.1rem', lineHeight: 1.8, marginBottom: '1.25rem' }}>
+                Urban Pulse Wholesale LLC is a professionally registered wholesale distribution company operating primarily through the Amazon FBA channel. We source products from authorized brands and distributors, delivering them to consumers through Amazon's world-class fulfillment network.
+              </p>
+              <p style={{ color: 'var(--gray)', lineHeight: 1.8, marginBottom: '2rem' }}>
+                We are not brokers, liquidators, or gray market sellers. We pursue legitimate, authorized wholesale accounts and operate entirely within each supplier's established terms and policies.
+              </p>
+              <div style={{ background: 'var(--navy)', borderRadius: '16px', padding: '1.75rem', marginBottom: '1.5rem' }}>
+                <div style={{ color: '#d4a843', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.75rem' }}>Our Mission</div>
+                <p style={{ color: 'rgba(255,255,255,0.85)', fontStyle: 'italic', fontSize: '1rem', lineHeight: 1.75, borderLeft: '3px solid #d4a843', paddingLeft: '1rem' }}>
+                  "Urban Pulse Wholesale LLC is committed to building lasting relationships with brands and distributors through professional purchasing practices, transparent communication, and responsible marketplace representation."
+                </p>
+              </div>
+              <Link href="/about" className="btn-gold"><span>Learn More About Us</span> <ArrowRight size={16} /></Link>
+            </div>
+
+            {/* Right image grid */}
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+              <div style={{ borderRadius: '16px', overflow: 'hidden', height: '220px' }}>
+                <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=400&q=80" alt="Warehouse operations" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              </div>
+              <div style={{ borderRadius: '16px', overflow: 'hidden', height: '220px', marginTop: '2rem' }}>
+                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&q=80" alt="Amazon FBA fulfillment" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              </div>
+              <div style={{ borderRadius: '16px', overflow: 'hidden', height: '220px' }}>
+                <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&q=80" alt="Product inventory" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              </div>
+              <div style={{ borderRadius: '16px', overflow: 'hidden', height: '220px', marginTop: '-2rem' }}>
+                <img src="https://images.unsplash.com/photo-1560472355-536de3962603?w=400&q=80" alt="Business partnership" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── PRODUCT CATEGORIES ── */}
+      <section className="section mesh-dark noise" style={{ position: 'relative' }}>
+        <div className="orb" style={{ width: 500, height: 500, background: 'rgba(14,165,176,0.08)', top: '-100px', right: '-100px' }} />
+        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+          <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
+            <div className="accent-bar-center" />
+            <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.75rem)', color: 'white', marginBottom: '1rem' }}>Product Categories We Sell</h2>
+            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '1.05rem', maxWidth: '560px', margin: '0 auto', lineHeight: 1.7 }}>
+              We source and distribute across five core categories on Amazon FBA, with consistent purchasing in each.
+            </p>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '1.25rem' }} className="grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
+            {categories.map((cat, i) => (
+              <div key={i} className="cat-card card-3d" style={{ height: '280px' }}>
+                <img src={cat.img} alt={cat.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, transparent 30%, rgba(5,13,31,0.92) 100%)' }} />
+                <div className="cat-overlay">
+                  <div style={{ textAlign: 'center', color: 'white' }}>
+                    <div style={{ fontSize: '2.5rem', marginBottom: '0.5rem' }}>{cat.emoji}</div>
+                    <div style={{ fontWeight: 700, fontSize: '0.9rem' }}>View Details</div>
+                  </div>
+                </div>
+                <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '1.25rem', zIndex: 2 }}>
+                  <div style={{ color: 'white', fontFamily: 'Playfair Display, serif', fontSize: '1.05rem', fontWeight: 700, marginBottom: '0.25rem' }}>{cat.name}</div>
+                  <div style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.75rem' }}>{cat.desc}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div style={{ textAlign: 'center', marginTop: '2.5rem' }}>
+            <Link href="/categories" className="btn-outline-gold">View All Categories</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── WHY PARTNER ── */}
+      <section className="section" style={{ background: 'white' }}>
+        <div className="container">
+          <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
+            <div className="accent-bar-center" />
+            <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.75rem)', color: 'var(--navy)', marginBottom: '1rem' }}>Why Partner With Us?</h2>
+            <p style={{ color: 'var(--gray)', fontSize: '1.05rem', maxWidth: '560px', margin: '0 auto', lineHeight: 1.7 }}>
+              We operate with the professionalism and transparency that suppliers deserve.
+            </p>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.5rem' }} className="sm:grid-cols-2 lg:grid-cols-3">
+            {pillars.map((p, i) => (
+              <div key={i} className="card-3d" style={{ background: 'var(--off)', borderRadius: '16px', padding: '2rem', border: '1px solid var(--border)', cursor: 'default' }}>
+                <div style={{ width: 48, height: 48, borderRadius: '12px', background: 'linear-gradient(135deg, rgba(212,168,67,0.15), rgba(14,165,176,0.15))', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#d4a843', marginBottom: '1.25rem' }}>
+                  {p.icon}
+                </div>
+                <h3 style={{ color: 'var(--navy)', fontSize: '1.1rem', fontFamily: 'Playfair Display, serif', marginBottom: '0.75rem' }}>{p.title}</h3>
+                <p style={{ color: 'var(--gray)', fontSize: '0.9rem', lineHeight: 1.7 }}>{p.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── HOW IT WORKS ── */}
+      <section className="section" style={{ background: 'var(--off)' }}>
+        <div className="container">
+          <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
+            <div className="accent-bar-center" />
+            <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.75rem)', color: 'var(--navy)', marginBottom: '1rem' }}>How We Operate</h2>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '1rem', position: 'relative' }}>
+            <div style={{ position: 'absolute', top: '28px', left: '10%', right: '10%', height: '2px', background: 'linear-gradient(90deg, #d4a843, #0ea5b0)', opacity: 0.3 }} className="hidden lg:block" />
+            {[
+              { n: '01', t: 'Source & Research', d: 'Identify brands aligned with our FBA model and market data.' },
+              { n: '02', t: 'Build Partnership', d: 'Professional onboarding with full business documentation.' },
+              { n: '03', t: 'Purchase Inventory', d: 'Data-driven purchase orders at agreed wholesale terms.' },
+              { n: '04', t: 'FBA Fulfillment', d: 'Products prepped and shipped to Amazon fulfillment centers.' },
+              { n: '05', t: 'Grow Together', d: 'Sales data drives consistent, growing reorder cycles.' },
+            ].map((step, i) => (
+              <div key={i} style={{ textAlign: 'center', padding: '0 0.5rem' }}>
+                <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'linear-gradient(135deg, #d4a843, #0ea5b0)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1rem', position: 'relative', zIndex: 1 }}>
+                  <span style={{ color: 'white', fontWeight: 800, fontSize: '0.8rem' }}>{step.n}</span>
+                </div>
+                <h3 style={{ color: 'var(--navy)', fontSize: '0.9rem', fontFamily: 'Playfair Display, serif', marginBottom: '0.5rem' }}>{step.t}</h3>
+                <p style={{ color: 'var(--gray)', fontSize: '0.8rem', lineHeight: 1.6 }}>{step.d}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── INVENTORY HIGHLIGHT ── */}
+      <section className="section mesh-dark noise" style={{ position: 'relative', overflow: 'hidden' }}>
+        <div className="orb" style={{ width: 600, height: 600, background: 'rgba(212,168,67,0.08)', bottom: '-200px', left: '-100px' }} />
+        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'center' }}>
+            <div>
+              <div className="accent-bar" />
+              <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.75rem)', color: 'white', marginBottom: '1.25rem' }}>Amazon FBA Operations</h2>
+              <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.05rem', lineHeight: 1.8, marginBottom: '2rem' }}>
+                Our Amazon FBA model means your products reach millions of Prime members through Amazon's trusted fulfillment network — with professional listing management, inventory planning, and full MAP compliance.
+              </p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginBottom: '2rem' }}>
+                {['Inventory forecasting & demand planning', 'Amazon FBA prep & compliance', 'Account health monitoring', 'MAP & brand policy adherence', 'Professional listing management'].map(item => (
+                  <div key={item} style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                    <div style={{ width: 20, height: 20, borderRadius: '50%', background: 'rgba(14,165,176,0.2)', border: '1px solid #0ea5b0', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                      <CheckCircle2 size={12} color="#0ea5b0" />
                     </div>
+                    <span style={{ color: 'rgba(255,255,255,0.75)', fontSize: '0.9rem' }}>{item}</span>
                   </div>
                 ))}
               </div>
+              <Link href="/fba-operations" className="btn-gold"><span>View FBA Operations</span> <ArrowRight size={16} /></Link>
             </div>
-            <div className="order-1 lg:order-2">
-              <span className="accent-line"></span>
-              <h2 className="text-display-sm text-navy mb-6">Amazon FBA Operations</h2>
-              <p className="text-charcoal-light text-lg leading-relaxed mb-5">
-                Amazon's Fulfilled by Amazon program is our primary sales channel. This means purchased inventory is shipped to Amazon's fulfillment centers, where Amazon handles storage, packing, shipping, and customer service on our behalf.
-              </p>
-              <p className="text-charcoal-light leading-relaxed mb-8">
-                This model provides suppliers with confidence that their products will be handled professionally, stored in climate-controlled facilities, and delivered to customers through Amazon's trusted logistics network.
-              </p>
-              <Link href="/fba-operations" className="btn-primary inline-flex items-center gap-2">
-                View FBA Operations <ArrowRight size={16} />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* CTA BAND */}
-      <section className="py-20 bg-accent relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10" style={{backgroundImage: 'repeating-linear-gradient(45deg, #0f2044 0, #0f2044 1px, transparent 0, transparent 50%)', backgroundSize: '20px 20px'}}></div>
-        <div className="max-w-content mx-auto px-6 text-center relative z-10">
-          <h2 className="text-display-sm text-navy mb-4">Ready to Establish a Wholesale Account?</h2>
-          <p className="text-navy/70 text-lg mb-8 max-w-xl mx-auto">
-            We welcome opportunities to work with new suppliers and are prepared to provide all required business documentation during the onboarding process.
-          </p>
-          <div className="flex flex-wrap gap-4 justify-center">
-            <Link href="/supplier-info" className="bg-navy text-white font-semibold py-3 px-8 rounded hover:bg-navy-mid transition-colors">
-              Submit Supplier Inquiry
-            </Link>
-            <Link href="/contact" className="border-2 border-navy text-navy font-semibold py-3 px-8 rounded hover:bg-navy/10 transition-colors">
-              Contact Us
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ TEASER */}
-      <section className="section bg-offwhite">
-        <div className="max-w-content mx-auto px-6">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="accent-line-center"></span>
-            <h2 className="text-display-sm text-navy mb-4">Frequently Asked Questions</h2>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {[
-              {
-                q: 'Is Urban Pulse Wholesale LLC a registered business?',
-                a: 'Yes, Urban Pulse Wholesale LLC is a registered limited liability company. We can provide business documentation including our EIN, state registration, and resale certificates upon request during the supplier onboarding process.',
-              },
-              {
-                q: 'Which marketplaces do you sell on?',
-                a: 'Our primary channel is Amazon FBA (Fulfilled by Amazon). We focus on maintaining a professional, compliant Amazon seller account with strong performance metrics.',
-              },
-              {
-                q: 'How do you handle MAP (Minimum Advertised Price) policies?',
-                a: 'We take MAP compliance seriously. Respecting brand pricing policies is fundamental to how we operate, and we will not list products below any supplier-established MAP.',
-              },
-              {
-                q: 'What documentation can you provide for onboarding?',
-                a: 'We can provide an EIN/Tax ID, state resale certificate, business registration documents, and any other standard supplier onboarding documentation required.',
-              },
-              {
-                q: 'How do you handle returns or defective products?',
-                a: 'We manage returns professionally and in accordance with each supplier\'s return policy. We communicate proactively if issues arise with a product lot.',
-              },
-              {
-                q: 'What order volumes can we expect?',
-                a: 'Order volumes vary by product and market conditions. We commit to transparent communication about our purchasing intentions and work to establish consistent reorder cadence.',
-              },
-            ].map(({ q, a }) => (
-              <div key={q} className="bg-white rounded-lg p-6 shadow-card">
-                <h3 className="text-navy font-semibold text-sm mb-2 leading-snug">{q}</h3>
-                <p className="text-charcoal-light text-sm leading-relaxed">{a}</p>
+            {/* FBA visual */}
+            <div style={{ position: 'relative' }}>
+              <div style={{ borderRadius: '24px', overflow: 'hidden', border: '1px solid rgba(212,168,67,0.2)' }}>
+                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=700&q=80" alt="Amazon FBA warehouse fulfillment" style={{ width: '100%', height: '380px', objectFit: 'cover' }} />
+                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(5,13,31,0.4) 0%, transparent 60%)' }} />
               </div>
-            ))}
+              {/* Floating stat badge */}
+              <div className="glass float" style={{ position: 'absolute', bottom: '-20px', left: '-20px', borderRadius: '16px', padding: '1.25rem 1.5rem' }}>
+                <div style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.7rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '4px' }}>Monthly Budget</div>
+                <div style={{ color: 'white', fontSize: '1.75rem', fontWeight: 900, fontFamily: 'Playfair Display, serif' }} className="gradient-text">$10K–$50K</div>
+              </div>
+              <div className="glass float2" style={{ position: 'absolute', top: '-16px', right: '-16px', borderRadius: '12px', padding: '1rem 1.25rem' }}>
+                <div style={{ color: '#0ea5b0', fontSize: '0.7rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '4px' }}>Primary Channel</div>
+                <div style={{ color: 'white', fontSize: '1.1rem', fontWeight: 800 }}>Amazon FBA</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── CTA ── */}
+      <section style={{ background: 'linear-gradient(135deg, #d4a843 0%, #f0c96a 50%, #0ea5b0 100%)', padding: '5rem 0', position: 'relative', overflow: 'hidden' }}>
+        <div style={{ position: 'absolute', inset: 0, backgroundImage: 'repeating-linear-gradient(45deg, rgba(5,13,31,0.05) 0, rgba(5,13,31,0.05) 1px, transparent 0, transparent 50%)', backgroundSize: '16px 16px' }} />
+        <div className="container" style={{ textAlign: 'center', position: 'relative', zIndex: 1 }}>
+          <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.75rem)', color: 'var(--navy)', marginBottom: '1rem' }}>Ready to Establish a Wholesale Account?</h2>
+          <p style={{ color: 'rgba(5,13,31,0.7)', fontSize: '1.1rem', maxWidth: '560px', margin: '0 auto 2.5rem', lineHeight: 1.7 }}>
+            We welcome new supplier partnerships and are fully prepared to provide all required business documentation during onboarding.
+          </p>
+          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <Link href="/supplier-info" className="btn-white"><span>Submit Supplier Inquiry</span></Link>
+            <Link href="/contact" style={{ border: '2px solid var(--navy)', color: 'var(--navy)', fontWeight: 700, padding: '0.85rem 2rem', borderRadius: '6px', fontSize: '0.9rem', letterSpacing: '0.04em', textTransform: 'uppercase', transition: 'all 0.3s', textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}>Contact Us</Link>
           </div>
         </div>
       </section>
