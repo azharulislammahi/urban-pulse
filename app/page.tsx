@@ -134,15 +134,14 @@ export default function HomePage() {
         <div className="page-wrap">
           <div className="four-col">
             {[
-              { icon: '📦', num: '5', label: 'Product Categories' },
-              { icon: '🚀', num: 'FBA', label: 'Primary Channel' },
-              { icon: '✅', num: '100%', label: 'MAP Compliant' },
-              { icon: '🏢', num: 'LLC', label: 'Registered Business' },
+              { num: '5', label: 'Product Categories' },
+              { num: 'FBA', label: 'Primary Channel' },
+              { num: '100%', label: 'MAP Compliant' },
+              { num: 'LLC', label: 'Registered Business' },
             ].map((s, i) => (
-              <div key={i} style={{ textAlign: 'center' }}>
-                <div style={{ fontSize: 'clamp(1.2rem, 4vw, 1.5rem)', marginBottom: 4 }}>{s.icon}</div>
-                <div style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(1.4rem, 5vw, 2.25rem)', fontWeight: 900, background: 'linear-gradient(135deg, #d4a843, #0ea5b0)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', lineHeight: 1 }}>{s.num}</div>
-                <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: 'clamp(0.6rem, 2vw, 0.7rem)', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginTop: 4, fontFamily: 'Plus Jakarta Sans, sans-serif' }}>{s.label}</div>
+              <div key={i} style={{ textAlign: 'center', padding: '0.5rem 0' }}>
+                <div style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(1.6rem, 5vw, 2.5rem)', fontWeight: 900, background: 'linear-gradient(135deg, #d4a843, #0ea5b0)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', lineHeight: 1, marginBottom: 6 }}>{s.num}</div>
+                <div style={{ color: 'rgba(255,255,255,0.45)', fontSize: 'clamp(0.6rem, 2vw, 0.72rem)', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>{s.label}</div>
               </div>
             ))}
           </div>
