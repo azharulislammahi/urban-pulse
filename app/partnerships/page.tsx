@@ -1,56 +1,60 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { CheckCircle2, ArrowRight, Clock, FileText, TrendingUp, Shield } from 'lucide-react'
+import { CheckCircle2, ArrowRight, Shield, TrendingUp, Clock, FileText } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Wholesale Partnerships',
-  description: 'Learn how Urban Pulse Wholesale LLC works with brands, distributors, and manufacturers to build professional, long-term wholesale partnerships.',
+  description: 'How Urban Pulse Wholesale LLC builds professional, long-term wholesale partnerships with brands, distributors, and manufacturers.',
 }
 
 export default function PartnershipsPage() {
+  const wrap = { maxWidth: 1200, margin: '0 auto', padding: '0 1.5rem', position: 'relative' as const, zIndex: 1 }
+  const bar = { width: 48, height: 3, background: 'linear-gradient(90deg, #d4a843, #0ea5b0)', borderRadius: 2, marginBottom: '1.25rem' }
+  const barC = { width: 48, height: 3, background: 'linear-gradient(90deg, #d4a843, #0ea5b0)', borderRadius: 2, margin: '0 auto 1.25rem' }
+  const h2 = { fontFamily: 'Playfair Display, Georgia, serif', fontWeight: 700, fontSize: 'clamp(1.75rem, 3vw, 2.5rem)', color: '#050d1f', marginBottom: '1.25rem' }
+  const h2w = { ...h2, color: 'white' }
+  const p = { color: '#64748b', lineHeight: 1.85, fontFamily: 'Plus Jakarta Sans, sans-serif', fontSize: '0.95rem', margin: 0 }
+  const pLg = { ...p, color: '#475569', fontSize: '1.05rem' }
+  const btn = { background: 'linear-gradient(135deg, #d4a843, #f0c96a)', color: '#050d1f', fontWeight: 800, padding: '0.85rem 2rem', borderRadius: 6, fontFamily: 'Plus Jakarta Sans, sans-serif', fontSize: '0.85rem', letterSpacing: '0.06em', textTransform: 'uppercase' as const, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8 }
+
   return (
-    <div className="page-enter">
-      <section className="hero-bg pt-36 pb-20">
-        <div className="max-w-content mx-auto px-6">
-          <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-6">
-            <span className="text-white/70 text-xs tracking-[0.1em] uppercase font-medium">Wholesale Partnerships</span>
+    <div style={{ background: '#ffffff' }}>
+
+      {/* HERO */}
+      <section style={{ minHeight: '55vh', display: 'flex', alignItems: 'center', background: 'linear-gradient(160deg, #030b1a 0%, #050d1f 50%, #081628 100%)', paddingTop: '8rem', paddingBottom: '5rem', position: 'relative', overflow: 'hidden' }}>
+        <div style={{ position: 'absolute', width: 600, height: 600, borderRadius: '50%', background: 'radial-gradient(circle, rgba(212,168,67,0.09) 0%, transparent 70%)', top: -200, right: -100, pointerEvents: 'none' }} />
+        <div style={wrap}>
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(212,168,67,0.1)', border: '1px solid rgba(212,168,67,0.25)', borderRadius: 100, padding: '6px 18px', marginBottom: '1.5rem' }}>
+            <span style={{ color: '#d4a843', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>Wholesale Partnerships</span>
           </div>
-          <h1 className="text-display text-white mb-5 max-w-2xl">Professional Wholesale Relationships Built to Last</h1>
-          <p className="text-white/65 text-xl max-w-2xl leading-relaxed">
-            We approach every supplier relationship as a long-term partnership, not a one-time transaction. Our goal is to become a reliable, valued customer in your wholesale program.
-          </p>
+          <h1 style={{ fontFamily: 'Playfair Display, Georgia, serif', fontWeight: 900, fontSize: 'clamp(2.5rem, 5vw, 3.75rem)', color: 'white', marginBottom: '1.25rem', lineHeight: 1.1, maxWidth: 700 }}>Professional Wholesale Relationships Built to Last</h1>
+          <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '1.1rem', lineHeight: 1.8, maxWidth: 600, fontFamily: 'Plus Jakarta Sans, sans-serif' }}>We approach every supplier relationship as a long-term partnership, not a one-time transaction. Our goal is to become a reliable, valued customer in your wholesale program.</p>
         </div>
       </section>
 
-      {/* Partnership philosophy */}
-      <section className="section bg-white">
-        <div className="max-w-content mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+      {/* PHILOSOPHY */}
+      <section style={{ padding: '6rem 0', background: '#ffffff' }}>
+        <div style={wrap}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'center' }}>
             <div>
-              <span className="accent-line"></span>
-              <h2 className="text-display-sm text-navy mb-6">Our Partnership Philosophy</h2>
-              <p className="text-charcoal-light text-lg leading-relaxed mb-5">
-                Urban Pulse Wholesale LLC believes that the strongest business relationships are built on mutual benefit, clear communication, and consistent follow-through. We don't approach suppliers looking for a quick deal — we seek lasting partnerships that grow over time.
-              </p>
-              <p className="text-charcoal-light leading-relaxed mb-5">
-                When we apply for a wholesale account, we have already done our research. We understand the brand's market position, pricing strategy, and distribution goals. We pursue accounts where we believe we can genuinely serve as a value-adding distribution partner.
-              </p>
-              <p className="text-charcoal-light leading-relaxed">
-                We recognize that every brand has worked hard to build their reputation. We are stewards of that reputation in the marketplace, and we take that responsibility seriously.
-              </p>
+              <div style={bar} />
+              <h2 style={h2}>Our Partnership Philosophy</h2>
+              <p style={{ ...pLg, marginBottom: '1.25rem' }}>Urban Pulse Wholesale LLC believes that the strongest business relationships are built on mutual benefit, clear communication, and consistent follow-through. We don't approach suppliers looking for a quick deal — we seek lasting partnerships that grow over time.</p>
+              <p style={{ ...p, marginBottom: '1.25rem' }}>When we apply for a wholesale account, we have already done our research. We understand the brand's market position, pricing strategy, and distribution goals.</p>
+              <p style={p}>We recognize that every brand has worked hard to build their reputation. We are stewards of that reputation in the marketplace, and we take that responsibility seriously.</p>
             </div>
-            <div className="space-y-4">
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
               {[
-                { icon: <Shield size={20} className="text-accent" />, title: 'Brand Protection First', desc: 'We strictly observe MAP policies, authorized reseller agreements, and any brand-specific marketplace requirements.' },
-                { icon: <TrendingUp size={20} className="text-accent" />, title: 'Consistent Volume', desc: 'We maintain predictable reorder cycles based on sales data, providing suppliers with reliable purchasing patterns.' },
-                { icon: <Clock size={20} className="text-accent" />, title: 'Timely Communication', desc: 'Our team responds to supplier inquiries promptly and proactively communicates about orders, inventory, or any issues.' },
-                { icon: <FileText size={20} className="text-accent" />, title: 'Organized Documentation', desc: 'All purchase orders, invoices, and account documentation are maintained systematically for easy reference.' },
+                { icon: <Shield size={18} color="#d4a843" />, title: 'Brand Protection First', desc: 'We strictly observe MAP policies, authorized reseller agreements, and any brand-specific marketplace requirements.' },
+                { icon: <TrendingUp size={18} color="#d4a843" />, title: 'Consistent Volume', desc: 'We maintain predictable reorder cycles based on sales data, providing suppliers with reliable purchasing patterns.' },
+                { icon: <Clock size={18} color="#d4a843" />, title: 'Timely Communication', desc: 'Our team responds to supplier inquiries promptly and proactively communicates about orders and inventory.' },
+                { icon: <FileText size={18} color="#d4a843" />, title: 'Organized Documentation', desc: 'All purchase orders, invoices, and account documentation are maintained systematically for easy reference.' },
               ].map(item => (
-                <div key={item.title} className="flex gap-4 bg-offwhite rounded-lg p-5">
-                  <div className="mt-0.5 flex-shrink-0">{item.icon}</div>
+                <div key={item.title} style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start', background: '#f8f9fc', borderRadius: 12, padding: '1.1rem 1.25rem', border: '1px solid #e2e8f0' }}>
+                  <div style={{ width: 36, height: 36, borderRadius: 10, background: 'rgba(212,168,67,0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>{item.icon}</div>
                   <div>
-                    <div className="text-navy font-semibold text-sm mb-1">{item.title}</div>
-                    <div className="text-charcoal-light text-sm leading-relaxed">{item.desc}</div>
+                    <div style={{ color: '#050d1f', fontWeight: 700, fontSize: '0.9rem', marginBottom: 4, fontFamily: 'Plus Jakarta Sans, sans-serif' }}>{item.title}</div>
+                    <div style={{ color: '#64748b', fontSize: '0.84rem', lineHeight: 1.7, fontFamily: 'Plus Jakarta Sans, sans-serif' }}>{item.desc}</div>
                   </div>
                 </div>
               ))}
@@ -59,57 +63,31 @@ export default function PartnershipsPage() {
         </div>
       </section>
 
-      {/* What Suppliers Can Expect */}
-      <section className="section bg-offwhite">
-        <div className="max-w-content mx-auto px-6">
-          <div className="text-center mb-14">
-            <span className="accent-line-center"></span>
-            <h2 className="text-display-sm text-navy mb-4">What Suppliers Can Expect</h2>
-            <p className="text-charcoal-light text-lg max-w-2xl mx-auto">
-              When you establish a wholesale relationship with Urban Pulse Wholesale LLC, here is what you can count on.
-            </p>
+      {/* WHAT SUPPLIERS CAN EXPECT */}
+      <section style={{ padding: '6rem 0', background: '#f8f9fc' }}>
+        <div style={wrap}>
+          <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
+            <div style={barC} />
+            <h2 style={{ ...h2, textAlign: 'center' }}>What Suppliers Can Expect</h2>
+            <p style={{ ...p, maxWidth: 540, margin: '0 auto', fontSize: '1rem' }}>When you establish a wholesale relationship with Urban Pulse Wholesale LLC, here is what you can count on.</p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.5rem' }}>
             {[
-              {
-                title: 'Timely Communication',
-                desc: 'We respond to emails and messages within one business day. You will always have a clear point of contact and will never be left wondering about order status or account activity.',
-                items: ['Prompt responses to inquiries', 'Proactive updates on orders', 'Clear escalation paths'],
-              },
-              {
-                title: 'Professional Account Management',
-                desc: 'We maintain organized records of all transactions, communications, and account documentation. Our supplier relationships are managed systematically, not ad hoc.',
-                items: ['Organized purchase orders', 'Clear invoice management', 'Documentation on request'],
-              },
-              {
-                title: 'Organized Purchasing Processes',
-                desc: 'From initial inquiry through ongoing ordering, our purchasing processes are structured and predictable. We do not place chaotic or last-minute orders.',
-                items: ['Structured order workflow', 'Forecasting-driven purchasing', 'Payment according to terms'],
-              },
-              {
-                title: 'Long-Term Business Mindset',
-                desc: 'We are building a business that will be around for years. Every decision we make is made with long-term sustainability in mind, not short-term opportunism.',
-                items: ['Sustainable growth focus', 'Relationship investment', 'Compliant operations'],
-              },
-              {
-                title: 'Commitment to Mutual Growth',
-                desc: 'We share in the success of the brands we carry. When a product performs well on Amazon, we increase our purchasing. Supplier success and our success are aligned.',
-                items: ['Volume growth over time', 'Market feedback sharing', 'Collaborative approach'],
-              },
-              {
-                title: 'Respectful of Supplier Policies',
-                desc: 'Every supplier has policies that protect their brand and distribution network. We read, understand, and follow all policies as a condition of doing business.',
-                items: ['MAP policy compliance', 'Authorized reseller terms', 'Return policy adherence'],
-              },
+              { title: 'Timely Communication', desc: 'Responses within one business day. You will always have a clear point of contact and will never be left wondering about order status or account activity.', items: ['Prompt inquiry responses', 'Proactive order updates', 'Clear escalation paths'] },
+              { title: 'Professional Account Mgmt', desc: 'We maintain organized records of all transactions, communications, and account documentation. Our supplier relationships are managed systematically, not ad hoc.', items: ['Organized purchase orders', 'Clear invoice management', 'Documentation on request'] },
+              { title: 'Organized Purchasing', desc: 'Our purchasing processes are structured and predictable. We do not place chaotic or last-minute orders — everything is planned and communicated in advance.', items: ['Structured order workflow', 'Forecast-driven buying', 'Payment per agreed terms'] },
+              { title: 'Long-Term Mindset', desc: 'We are building a business that will be around for years. Every decision is made with long-term sustainability in mind, not short-term opportunism.', items: ['Sustainable growth focus', 'Relationship investment', 'Compliant operations'] },
+              { title: 'Mutual Growth Focus', desc: 'We share in the success of the brands we carry. When a product performs well, we increase our purchasing. Supplier success and our success are fully aligned.', items: ['Volume growth over time', 'Market feedback sharing', 'Collaborative approach'] },
+              { title: 'Policy Compliance', desc: 'Every supplier has policies that protect their brand and distribution network. We read, understand, and follow all policies as a non-negotiable condition of doing business.', items: ['MAP policy adherence', 'Authorized reseller terms', 'Return policy compliance'] },
             ].map(item => (
-              <div key={item.title} className="bg-white rounded-xl p-7 shadow-card card-hover">
-                <h3 className="text-navy font-semibold text-lg mb-3">{item.title}</h3>
-                <p className="text-charcoal-light text-sm leading-relaxed mb-4">{item.desc}</p>
-                <ul className="space-y-2">
+              <div key={item.title} style={{ background: 'white', borderRadius: 16, padding: '1.75rem', border: '1px solid #e2e8f0', boxShadow: '0 2px 20px rgba(5,13,31,0.05)' }}>
+                <h3 style={{ color: '#050d1f', fontSize: '1rem', fontFamily: 'Playfair Display, serif', marginBottom: '0.75rem', fontWeight: 700 }}>{item.title}</h3>
+                <p style={{ ...p, marginBottom: '1rem', fontSize: '0.875rem' }}>{item.desc}</p>
+                <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 6 }}>
                   {item.items.map(i => (
-                    <li key={i} className="flex items-center gap-2 text-xs text-charcoal">
-                      <CheckCircle2 size={13} className="text-accent flex-shrink-0" />
-                      {i}
+                    <li key={i} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                      <CheckCircle2 size={13} color="#0ea5b0" />
+                      <span style={{ color: '#475569', fontSize: '0.8rem', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>{i}</span>
                     </li>
                   ))}
                 </ul>
@@ -119,78 +97,71 @@ export default function PartnershipsPage() {
         </div>
       </section>
 
-      {/* Responsible selling */}
-      <section className="section bg-navy relative overflow-hidden">
-        <div className="absolute inset-0 grid-pattern opacity-40"></div>
-        <div className="max-w-content mx-auto px-6 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
-            <span className="accent-line-center"></span>
-            <h2 className="text-display-sm text-white mb-5">Responsible Marketplace Selling</h2>
-            <p className="text-white/70 text-lg leading-relaxed mb-8">
-              We understand that irresponsible marketplace behavior by resellers can harm brands — through price erosion, unauthorized listings, counterfeit competition, and poor customer experiences. We have zero tolerance for these practices.
-            </p>
+      {/* RESPONSIBLE SELLING */}
+      <section style={{ padding: '6rem 0', background: 'linear-gradient(160deg, #030b1a 0%, #050d1f 100%)', position: 'relative', overflow: 'hidden' }}>
+        <div style={{ position: 'absolute', width: 500, height: 500, borderRadius: '50%', background: 'radial-gradient(circle, rgba(14,165,176,0.09) 0%, transparent 70%)', top: -100, right: -100, pointerEvents: 'none' }} />
+        <div style={wrap}>
+          <div style={{ textAlign: 'center', maxWidth: 700, margin: '0 auto 3.5rem' }}>
+            <div style={barC} />
+            <h2 style={{ ...h2w, textAlign: 'center' }}>Responsible Marketplace Selling</h2>
+            <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '1rem', lineHeight: 1.8, fontFamily: 'Plus Jakarta Sans, sans-serif' }}>We have zero tolerance for practices that harm brands — price erosion, unauthorized listings, or poor customer experiences.</p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1.25rem' }}>
             {[
-              { title: 'MAP Compliance', desc: 'We never advertise or sell below your established Minimum Advertised Price.' },
-              { title: 'Authorized Only', desc: 'We only sell products we have purchased directly from authorized sources.' },
+              { title: 'MAP Compliance', desc: 'We never advertise or sell below your established Minimum Advertised Price, period.' },
+              { title: 'Authorized Only', desc: 'We only sell products we have purchased directly from authorized wholesale sources.' },
               { title: 'Accurate Listings', desc: 'Product listings accurately represent items — no misleading titles, images, or descriptions.' },
-              { title: 'Policy Adherence', desc: 'We read and comply with all supplier terms, including restrictions on sales channels or geographies.' },
+              { title: 'Policy Adherence', desc: 'We read and comply with all supplier terms including any channel or geography restrictions.' },
             ].map(item => (
-              <div key={item.title} className="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
-                <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-3">
-                  <CheckCircle2 size={18} className="text-accent" />
+              <div key={item.title} style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 16, padding: '1.75rem', textAlign: 'center' }}>
+                <div style={{ width: 44, height: 44, borderRadius: '50%', background: 'rgba(212,168,67,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1rem' }}>
+                  <CheckCircle2 size={20} color="#d4a843" />
                 </div>
-                <h3 className="text-white font-semibold text-sm mb-2">{item.title}</h3>
-                <p className="text-white/55 text-xs leading-relaxed">{item.desc}</p>
+                <h3 style={{ color: 'white', fontSize: '0.95rem', fontFamily: 'Playfair Display, serif', marginBottom: '0.6rem', fontWeight: 700 }}>{item.title}</h3>
+                <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.82rem', lineHeight: 1.7, fontFamily: 'Plus Jakarta Sans, sans-serif', margin: 0 }}>{item.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* How the relationship works */}
-      <section className="section bg-white">
-        <div className="max-w-content mx-auto px-6">
-          <div className="text-center mb-14">
-            <span className="accent-line-center"></span>
-            <h2 className="text-display-sm text-navy mb-4">How the Relationship Works</h2>
+      {/* RELATIONSHIP LIFECYCLE */}
+      <section style={{ padding: '6rem 0', background: '#ffffff' }}>
+        <div style={wrap}>
+          <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
+            <div style={barC} />
+            <h2 style={{ ...h2, textAlign: 'center' }}>How the Relationship Works</h2>
           </div>
-          <div className="max-w-3xl mx-auto">
-            <div className="space-y-6">
-              {[
-                { phase: 'Initial Inquiry', desc: 'We reach out with a professional wholesale account application, providing full business documentation including LLC registration, EIN, resale certificate, and any required forms. We are transparent about our business model and sales channels upfront.' },
-                { phase: 'Onboarding', desc: 'We complete your supplier onboarding process exactly as required — no shortcuts, no requests for exceptions. We provide all requested documentation promptly and follow your process from start to finish.' },
-                { phase: 'First Orders', desc: 'Initial orders are placed in sizes appropriate for our market research and inventory planning. We do not over-order relative to our sell-through projections and maintain payment according to agreed terms.' },
-                { phase: 'Ongoing Partnership', desc: 'As the relationship matures and we develop sales data, our ordering becomes more predictable and potentially larger. We check in with our account representative regularly and provide feedback on marketplace conditions.' },
-                { phase: 'Long-Term Growth', desc: 'Over time, we aim to become a significant, reliable wholesale customer — one that account managers are glad to have in their portfolio. We measure success in years, not transactions.' },
-              ].map((item, i) => (
-                <div key={item.phase} className="flex gap-6 items-start">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-accent flex items-center justify-center text-navy font-bold text-xs">
-                    {i + 1}
-                  </div>
-                  <div className="flex-1 pb-6 border-b border-border last:border-0">
-                    <h3 className="text-navy font-semibold mb-2">{item.phase}</h3>
-                    <p className="text-charcoal-light text-sm leading-relaxed">{item.desc}</p>
-                  </div>
+          <div style={{ maxWidth: 760, margin: '0 auto' }}>
+            {[
+              { phase: 'Initial Inquiry', desc: 'We reach out with a professional wholesale account application, providing full business documentation — LLC registration, EIN, resale certificate, and any required forms. We are transparent about our business model upfront.' },
+              { phase: 'Onboarding', desc: 'We complete your supplier onboarding process exactly as required — no shortcuts. We provide all documentation promptly and follow your process from start to finish.' },
+              { phase: 'First Orders', desc: 'Initial orders are sized appropriately for our market research. We do not over-order and maintain payment according to agreed terms.' },
+              { phase: 'Ongoing Partnership', desc: 'As the relationship matures and we develop sales data, our ordering becomes more predictable and potentially larger. We check in regularly and share marketplace feedback.' },
+              { phase: 'Long-Term Growth', desc: 'Over time, we aim to become a significant, reliable wholesale customer — one that account managers are glad to have in their portfolio.' },
+            ].map((item, i) => (
+              <div key={item.phase} style={{ display: 'flex', gap: '1.5rem', alignItems: 'flex-start', paddingBottom: '2rem', position: 'relative' }}>
+                {i < 4 && <div style={{ position: 'absolute', left: 20, top: 44, bottom: 0, width: 2, background: 'linear-gradient(180deg, rgba(212,168,67,0.4), rgba(212,168,67,0.05))' }} />}
+                <div style={{ width: 40, height: 40, borderRadius: '50%', background: 'linear-gradient(135deg, #d4a843, #0ea5b0)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, zIndex: 1 }}>
+                  <span style={{ color: 'white', fontWeight: 800, fontSize: '0.85rem', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>{i + 1}</span>
                 </div>
-              ))}
-            </div>
+                <div style={{ paddingTop: 8 }}>
+                  <h3 style={{ color: '#050d1f', fontWeight: 700, fontSize: '1rem', marginBottom: 6, fontFamily: 'Playfair Display, serif' }}>{item.phase}</h3>
+                  <p style={p}>{item.desc}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-accent relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10" style={{backgroundImage: 'repeating-linear-gradient(45deg, #0f2044 0, #0f2044 1px, transparent 0, transparent 50%)', backgroundSize: '20px 20px'}}></div>
-        <div className="max-w-content mx-auto px-6 text-center relative z-10">
-          <h2 className="text-display-sm text-navy mb-4">Ready to Start a Partnership?</h2>
-          <p className="text-navy/70 text-lg mb-8 max-w-xl mx-auto">
-            We welcome inquiries from brands, distributors, and manufacturers interested in working with a professional wholesale buyer.
-          </p>
-          <Link href="/supplier-info" className="bg-navy text-white font-semibold py-3 px-8 rounded hover:bg-navy-mid transition-colors inline-flex items-center gap-2">
-            Submit Supplier Inquiry <ArrowRight size={16} />
-          </Link>
+      <section style={{ padding: '5rem 0', background: 'linear-gradient(135deg, #c8981f 0%, #d4a843 40%, #0ea5b0 100%)', position: 'relative', overflow: 'hidden' }}>
+        <div style={{ position: 'absolute', inset: 0, backgroundImage: 'repeating-linear-gradient(45deg, rgba(5,13,31,0.04) 0, rgba(5,13,31,0.04) 1px, transparent 0, transparent 50%)', backgroundSize: '18px 18px' }} />
+        <div style={{ ...wrap, textAlign: 'center' }}>
+          <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(2rem, 3vw, 2.5rem)', color: '#050d1f', marginBottom: '1rem', fontWeight: 900 }}>Ready to Start a Partnership?</h2>
+          <p style={{ color: 'rgba(5,13,31,0.65)', fontSize: '1.05rem', maxWidth: 500, margin: '0 auto 2.5rem', lineHeight: 1.75, fontFamily: 'Plus Jakarta Sans, sans-serif' }}>We welcome inquiries from brands, distributors, and manufacturers interested in working with a professional wholesale buyer.</p>
+          <Link href="/supplier-info" style={btn}>Submit Supplier Inquiry <ArrowRight size={15} /></Link>
         </div>
       </section>
     </div>
