@@ -6,70 +6,63 @@ interface LogoProps {
 }
 
 export default function Logo({ size = 'md', variant = 'dark' }: LogoProps) {
-  const scales = { sm: 0.7, md: 1, lg: 1.4 }
-  const s = scales[size]
-  const wordColor = variant === 'dark' ? '#050d1f' : '#ffffff'
-  const subColor = variant === 'dark' ? '#64748b' : 'rgba(255,255,255,0.6)'
+  const s = size === 'sm' ? 0.65 : size === 'lg' ? 1.3 : 1
+  const wordColor = variant === 'light' ? '#ffffff' : '#050d1f'
+  const subColor = variant === 'light' ? 'rgba(255,255,255,0.5)' : '#64748b'
 
   return (
-    <Link href="/" style={{ display: 'inline-flex', alignItems: 'center', gap: `${10 * s}px`, textDecoration: 'none' }}>
-      {/* Icon mark */}
-      <svg width={Math.round(52 * s)} height={Math.round(44 * s)} viewBox="0 0 52 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <Link href="/" style={{ display: 'inline-flex', alignItems: 'center', gap: `${12 * s}px`, textDecoration: 'none', flexShrink: 0 }}>
+      <svg width={Math.round(72 * s)} height={Math.round(48 * s)} viewBox="0 0 72 48" fill="none" xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
             <stop offset="0%" stopColor="#d4a843"/>
             <stop offset="100%" stopColor="#f0c96a"/>
           </linearGradient>
-          <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="0%">
             <stop offset="0%" stopColor="#0ea5b0"/>
             <stop offset="100%" stopColor="#22d3ee"/>
           </linearGradient>
           <linearGradient id="pulseGrad" x1="0%" y1="50%" x2="100%" y2="50%">
             <stop offset="0%" stopColor="#d4a843"/>
-            <stop offset="50%" stopColor="#0ea5b0"/>
+            <stop offset="60%" stopColor="#0ea5b0"/>
             <stop offset="100%" stopColor="#22d3ee"/>
           </linearGradient>
         </defs>
 
-        {/* Pulse wave background ring */}
-        <ellipse cx="26" cy="22" rx="24" ry="20" stroke="url(#pulseGrad)" strokeWidth="1.5" strokeDasharray="4 3" opacity="0.4"/>
+        {/* UP monogram */}
+        <text x="2" y="36" fontFamily="Georgia, serif" fontWeight="900" fontSize="34" fill="url(#goldGrad)">U</text>
+        <text x="22" y="36" fontFamily="Georgia, serif" fontWeight="900" fontSize="34" fill="url(#tealGrad)">P</text>
 
-        {/* Pulse wave line */}
+        {/* Vertical divider line — pulse wave */}
         <polyline
-          points="2,22 8,22 11,12 14,32 17,18 20,26 23,22 29,22 32,10 35,34 38,18 41,22 50,22"
+          points="54,4 54,10 56,14 52,20 56,26 52,32 54,36 54,44"
           stroke="url(#pulseGrad)"
-          strokeWidth="2.5"
+          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
           fill="none"
         />
-
-        {/* UP text — U */}
-        <text x="11" y="36" fontFamily="Playfair Display, serif" fontWeight="700" fontSize="9" fill="url(#goldGrad)" opacity="0.9">U</text>
-        {/* UP text — P */}
-        <text x="19" y="36" fontFamily="Playfair Display, serif" fontWeight="700" fontSize="9" fill="url(#tealGrad)" opacity="0.9">P</text>
       </svg>
 
       {/* Wordmark */}
-      <div style={{ lineHeight: 1 }}>
+      <div style={{ lineHeight: 1, display: 'flex', flexDirection: 'column', gap: `${3 * s}px` }}>
         <div style={{
-          fontFamily: "'Playfair Display', serif",
+          fontFamily: "'Playfair Display', Georgia, serif",
           fontWeight: 700,
           fontSize: `${Math.round(15 * s)}px`,
           color: wordColor,
-          letterSpacing: '0.03em',
-          lineHeight: 1.2,
+          letterSpacing: '0.05em',
+          lineHeight: 1,
         }}>
           Urban Pulse
         </div>
         <div style={{
-          fontFamily: "'Plus Jakarta Sans', sans-serif",
+          fontFamily: "'Plus Jakarta Sans', Arial, sans-serif",
           fontWeight: 600,
-          fontSize: `${Math.round(8.5 * s)}px`,
+          fontSize: `${Math.round(8 * s)}px`,
           color: subColor,
-          letterSpacing: '0.14em',
+          letterSpacing: '0.18em',
           textTransform: 'uppercase',
-          marginTop: '2px',
         }}>
           Wholesale LLC
         </div>
