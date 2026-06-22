@@ -38,17 +38,22 @@ export default function Footer() {
           <div>
             <div style={{ color: '#d4a843', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '1rem' }}>Contact</div>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-              {[
-                { icon: '✉', val: '[email@urbanpulsewholesale.com]' },
-                { icon: '✆', val: '[Phone Placeholder]' },
-                { icon: '⊙', val: '[Address Placeholder]' },
-                { icon: '◷', val: 'Mon–Fri 9AM–5PM' },
-              ].map(i => (
-                <li key={i.icon} style={{ display: 'flex', gap: '8px', alignItems: 'flex-start' }}>
-                  <span style={{ color: '#0ea5b0', fontSize: '0.9rem' }}>{i.icon}</span>
-                  <span style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.8rem', lineHeight: 1.5 }}>{i.val}</span>
-                </li>
-              ))}
+              <li style={{ display: 'flex', gap: '8px', alignItems: 'flex-start' }}>
+                <span style={{ color: '#0ea5b0', fontSize: '0.9rem' }}>✉</span>
+                <a href="mailto:support@urbanpulsewholesale.com" style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.8rem', lineHeight: 1.5, textDecoration: 'none' }}>support@urbanpulsewholesale.com</a>
+              </li>
+              <li style={{ display: 'flex', gap: '8px', alignItems: 'flex-start' }}>
+                <span style={{ color: '#0ea5b0', fontSize: '0.9rem' }}>✆</span>
+                <a href="tel:5862008750" style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.8rem', lineHeight: 1.5, textDecoration: 'none' }}>(586) 200-8750</a>
+              </li>
+              <li style={{ display: 'flex', gap: '8px', alignItems: 'flex-start' }}>
+                <span style={{ color: '#0ea5b0', fontSize: '0.9rem' }}>⊙</span>
+                <span style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.8rem', lineHeight: 1.5 }}>Warren, Michigan 48093</span>
+              </li>
+              <li style={{ display: 'flex', gap: '8px', alignItems: 'flex-start' }}>
+                <span style={{ color: '#0ea5b0', fontSize: '0.9rem' }}>◷</span>
+                <span style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.8rem', lineHeight: 1.5 }}>Mon–Fri 9AM–5PM EST</span>
+              </li>
             </ul>
           </div>
         </div>

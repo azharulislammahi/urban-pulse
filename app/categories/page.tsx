@@ -3,50 +3,58 @@ import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Product Categories',
-  description: 'Urban Pulse Wholesale LLC distributes products across Home & Kitchen, Toys & Games, Pet Supplies, Grocery & Food, and Sports & Outdoors on Amazon FBA.',
+  title: 'Product Categories | Fragrance, Home, Pet, Health & More',
+  description: 'Urban Pulse Wholesale distributes products across 6 high-velocity Amazon FBA categories: Fragrance & Perfume, Home & Kitchen, Pet Supplies, Health & Wellness, Grocery & Food, and Sports & Outdoors. Authorized brands only. MAP compliant.',
 }
 
 const categories = [
   {
+    name: 'Fragrance & Perfume',
+    emoji: '🌸',
+    img: 'https://images.unsplash.com/photo-1541643600914-78b084683702?w=800&q=80',
+    desc: 'Fragrance & Perfume is one of the fastest-growing categories on Amazon — and one where authorized distribution matters most. Urban Pulse Wholesale sources and distributes authentic fragrances including niche Middle Eastern oud and attar labels, domestic specialty candle and home fragrance brands, and personal fragrance lines with strong Amazon demand.',
+    items: ['Eau de Parfum & Eau de Toilette', 'Oud, Attar & Middle Eastern Fragrances', 'Body Mists & Cologne Sprays', 'Perfume Oils & Roll-Ons', 'Home Fragrance & Reed Diffusers', 'Scented Candles & Wax Melts', 'Incense & Aromatherapy Products', 'Fragrance Gift Sets'],
+    why: 'Fragrance is the #1 Amazon category where brand protection matters most — counterfeit product is rampant. As an authorized, MAP-compliant wholesale buyer, Urban Pulse Wholesale offers fragrance brands exactly the kind of Amazon distribution they should want: documented, compliant, and brand-protective. We are fully versed in Amazon Dangerous Goods compliance for fragrance products including SDS documentation.',
+  },
+  {
     name: 'Home & Kitchen',
     emoji: '🏠',
     img: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80',
-    desc: 'We source and distribute a wide range of Home & Kitchen products including cookware, small appliances, kitchen gadgets, storage solutions, and home décor items.',
+    desc: 'We source and distribute a wide range of Home & Kitchen products including cookware, small appliances, kitchen gadgets, storage solutions, and home décor items from authorized brands and distributors.',
     items: ['Cookware & Bakeware', 'Small Kitchen Appliances', 'Kitchen Storage & Organization', 'Cleaning Supplies & Tools', 'Home Décor & Accents', 'Bedding & Bath Essentials'],
-    why: 'Home & Kitchen is one of Amazon\'s largest and most consistent categories, with strong year-round demand and loyal repeat buyers.',
-  },
-  {
-    name: 'Toys & Games',
-    emoji: '🎮',
-    img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
-    desc: 'We carry educational toys, board games, outdoor play equipment, STEM products, and family entertainment items from established brands.',
-    items: ['Educational & STEM Toys', 'Board Games & Puzzles', 'Outdoor Play Equipment', 'Building & Construction Sets', 'Action Figures & Collectibles', 'Arts & Crafts Kits'],
-    why: 'Toys & Games offers strong seasonal opportunities with consistent baseline demand, especially for educational and family-focused brands.',
+    why: 'Home & Kitchen is one of Amazon\'s largest and most consistent categories, with strong year-round demand and loyal repeat buyers. Our data-driven sourcing focuses on brands with strong BSR rankings and proven review profiles.',
   },
   {
     name: 'Pet Supplies',
     emoji: '🐾',
     img: 'https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=800&q=80',
-    desc: 'Pet ownership is at an all-time high. We distribute pet food, treats, grooming products, toys, accessories, and health products for dogs, cats, and small animals.',
-    items: ['Dog & Cat Food and Treats', 'Grooming Tools & Products', 'Beds, Crates & Carriers', 'Toys & Enrichment Products', 'Health & Wellness Supplements', 'Leashes, Collars & Apparel'],
-    why: 'Pet Supplies is a recession-resistant category with extremely loyal, repeat customers — one of the best performing categories on Amazon.',
+    desc: 'Pet ownership is at an all-time high. We distribute pet food, treats, grooming products, toys, accessories, and health products for dogs, cats, birds, fish, and small animals from authorized brands.',
+    items: ['Dog & Cat Food and Treats', 'Grooming Tools & Products', 'Beds, Crates & Carriers', 'Toys & Enrichment Products', 'Health & Wellness Supplements', 'Aquarium & Small Animal Supplies'],
+    why: 'Pet Supplies is a recession-resistant category with extremely loyal, repeat customers and strong subscription buying patterns — one of the best performing categories on Amazon.',
+  },
+  {
+    name: 'Health & Wellness',
+    emoji: '💊',
+    img: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&q=80',
+    desc: 'We source vitamins, supplements, personal care products, first aid supplies, and wellness essentials from authorized brands and domestic distributors with strong Amazon velocity.',
+    items: ['Vitamins & Dietary Supplements', 'Natural & Organic Wellness', 'Personal Care & Hygiene', 'First Aid & Medical Supplies', 'Sports Nutrition & Protein', 'Essential Oils & Aromatherapy'],
+    why: 'Health & Wellness is one of the highest-repeat-purchase categories on Amazon, driven by subscription habits and brand loyalty. Authorized sourcing and MAP compliance are especially important here.',
   },
   {
     name: 'Grocery & Food',
     emoji: '🛒',
     img: 'https://images.unsplash.com/photo-1542838132-92c53300491e?w=800&q=80',
-    desc: 'We work with specialty food brands, pantry staple manufacturers, and natural/organic food distributors to bring quality food products to Amazon shoppers.',
-    items: ['Pantry Staples & Condiments', 'Snacks & Specialty Foods', 'Natural & Organic Products', 'Coffee, Tea & Beverages', 'Health Foods & Supplements', 'International & Specialty Items'],
-    why: 'Grocery & Food on Amazon is a rapidly growing channel as consumers increasingly shop for pantry items online with subscription and replenishment habits.',
+    desc: 'We work with specialty food brands, pantry staple manufacturers, and natural/organic food distributors to bring quality food products to Amazon shoppers across the United States.',
+    items: ['Pantry Staples & Condiments', 'Snacks & Specialty Foods', 'Natural & Organic Products', 'Coffee, Tea & Beverages', 'Protein Bars & Health Foods', 'International & Specialty Items'],
+    why: 'Grocery & Food on Amazon is a rapidly growing channel as consumers increasingly shop for pantry items online with subscription and auto-replenishment purchasing habits.',
   },
   {
     name: 'Sports & Outdoors',
     emoji: '⚽',
     img: 'https://images.unsplash.com/photo-1517649763962-0c623066013b?w=800&q=80',
-    desc: 'From fitness equipment to camping gear, we distribute sports and outdoor products that support active lifestyles for Amazon\'s health-conscious consumer base.',
+    desc: 'From fitness equipment to camping gear, we distribute sports and outdoor products that support active lifestyles for Amazon\'s health-conscious consumer base from authorized brands.',
     items: ['Fitness Equipment & Accessories', 'Camping & Hiking Gear', 'Team & Recreational Sports', 'Water Sports & Swimming', 'Cycling Accessories', 'Yoga & Wellness Products'],
-    why: 'Sports & Outdoors sees strong seasonal peaks and growing baseline demand as health and fitness awareness continues to rise among Amazon shoppers.',
+    why: 'Sports & Outdoors sees strong seasonal peaks and growing baseline demand as health and fitness awareness continues to rise among Amazon shoppers. Consistent BSR and repeat purchases make this a reliable category.',
   },
 ]
 
@@ -58,13 +66,13 @@ export default function CategoriesPage() {
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <div style={{ maxWidth: '700px' }}>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'rgba(212,168,67,0.12)', border: '1px solid rgba(212,168,67,0.3)', borderRadius: '100px', padding: '6px 16px', marginBottom: '1.5rem' }}>
-              <span style={{ color: '#d4a843', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' }}>5 Active Product Categories</span>
+              <span style={{ color: '#d4a843', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' }}>6 Active Product Categories — Including Fragrance & Perfume</span>
             </div>
             <h1 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', color: 'white', marginBottom: '1.25rem', fontWeight: 900 }}>
               Product Categories <span className="gradient-text">We Distribute</span>
             </h1>
             <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.15rem', lineHeight: 1.75 }}>
-              We operate across five core Amazon FBA categories — sourcing from authorized brands, distributors, and manufacturers with consistent purchasing in each.
+              We operate across six high-velocity Amazon FBA categories — authorized brands only, MAP compliant, data-driven purchasing across each. Fragrance &amp; Perfume is our newest and fastest-growing vertical.
             </p>
           </div>
         </div>
@@ -117,7 +125,7 @@ export default function CategoriesPage() {
           <div className="accent-bar-center" />
           <h2 style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)', color: 'white', marginBottom: '1rem' }}>Interested in Supplying These Categories?</h2>
           <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '1.05rem', maxWidth: '520px', margin: '0 auto 2rem', lineHeight: 1.7 }}>
-            We are actively seeking wholesale accounts across all five categories. Submit an inquiry and we'll be in touch within one business day.
+            We are actively seeking wholesale accounts across all six categories — especially Fragrance &amp; Perfume, Home &amp; Kitchen, and Pet Supplies. Submit an inquiry and we&apos;ll be in touch within one business day.
           </p>
           <Link href="/supplier-info" className="btn-gold"><span>Submit Supplier Inquiry</span> <ArrowRight size={16} /></Link>
         </div>

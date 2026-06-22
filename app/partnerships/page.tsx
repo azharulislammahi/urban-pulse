@@ -3,8 +3,8 @@ import Link from 'next/link'
 import { CheckCircle2, ArrowRight, Shield, TrendingUp, Clock, FileText } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Wholesale Partnerships',
-  description: 'How Urban Pulse Wholesale LLC builds professional, long-term wholesale partnerships with brands, distributors, and manufacturers.',
+  title: 'Wholesale Partnerships | Fragrance & Brand Wholesale Accounts',
+  description: 'Urban Pulse Wholesale LLC actively seeks authorized wholesale accounts — with a priority focus on Fragrance & Perfume brands. Fully documented, MAP-compliant, Amazon FBA operator. Warren, Michigan.',
 }
 
 export default function PartnershipsPage() {
@@ -28,7 +28,12 @@ export default function PartnershipsPage() {
             <span style={{ color: '#d4a843', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>Wholesale Partnerships</span>
           </div>
           <h1 style={{ fontFamily: 'Playfair Display, Georgia, serif', fontWeight: 900, fontSize: 'clamp(2.5rem, 5vw, 3.75rem)', color: 'white', marginBottom: '1.25rem', lineHeight: 1.1, maxWidth: 700 }}>Professional Wholesale Relationships Built to Last</h1>
-          <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '1.1rem', lineHeight: 1.8, maxWidth: 600, fontFamily: 'Plus Jakarta Sans, sans-serif' }}>We approach every supplier relationship as a long-term partnership, not a one-time transaction. Our goal is to become a reliable, valued customer in your wholesale program.</p>
+          <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '1.1rem', lineHeight: 1.8, maxWidth: 600, fontFamily: 'Plus Jakarta Sans, sans-serif' }}>We approach every supplier relationship as a long-term partnership, not a one-time transaction. We are currently prioritizing authorized wholesale accounts in Fragrance &amp; Perfume, Home &amp; Kitchen, and Pet Supplies.</p>
+          <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', marginTop: '1.75rem' }}>
+            {['🌸 Fragrance Priority', '✓ MAP Compliant', '✓ LLC Registered', '✓ Amazon FBA Seller'].map(tag => (
+              <span key={tag} style={{ background: 'rgba(212,168,67,0.12)', border: '1px solid rgba(212,168,67,0.3)', borderRadius: 100, padding: '5px 14px', color: 'rgba(255,255,255,0.75)', fontSize: '0.78rem', fontFamily: 'Plus Jakarta Sans, sans-serif', fontWeight: 600 }}>{tag}</span>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -56,6 +61,43 @@ export default function PartnershipsPage() {
                     <div style={{ color: '#050d1f', fontWeight: 700, fontSize: '0.9rem', marginBottom: 4, fontFamily: 'Plus Jakarta Sans, sans-serif' }}>{item.title}</div>
                     <div style={{ color: '#64748b', fontSize: '0.84rem', lineHeight: 1.7, fontFamily: 'Plus Jakarta Sans, sans-serif' }}>{item.desc}</div>
                   </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FRAGRANCE BRANDS — FEATURED PITCH */}
+      <section style={{ padding: '6rem 0', background: 'linear-gradient(160deg, #0a0f1e 0%, #050d1f 60%, #0a1828 100%)', position: 'relative', overflow: 'hidden' }}>
+        <div style={{ position: 'absolute', width: 500, height: 500, borderRadius: '50%', background: 'radial-gradient(circle, rgba(212,168,67,0.1) 0%, transparent 70%)', top: -100, right: -80, pointerEvents: 'none' }} />
+        <div style={wrap}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'center' }}>
+            <div>
+              <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(212,168,67,0.12)', border: '1px solid rgba(212,168,67,0.3)', borderRadius: 100, padding: '6px 16px', marginBottom: '1.5rem' }}>
+                <span style={{ color: '#d4a843', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>🌸 Fragrance & Perfume — Priority Category</span>
+              </div>
+              <h2 style={{ ...h2w, fontSize: 'clamp(1.75rem, 3vw, 2.4rem)' }}>Why Fragrance Brands Should Work With Us</h2>
+              <p style={{ color: 'rgba(255,255,255,0.65)', lineHeight: 1.85, marginBottom: '1.25rem', fontFamily: 'Plus Jakarta Sans, sans-serif', fontSize: '1rem' }}>
+                Fragrance is the most brand-sensitive category on Amazon — and the one most damaged by gray-market and unauthorized resellers. Urban Pulse Wholesale LLC is exactly the kind of buyer fragrance brands need: authorized, documented, MAP-compliant, and Amazon DG-ready.
+              </p>
+              <p style={{ color: 'rgba(255,255,255,0.5)', lineHeight: 1.85, fontFamily: 'Plus Jakarta Sans, sans-serif', fontSize: '0.9rem' }}>
+                We are not a liquidator, discount reseller, or gray-market source. We are a registered Michigan LLC applying for your authorized wholesale program through your preferred channel, with complete documentation ready on day one.
+              </p>
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+              {[
+                { title: 'Amazon Dangerous Goods Compliance', desc: 'We are fully versed in Amazon\'s Dangerous Goods (hazmat) process for fragrance products — FHSA classification, SDS documentation, and FBA hazmat program enrollment. Your products are handled correctly from day one.' },
+                { title: 'Full SDS Documentation', desc: 'We request and maintain Safety Data Sheets for all applicable fragrance SKUs. We understand flammability classifications, UN numbers, and the full documentation chain Amazon requires.' },
+                { title: 'Brand-Protective Listing Management', desc: 'We never create unauthorized listings or modify brand content. All fragrance listings are managed within Amazon\'s brand registry guidelines to protect your intellectual property.' },
+                { title: 'MAP Enforcement — Zero Exceptions', desc: 'Fragrance pricing is some of the most sensitive in retail. We observe MAP policies without exception — no discounting, no workarounds, no promotional pricing without explicit supplier approval.' },
+              ].map(item => (
+                <div key={item.title} style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(212,168,67,0.18)', borderRadius: 14, padding: '1.25rem 1.4rem' }}>
+                  <div style={{ display: 'flex', gap: '0.6rem', alignItems: 'flex-start', marginBottom: 6 }}>
+                    <CheckCircle2 size={15} color="#d4a843" style={{ flexShrink: 0, marginTop: 2 }} />
+                    <div style={{ color: '#d4a843', fontWeight: 700, fontSize: '0.875rem', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>{item.title}</div>
+                  </div>
+                  <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.82rem', lineHeight: 1.7, fontFamily: 'Plus Jakarta Sans, sans-serif', margin: 0, paddingLeft: '1.5rem' }}>{item.desc}</p>
                 </div>
               ))}
             </div>

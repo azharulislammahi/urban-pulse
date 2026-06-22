@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import ContactForm from '../components/ContactForm'
 
 export const metadata: Metadata = {
-  title: 'Contact Us',
-  description: 'Contact Urban Pulse Wholesale LLC for supplier inquiries, partnership questions, and business documentation requests.',
+  title: 'Contact Us | Warren, Michigan | (586) 200-8750',
+  description: 'Contact Urban Pulse Wholesale LLC in Warren, Michigan. Email: support@urbanpulsewholesale.com | Phone: (586) 200-8750. We respond to all supplier and partnership inquiries within 1 business day.',
 }
 
 export default function ContactPage() {
@@ -41,16 +41,19 @@ export default function ContactPage() {
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.875rem', marginBottom: '2rem' }}>
                 {[
-                  { icon: '✉', label: 'Email', val: '[email@urbanpulsewholesale.com]' },
-                  { icon: '✆', label: 'Phone', val: '[Phone Number Placeholder]' },
-                  { icon: '⊙', label: 'Address', val: '[Business Address Placeholder]' },
-                  { icon: '◷', label: 'Hours', val: 'Monday – Friday, 9AM – 5PM' },
+                  { icon: '✉', label: 'Email', val: 'support@urbanpulsewholesale.com', href: 'mailto:support@urbanpulsewholesale.com' },
+                  { icon: '✆', label: 'Phone', val: '(586) 200-8750', href: 'tel:5862008750' },
+                  { icon: '⊙', label: 'Address', val: 'Warren, Michigan 48093', href: undefined },
+                  { icon: '◷', label: 'Hours', val: 'Monday – Friday, 9:00 AM – 5:00 PM EST', href: undefined },
                 ].map(item => (
                   <div key={item.label} style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start', background: 'white', borderRadius: 12, padding: '1.1rem 1.25rem', border: '1px solid #e2e8f0' }}>
                     <span style={{ fontSize: '1.1rem', color: '#d4a843', lineHeight: 1, flexShrink: 0, marginTop: 2 }}>{item.icon}</span>
                     <div>
                       <div style={{ color: '#050d1f', fontSize: '0.7rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 3, fontFamily: 'Plus Jakarta Sans, sans-serif' }}>{item.label}</div>
-                      <div style={{ color: '#64748b', fontSize: '0.875rem', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>{item.val}</div>
+                      {item.href
+                        ? <a href={item.href} style={{ color: '#64748b', fontSize: '0.875rem', fontFamily: 'Plus Jakarta Sans, sans-serif', textDecoration: 'none' }}>{item.val}</a>
+                        : <div style={{ color: '#64748b', fontSize: '0.875rem', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>{item.val}</div>
+                      }
                     </div>
                   </div>
                 ))}

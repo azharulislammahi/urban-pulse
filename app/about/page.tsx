@@ -3,8 +3,8 @@ import Link from 'next/link'
 import { CheckCircle2, ArrowRight } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'About Us',
-  description: 'Learn about Urban Pulse Wholesale LLC — our mission, values, and commitment to professional wholesale distribution.',
+  title: 'About Us | Michigan Amazon FBA Wholesale Distributor',
+  description: 'Learn about Urban Pulse Wholesale LLC — a professionally registered Michigan wholesale distribution company operating on Amazon FBA. Specializing in fragrance, personal care, home goods, and pet supplies with full MAP compliance. Warren, Michigan.',
 }
 
 const S = {
@@ -97,10 +97,10 @@ export default function AboutPage() {
             <h2 style={S.h2}>Who We Are</h2>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
               {[
-                'Urban Pulse Wholesale LLC is a professionally registered limited liability company engaged in wholesale product sourcing and e-commerce distribution. Our primary sales channel is Amazon FBA (Fulfilled by Amazon), where we operate a dedicated seller account managed to the highest performance standards.',
-                'We source products from authorized brands, manufacturers, and distributors. Our purchasing process is organized, documented, and conducted with full respect for supplier onboarding requirements and policies.',
-                'We are not a broker, liquidator, or gray market reseller. We pursue legitimate, authorized wholesale accounts and operate entirely within the terms established by each supplier. Our customers are Amazon shoppers purchasing genuine products at competitive prices.',
-                'Our team brings experience in e-commerce operations, inventory management, marketplace compliance, and supply chain logistics. We apply that experience to serve our supplier partners well and to represent their products responsibly in the marketplace.',
+                'Urban Pulse Wholesale LLC is a professionally registered limited liability company based in Warren, Michigan, engaged in wholesale product sourcing and Amazon FBA distribution. We purchase from authorized brands and licensed distributors and sell exclusively through Amazon\'s Fulfilled by Amazon (FBA) program — reaching millions of Prime customers across the United States.',
+                'We specialize in six high-velocity categories: Fragrance & Perfume, Home & Kitchen, Pet Supplies, Health & Wellness, Grocery & Food, and Sports & Outdoors. Our buying decisions are driven by verified sales velocity data and brand relationship quality — never guesswork.',
+                'We are not a broker, liquidator, or gray market reseller. Every product we carry comes from a legitimate, authorized wholesale account — signed agreements, documented purchasing, and full respect for each brand\'s MAP policies and reseller terms.',
+                'We have a particular focus on the Fragrance & Perfume category, one of the fastest-growing segments on Amazon. We understand this is a category where brand protection matters most — counterfeit and gray-market product is rampant. We are fully versed in Amazon Dangerous Goods compliance for fragrance products and provide complete SDS documentation for all applicable SKUs.',
               ].map((text, i) => (
                 <p key={i} style={i === 0 ? S.pLg : S.p}>{text}</p>
               ))}

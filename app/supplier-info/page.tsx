@@ -3,8 +3,8 @@ import { CheckCircle2 } from 'lucide-react'
 import SupplierForm from '../components/SupplierForm'
 
 export const metadata: Metadata = {
-  title: 'Supplier Information & Inquiry',
-  description: 'Information for brands and distributors interested in working with Urban Pulse Wholesale LLC as an authorized wholesale buyer.',
+  title: 'Supplier Information & Wholesale Inquiry',
+  description: 'Brands and distributors: apply to work with Urban Pulse Wholesale LLC as an authorized wholesale buyer. We provide LLC documentation, EIN, resale certificate, Amazon verification, and signed MAP agreements. Fast response — Warren, Michigan.',
 }
 
 export default function SupplierInfoPage() {
@@ -26,7 +26,7 @@ export default function SupplierInfoPage() {
           </div>
           <h1 style={{ fontFamily: 'Playfair Display, Georgia, serif', fontWeight: 900, fontSize: 'clamp(2.5rem, 5vw, 3.75rem)', color: 'white', marginBottom: '1.25rem', lineHeight: 1.1, maxWidth: 700 }}>Supplier Information & Wholesale Inquiry</h1>
           <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '1.1rem', lineHeight: 1.8, maxWidth: 600, fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
-            We welcome opportunities to establish new supplier relationships and are committed to maintaining professional standards throughout the onboarding process.
+            Urban Pulse Wholesale LLC is actively seeking authorized wholesale accounts — with particular interest in Fragrance &amp; Perfume, Home &amp; Kitchen, and Pet Supplies. We are a Michigan-registered LLC with complete onboarding documentation ready, a clean Amazon Professional Seller account, and a track record of MAP-compliant purchasing. We respond to all supplier inquiries within one business day.
           </p>
         </div>
       </section>

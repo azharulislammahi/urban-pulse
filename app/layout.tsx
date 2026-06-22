@@ -6,11 +6,11 @@ import Footer from './components/Footer'
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.urbanpulsewholesale.com'),
   title: {
-    default: 'Urban Pulse Wholesale LLC | Professional Wholesale Distribution & Amazon FBA',
+    default: 'Urban Pulse Wholesale LLC | Authorized Amazon FBA Wholesale Distributor — Warren, Michigan',
     template: '%s | Urban Pulse Wholesale LLC',
   },
-  description: 'Urban Pulse Wholesale LLC — professional wholesale distribution and Amazon FBA operations. We partner with brands, manufacturers, and distributors to build long-term wholesale relationships.',
-  keywords: ['wholesale distribution', 'Amazon FBA', 'wholesale supplier', 'brand partnerships', 'e-commerce wholesale'],
+  description: 'Urban Pulse Wholesale LLC is a Michigan-based authorized wholesale distributor operating on Amazon FBA. We source from licensed brands in fragrance, home & kitchen, pet supplies, health & wellness, and more. MAP compliant. LLC registered.',
+  keywords: ['wholesale distributor Michigan', 'Amazon FBA wholesale', 'authorized brand wholesaler', 'fragrance wholesale distributor', 'wholesale account Amazon', 'Urban Pulse Wholesale', 'Warren Michigan wholesale', 'Amazon FBA distributor', 'brand wholesale partner'],
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },
@@ -28,6 +28,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://www.urbanpulsewholesale.com',
     siteName: 'Urban Pulse Wholesale LLC',
+    description: 'Michigan-based authorized wholesale distributor specializing in fragrance, home & kitchen, pet supplies, and more. Amazon FBA. MAP compliant.',
   },
   robots: { index: true, follow: true },
 }
@@ -44,7 +45,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           "@type": "Organization",
           "name": "Urban Pulse Wholesale LLC",
           "url": "https://www.urbanpulsewholesale.com",
-          "description": "Professional wholesale distribution and Amazon FBA operations.",
+          "description": "Michigan-based authorized wholesale distributor operating on Amazon FBA. Specializing in fragrance, home & kitchen, pet supplies, health & wellness, and more.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Warren",
+            "addressRegion": "MI",
+            "postalCode": "48093",
+            "addressCountry": "US"
+          },
+          "telephone": "+15862008750",
+          "email": "support@urbanpulsewholesale.com",
+          "areaServed": "US",
+          "sameAs": ["https://linkedin.com/company/urban-pulse-wholesale"]
         })}} />
       </head>
       <body>

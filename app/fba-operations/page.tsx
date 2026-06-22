@@ -3,8 +3,8 @@ import Link from 'next/link'
 import { CheckCircle2, ArrowRight } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Amazon FBA Operations',
-  description: 'Learn about Urban Pulse Wholesale LLC\'s Amazon FBA operations — inventory management, fulfillment, and marketplace compliance.',
+  title: 'Amazon FBA Operations | Urban Pulse Wholesale LLC',
+  description: 'Urban Pulse Wholesale LLC runs a fully compliant Amazon FBA operation — fragrance DG handling, systematic inventory management, and professional marketplace standards. Warren, Michigan.',
 }
 
 export default function FBAPage() {
@@ -28,7 +28,12 @@ export default function FBAPage() {
             <span style={{ color: '#0ea5b0', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>Amazon FBA Operations</span>
           </div>
           <h1 style={{ fontFamily: 'Playfair Display, Georgia, serif', fontWeight: 900, fontSize: 'clamp(2.5rem, 5vw, 3.75rem)', color: 'white', marginBottom: '1.25rem', lineHeight: 1.1, maxWidth: 700 }}>Professional Amazon FBA Operations & Fulfillment</h1>
-          <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '1.1rem', lineHeight: 1.8, maxWidth: 600, fontFamily: 'Plus Jakarta Sans, sans-serif' }}>We operate an organized, compliant Amazon FBA business with systematic processes for inventory management, product prep, and marketplace compliance.</p>
+          <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '1.1rem', lineHeight: 1.8, maxWidth: 600, fontFamily: 'Plus Jakarta Sans, sans-serif' }}>We operate an organized, compliant Amazon FBA business with systematic processes for inventory management, product prep, and marketplace compliance — including full Amazon Dangerous Goods handling for Fragrance &amp; Perfume SKUs.</p>
+          <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', marginTop: '1.75rem' }}>
+            {['✓ FBA Prep Compliant', '✓ DG / Hazmat Ready', '✓ MAP Enforced', '✓ Account Health Monitored'].map(tag => (
+              <span key={tag} style={{ background: 'rgba(14,165,176,0.12)', border: '1px solid rgba(14,165,176,0.3)', borderRadius: 100, padding: '5px 14px', color: 'rgba(255,255,255,0.75)', fontSize: '0.78rem', fontFamily: 'Plus Jakarta Sans, sans-serif', fontWeight: 600 }}>{tag}</span>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -144,6 +149,58 @@ export default function FBAPage() {
         </div>
       </section>
 
+      {/* FRAGRANCE DG COMPLIANCE */}
+      <section style={{ padding: '6rem 0', background: '#f8f9fc' }}>
+        <div style={wrap}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'start' }}>
+            <div>
+              <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(212,168,67,0.1)', border: '1px solid rgba(212,168,67,0.25)', borderRadius: 100, padding: '6px 16px', marginBottom: '1.25rem' }}>
+                <span style={{ color: '#a87c1f', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>🌸 Fragrance Category</span>
+              </div>
+              <div style={bar} />
+              <h2 style={h2}>Amazon Dangerous Goods Compliance for Fragrance</h2>
+              <p style={{ ...pLg, marginBottom: '1.25rem' }}>
+                Fragrance and perfume products are classified as Dangerous Goods (hazmat) on Amazon due to their flammable liquid content. We are fully prepared to handle the complete DG compliance process — from product classification through FBA hazmat program enrollment.
+              </p>
+              <p style={{ ...p, marginBottom: '1.25rem' }}>
+                This is one of the most common barriers preventing new sellers from entering the fragrance category. We have invested in understanding the regulatory requirements so that fragrance brands can trust their products will arrive at FBA — and reach customers — without compliance delays or account risk.
+              </p>
+              <p style={p}>
+                Every fragrance SKU we carry is documented, classified, and enrolled in Amazon's hazmat review process before the first unit ships. Suppliers never have to worry about a compliance issue creating a listing problem on their products.
+              </p>
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+              <div style={{ background: '#050d1f', borderRadius: 20, padding: '1.75rem', marginBottom: '0.5rem' }}>
+                <div style={{ color: '#d4a843', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', marginBottom: '1.25rem', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>Our DG Compliance Process</div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.875rem' }}>
+                  {[
+                    { step: '1', title: 'FHSA Classification Review', desc: 'Each fragrance product reviewed for flammable liquid classification under the Federal Hazardous Substances Act.' },
+                    { step: '2', title: 'SDS Collection', desc: 'Safety Data Sheet requested and obtained from supplier for every applicable SKU prior to inbound shipment.' },
+                    { step: '3', title: 'Amazon DG Submission', desc: 'Product submitted through Amazon\'s Dangerous Goods review program with SDS and product documentation.' },
+                    { step: '4', title: 'Hazmat FBA Enrollment', desc: 'Products enrolled in Amazon\'s FBA hazmat storage program once review is complete.' },
+                    { step: '5', title: 'Ongoing Monitoring', desc: 'DG status and SDS validity monitored continuously to prevent compliance gaps.' },
+                  ].map(item => (
+                    <div key={item.step} style={{ display: 'flex', gap: '0.875rem', alignItems: 'flex-start', paddingBottom: '0.875rem', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
+                      <div style={{ width: 28, height: 28, borderRadius: '50%', background: 'linear-gradient(135deg, #d4a843, #0ea5b0)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                        <span style={{ color: 'white', fontWeight: 800, fontSize: '0.72rem', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>{item.step}</span>
+                      </div>
+                      <div>
+                        <div style={{ color: '#d4a843', fontWeight: 700, fontSize: '0.82rem', marginBottom: 3, fontFamily: 'Plus Jakarta Sans, sans-serif' }}>{item.title}</div>
+                        <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.8rem', lineHeight: 1.6, fontFamily: 'Plus Jakarta Sans, sans-serif' }}>{item.desc}</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div style={{ background: 'rgba(14,165,176,0.06)', border: '1px solid rgba(14,165,176,0.2)', borderRadius: 12, padding: '1.1rem 1.25rem' }}>
+                <div style={{ color: '#0ea5b0', fontWeight: 700, fontSize: '0.82rem', marginBottom: 4, fontFamily: 'Plus Jakarta Sans, sans-serif' }}>What This Means for Fragrance Suppliers</div>
+                <p style={{ color: '#64748b', fontSize: '0.84rem', lineHeight: 1.7, fontFamily: 'Plus Jakarta Sans, sans-serif', margin: 0 }}>When you grant Urban Pulse Wholesale LLC an authorized account, your fragrance products will be handled by a buyer who knows exactly how to get them into FBA compliantly — protecting your brand and your Amazon presence.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FORECASTING */}
       <section style={{ padding: '6rem 0', background: 'linear-gradient(160deg, #030b1a 0%, #050d1f 100%)', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', width: 500, height: 500, borderRadius: '50%', background: 'radial-gradient(circle, rgba(212,168,67,0.08) 0%, transparent 70%)', bottom: -150, left: -100, pointerEvents: 'none' }} />
@@ -184,7 +241,7 @@ export default function FBAPage() {
         <div style={wrap}>
           <div style={barC} />
           <h2 style={{ ...h2, textAlign: 'center', maxWidth: 600, margin: '0 auto 1rem' }}>Interested in Supplying Urban Pulse Wholesale?</h2>
-          <p style={{ ...p, maxWidth: 520, margin: '0 auto 2.5rem', fontSize: '1rem' }}>We are actively seeking new supplier partnerships across all five product categories. Reach out to begin the conversation.</p>
+          <p style={{ ...p, maxWidth: 520, margin: '0 auto 2.5rem', fontSize: '1rem' }}>We are actively seeking new supplier partnerships across all six product categories — with a priority focus on Fragrance &amp; Perfume. Reach out to begin the conversation.</p>
           <Link href="/supplier-info" style={btn}>Supplier Information & Inquiry <ArrowRight size={15} /></Link>
         </div>
       </section>

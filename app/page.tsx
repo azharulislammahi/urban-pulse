@@ -3,14 +3,15 @@ import Link from 'next/link'
 import { ArrowRight, CheckCircle2, Shield, Handshake, BarChart3, TrendingUp, Package, Star } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Urban Pulse Wholesale LLC | Building Strong Wholesale Partnerships',
-  description: 'Professional wholesale distribution and Amazon FBA operations.',
+  title: 'Urban Pulse Wholesale LLC | Authorized Amazon FBA Wholesale Distributor — Warren, Michigan',
+  description: 'Urban Pulse Wholesale LLC is a Michigan-based authorized wholesale distributor operating on Amazon FBA. Specializing in fragrance, home & kitchen, pet supplies, health & wellness, and more. MAP compliant. LLC registered.',
 }
 
 const categories = [
+  { name: 'Fragrance & Perfume', emoji: '🌸', img: 'https://images.unsplash.com/photo-1541643600914-78b084683702?w=800&q=80', desc: 'Oud, attar, parfum & home scent' },
   { name: 'Home & Kitchen', emoji: '🏠', img: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80', desc: 'Cookware, appliances & décor' },
-  { name: 'Toys & Games', emoji: '🎮', img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80', desc: 'Educational & family fun' },
   { name: 'Pet Supplies', emoji: '🐾', img: 'https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=800&q=80', desc: 'Food, toys & accessories' },
+  { name: 'Health & Wellness', emoji: '💊', img: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&q=80', desc: 'Supplements & personal care' },
   { name: 'Grocery & Food', emoji: '🛒', img: 'https://images.unsplash.com/photo-1542838132-92c53300491e?w=800&q=80', desc: 'Pantry staples & specialty' },
   { name: 'Sports & Outdoors', emoji: '⚽', img: 'https://images.unsplash.com/photo-1517649763962-0c623066013b?w=800&q=80', desc: 'Fitness & outdoor gear' },
 ]
@@ -41,6 +42,7 @@ export default function HomePage() {
         .three-col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
         .four-col { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
         .five-col { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; }
+        .six-col { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1rem; }
         .photo-grid-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 0.875rem; }
         .photo-item { border-radius: 14px; overflow: hidden; height: 200px; }
         .photo-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -57,6 +59,7 @@ export default function HomePage() {
           .three-col { grid-template-columns: 1fr !important; gap: 1rem !important; }
           .four-col { grid-template-columns: 1fr 1fr !important; gap: 0.75rem !important; }
           .five-col { grid-template-columns: 1fr 1fr !important; gap: 0.75rem !important; }
+          .six-col { grid-template-columns: 1fr 1fr !important; gap: 0.75rem !important; }
           .photo-grid-wrap { grid-template-columns: 1fr !important; gap: 0.75rem !important; }
           .photo-item { height: 220px !important; margin-top: 0 !important; }
           .cat-item { height: 180px !important; }
@@ -67,6 +70,7 @@ export default function HomePage() {
         @media (min-width: 768px) and (max-width: 1023px) {
           .two-col { grid-template-columns: 1fr !important; gap: 3rem !important; }
           .five-col { grid-template-columns: repeat(3, 1fr) !important; }
+          .six-col { grid-template-columns: repeat(3, 1fr) !important; }
           .three-col { grid-template-columns: 1fr 1fr !important; }
         }
       `}</style>
@@ -104,8 +108,11 @@ export default function HomePage() {
 
           <div style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', fontWeight: 300, fontSize: 'clamp(0.8rem, 3vw, 1rem)', color: 'rgba(255,255,255,0.4)', letterSpacing: '0.28em', textTransform: 'uppercase', marginBottom: '2rem' }}>Wholesale LLC</div>
 
-          <p style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', color: 'rgba(255,255,255,0.65)', fontSize: 'clamp(0.95rem, 3vw, 1.15rem)', lineHeight: 1.8, maxWidth: 560, margin: '0 auto 2.5rem' }}>
-            Building strong partnerships with brands, distributors, and manufacturers through professional Amazon FBA operations and transparent wholesale practices.
+          <p style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', color: 'rgba(255,255,255,0.65)', fontSize: 'clamp(0.95rem, 3vw, 1.15rem)', lineHeight: 1.8, maxWidth: 560, margin: '0 auto 1rem' }}>
+            Authorized wholesale distribution in Fragrance, Home &amp; Kitchen, Pet Supplies, Health &amp; Wellness, and more — sourced from licensed brands, sold on Amazon FBA.
+          </p>
+          <p style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', color: 'rgba(255,255,255,0.4)', fontSize: 'clamp(0.8rem, 2.5vw, 0.9rem)', lineHeight: 1.7, maxWidth: 480, margin: '0 auto 2.5rem' }}>
+            Warren, Michigan · LLC Registered · MAP Compliant · Amazon Professional Seller
           </p>
 
           <div style={{ display: 'flex', gap: '0.875rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '2.5rem' }}>
@@ -134,10 +141,10 @@ export default function HomePage() {
         <div className="page-wrap">
           <div className="four-col">
             {[
-              { num: '5', label: 'Product Categories' },
+              { num: '6', label: 'Product Categories' },
               { num: 'FBA', label: 'Primary Channel' },
               { num: '100%', label: 'MAP Compliant' },
-              { num: 'LLC', label: 'Registered Business' },
+              { num: 'LLC', label: 'Warren, Michigan' },
             ].map((s, i) => (
               <div key={i} style={{ textAlign: 'center', padding: '0.5rem 0' }}>
                 <div style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(1.6rem, 5vw, 2.5rem)', fontWeight: 900, background: 'linear-gradient(135deg, #d4a843, #0ea5b0)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', lineHeight: 1, marginBottom: 6 }}>{s.num}</div>
@@ -156,10 +163,13 @@ export default function HomePage() {
               <div className="grad-bar" />
               <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(1.75rem, 4vw, 2.75rem)', color: '#050d1f', marginBottom: '1.25rem', fontWeight: 700 }}>Who We Are</h2>
               <p style={{ color: '#475569', fontSize: 'clamp(0.9rem, 2.5vw, 1.05rem)', lineHeight: 1.85, marginBottom: '1.25rem', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
-                Urban Pulse Wholesale LLC is a professionally registered wholesale distribution company operating primarily through the Amazon FBA channel. We source products from authorized brands and distributors, delivering them through Amazon's world-class fulfillment network.
+                Urban Pulse Wholesale LLC is a professionally registered wholesale distribution company based in Warren, Michigan. We source products exclusively from authorized brands and distributors and sell through Amazon FBA — reaching millions of Prime customers across the United States.
+              </p>
+              <p style={{ color: '#64748b', lineHeight: 1.85, marginBottom: '1.25rem', fontFamily: 'Plus Jakarta Sans, sans-serif', fontSize: '0.95rem' }}>
+                We specialize in Fragrance &amp; Perfume, Home &amp; Kitchen, Pet Supplies, Health &amp; Wellness, Grocery &amp; Food, and Sports &amp; Outdoors. Our buying decisions are driven by sales velocity data and brand relationship quality — never guesswork.
               </p>
               <p style={{ color: '#64748b', lineHeight: 1.85, marginBottom: '2rem', fontFamily: 'Plus Jakarta Sans, sans-serif', fontSize: '0.95rem' }}>
-                We are not brokers, liquidators, or gray market sellers. We pursue legitimate, authorized wholesale accounts and operate entirely within each supplier's established terms and policies.
+                We are not brokers, liquidators, or gray market sellers. Every product we carry comes from a legitimate, authorized wholesale account — signed agreements, documented purchasing, and full MAP compliance.
               </p>
               <div style={{ background: '#050d1f', borderRadius: 16, padding: '1.5rem', marginBottom: '2rem' }}>
                 <div style={{ color: '#d4a843', fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', marginBottom: '0.6rem', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>Our Mission</div>
@@ -196,9 +206,9 @@ export default function HomePage() {
           <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
             <div className="grad-bar-c" />
             <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(1.75rem, 4vw, 2.75rem)', color: 'white', marginBottom: '1rem', fontWeight: 700 }}>Categories We Distribute</h2>
-            <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.95rem', maxWidth: 480, margin: '0 auto', lineHeight: 1.75, fontFamily: 'Plus Jakarta Sans, sans-serif' }}>Five core Amazon FBA categories with consistent, data-driven purchasing across each.</p>
+            <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.95rem', maxWidth: 520, margin: '0 auto', lineHeight: 1.75, fontFamily: 'Plus Jakarta Sans, sans-serif' }}>Six high-velocity Amazon FBA categories — authorized brands only, MAP compliant, data-driven purchasing across each.</p>
           </div>
-          <div className="five-col">
+          <div className="six-col">
             {categories.map((cat, i) => (
               <div key={i} className="cat-item">
                 <img src={cat.img} alt={cat.name} />
@@ -265,8 +275,8 @@ export default function HomePage() {
                 <img className="fba-img" src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80" alt="Amazon FBA warehouse" style={{ width: '100%', height: 420, objectFit: 'cover', display: 'block' }} />
               </div>
               <div className="hide-mob" style={{ position: 'absolute', bottom: -18, left: -18, background: 'rgba(5,13,31,0.96)', border: '1px solid rgba(212,168,67,0.25)', borderRadius: 12, padding: '1rem 1.25rem' }}>
-                <div style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.62rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 2, fontFamily: 'Plus Jakarta Sans, sans-serif' }}>Monthly Budget</div>
-                <div style={{ fontFamily: 'Playfair Display, serif', fontSize: '1.5rem', fontWeight: 900, background: 'linear-gradient(135deg, #d4a843, #0ea5b0)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>$10K–$50K</div>
+                <div style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.62rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 2, fontFamily: 'Plus Jakarta Sans, sans-serif' }}>Fragrance</div>
+                <div style={{ fontFamily: 'Playfair Display, serif', fontSize: '1.1rem', fontWeight: 900, background: 'linear-gradient(135deg, #d4a843, #0ea5b0)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Featured Category</div>
               </div>
             </div>
           </div>
@@ -278,8 +288,11 @@ export default function HomePage() {
         <div style={{ position: 'absolute', inset: 0, backgroundImage: 'repeating-linear-gradient(45deg, rgba(5,13,31,0.04) 0, rgba(5,13,31,0.04) 1px, transparent 0, transparent 50%)', backgroundSize: '18px 18px' }} />
         <div className="page-wrap" style={{ textAlign: 'center', position: 'relative', zIndex: 1 }}>
           <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(1.75rem, 4vw, 2.75rem)', color: '#050d1f', marginBottom: '1rem', fontWeight: 900 }}>Ready to Establish a Wholesale Account?</h2>
-          <p style={{ color: 'rgba(5,13,31,0.65)', fontSize: '1rem', maxWidth: 500, margin: '0 auto 2.5rem', lineHeight: 1.75, fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
-            We welcome new supplier partnerships and are fully prepared to provide all required business documentation during onboarding.
+          <p style={{ color: 'rgba(5,13,31,0.65)', fontSize: '1rem', maxWidth: 560, margin: '0 auto 0.75rem', lineHeight: 1.75, fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
+            We are actively building wholesale account relationships across all six categories — with particular interest in Fragrance &amp; Perfume, Home &amp; Kitchen, and Pet Supplies.
+          </p>
+          <p style={{ color: 'rgba(5,13,31,0.55)', fontSize: '0.9rem', maxWidth: 500, margin: '0 auto 2.5rem', lineHeight: 1.75, fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
+            We provide complete onboarding documentation and respond to all supplier inquiries within one business day.
           </p>
           <div style={{ display: 'flex', gap: '0.875rem', justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link href="/supplier-info" style={{ background: '#050d1f', color: 'white', fontWeight: 800, padding: '0.9rem 2rem', borderRadius: 6, fontFamily: 'Plus Jakarta Sans, sans-serif', fontSize: '0.82rem', letterSpacing: '0.06em', textTransform: 'uppercase', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8 }}>
