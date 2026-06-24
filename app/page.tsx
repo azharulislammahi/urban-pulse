@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 }
 
 const categories = [
-  { name: 'Fragrance & Perfume', img: 'https://images.unsplash.com/photo-1541643600914-78b084683702?w=800&q=80', desc: 'Oud, attar, parfum & home scent' },
+  { name: 'Fragrance & Perfume', img: 'https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=800&q=80', desc: 'Oud, attar, parfum & home scent' },
   { name: 'Home & Kitchen',      img: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80', desc: 'Cookware, appliances & décor' },
   { name: 'Pet Supplies',        img: 'https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=800&q=80', desc: 'Food, toys & accessories' },
   { name: 'Health & Wellness',   img: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&q=80', desc: 'Supplements & personal care' },

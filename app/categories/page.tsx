@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 const categories = [
   {
     name: 'Fragrance & Perfume',
-    img: 'https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=800&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=500&q=80',
       'https://images.unsplash.com/photo-1608721279136-cd41b752fa41?w=500&q=80',
