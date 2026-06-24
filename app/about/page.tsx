@@ -50,9 +50,9 @@ export default function AboutPage() {
       </section>
 
       {/* ── MISSION ── */}
-      <section style={{ padding: '6rem 0', background: C.white }}>
+      <section className="section" style={{ background: C.white }}>
         <div style={wrap}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'start' }}>
+          <div className="mob-1col tab-1col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'start' }}>
             <div>
               <div style={bar} />
               <h2 style={h2}>Our Mission</h2>
@@ -89,7 +89,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── WHO WE ARE ── */}
-      <section style={{ padding: '6rem 0', background: C.cream2 }}>
+      <section className="section" style={{ background: C.cream2 }}>
         <div style={wrap}>
           <div style={{ maxWidth: 780, margin: '0 auto' }}>
             <div style={bar} />
@@ -109,14 +109,14 @@ export default function AboutPage() {
       </section>
 
       {/* ── APPROACH ── */}
-      <section style={{ padding: '6rem 0', background: C.white }}>
+      <section className="section" style={{ background: C.white }}>
         <div style={wrap}>
           <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
             <div style={barC} />
             <h2 style={{ ...h2, textAlign: 'center', marginBottom: '1rem' }}>Our Approach to Wholesale</h2>
             <p style={{ color: C.muted, maxWidth: 520, margin: '0 auto', fontFamily: 'Plus Jakarta Sans, sans-serif', fontSize: '0.95rem' }}>How we operate at every stage — from sourcing to long-term partnership management.</p>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.25rem' }}>
+          <div className="mob-1col tab-2col" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.25rem' }}>
             {[
               { num: '01', title: 'Sourcing with Integrity',     desc: 'We identify products where we can add genuine value — pursuing only authorized wholesale accounts and avoiding unauthorized sourcing.' },
               { num: '02', title: 'Supplier-First Communication', desc: 'We initiate supplier relationships with full disclosure of our business model. Account managers always know exactly who they are working with.' },
@@ -136,10 +136,10 @@ export default function AboutPage() {
       </section>
 
       {/* ── E-COMMERCE EXPERTISE ── */}
-      <section style={{ padding: '6rem 0', background: C.cream2, position: 'relative', overflow: 'hidden' }}>
+      <section className="section" style={{ background: C.cream2, position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', width: 400, height: 400, borderRadius: '50%', background: `radial-gradient(circle, rgba(196,98,58,0.06) 0%, transparent 70%)`, top: -100, right: -80, pointerEvents: 'none' }} />
         <div style={{ ...wrap, position: 'relative', zIndex: 1 }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'center' }}>
+          <div className="mob-1col tab-1col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'center' }}>
             <div>
               <div style={bar} />
               <h2 style={h2}>Amazon FBA Expertise</h2>
@@ -155,7 +155,7 @@ export default function AboutPage() {
               <Link href="/fba-operations" style={btn}>View FBA Operations <ArrowRight size={15} /></Link>
             </div>
             <div style={{ borderRadius: 20, overflow: 'hidden', border: `1px solid ${C.beige}`, boxShadow: '0 16px 48px rgba(28,28,26,0.08)' }}>
-              <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=700&q=85" alt="Wholesale warehouse operations and Amazon FBA fulfillment" style={{ width: '100%', height: 420, objectFit: 'cover', display: 'block' }} />
+              <img className="mob-img-sm" src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=700&q=85" alt="Wholesale warehouse operations and Amazon FBA fulfillment" style={{ width: '100%', height: 420, objectFit: 'cover', display: 'block' }} />
             </div>
           </div>
         </div>

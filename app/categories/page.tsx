@@ -116,8 +116,8 @@ export default function CategoriesPage() {
       {categories.map((cat, i) => (
         <section key={i} className="section" style={{ background: i % 2 === 0 ? '#FAFAF5' : '#F5F0EA' }}>
           <div className="container">
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'center' }}>
-              <div style={{ order: i % 2 === 0 ? 1 : 2 }}>
+            <div className="mob-1col tab-1col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'center' }}>
+              <div className="mob-order-1" style={{ order: i % 2 === 0 ? 1 : 2 }}>
                 <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'rgba(196,98,58,0.08)', border: '1px solid rgba(196,98,58,0.18)', borderRadius: '100px', padding: '5px 14px', marginBottom: '1.25rem' }}>
                   <div style={{ width: 6, height: 6, borderRadius: '50%', background: '#C4623A' }} />
                   <span style={{ color: '#C4623A', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>Category</span>
@@ -140,17 +140,17 @@ export default function CategoriesPage() {
                 </div>
               </div>
 
-              <div style={{ order: i % 2 === 0 ? 2 : 1 }}>
+              <div className="mob-order-2" style={{ order: i % 2 === 0 ? 2 : 1 }}>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.65rem' }} className="card-3d">
                   {/* Main hero image */}
-                  <div style={{ borderRadius: '18px', overflow: 'hidden', position: 'relative', height: '260px', border: '1px solid #EDE7DE', boxShadow: '0 8px 32px rgba(28,28,26,0.07)' }}>
+                  <div className="cat-hero-img" style={{ borderRadius: '18px', overflow: 'hidden', position: 'relative', height: '260px', border: '1px solid #EDE7DE', boxShadow: '0 8px 32px rgba(28,28,26,0.07)' }}>
                     <img src={cat.img} alt={`${cat.name} wholesale products Amazon FBA`} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
                     <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '1.25rem 1.5rem', background: 'linear-gradient(transparent, rgba(28,28,26,0.82))' }}>
                       <div style={{ color: 'white', fontFamily: 'Fraunces, Georgia, serif', fontSize: '1.2rem', fontWeight: 700 }}>{cat.name}</div>
                     </div>
                   </div>
                   {/* Thumbnail row — PRESERVED from original */}
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '0.65rem' }}>
+                  <div className="mob-hide" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '0.65rem' }}>
                     {cat.gallery.map((gImg, gi) => (
                       <div key={gi} style={{ borderRadius: '12px', overflow: 'hidden', height: '120px', border: '1px solid #EDE7DE' }}>
                         <img src={gImg} alt={`${cat.name} product ${gi + 1}`} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />

@@ -53,9 +53,9 @@ export default function PartnershipsPage() {
       </section>
 
       {/* ── PHILOSOPHY ── */}
-      <section style={{ padding: '6rem 0', background: C.white }}>
+      <section className="section" style={{ background: C.white }}>
         <div style={wrap}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'center' }}>
+          <div className="mob-1col tab-1col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'center' }}>
             <div>
               <div style={bar} />
               <h2 style={h2}>Our Partnership Philosophy</h2>
@@ -84,10 +84,10 @@ export default function PartnershipsPage() {
       </section>
 
       {/* ── FRAGRANCE PITCH ── */}
-      <section style={{ padding: '6rem 0', background: C.dark, position: 'relative', overflow: 'hidden' }}>
+      <section className="section" style={{ background: C.dark, position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', width: 500, height: 500, borderRadius: '50%', background: 'radial-gradient(circle, rgba(196,98,58,0.12) 0%, transparent 70%)', top: -100, right: -80, pointerEvents: 'none' }} />
         <div style={{ ...wrap, position: 'relative', zIndex: 1 }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'center' }}>
+          <div className="mob-1col tab-1col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'center' }}>
             <div>
               <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(196,98,58,0.15)', border: '1px solid rgba(196,98,58,0.3)', borderRadius: 100, padding: '6px 16px', marginBottom: '1.5rem' }}>
                 <div style={{ width: 6, height: 6, borderRadius: '50%', background: C.rust }} />
@@ -118,14 +118,14 @@ export default function PartnershipsPage() {
       </section>
 
       {/* ── WHAT SUPPLIERS CAN EXPECT ── */}
-      <section style={{ padding: '6rem 0', background: C.cream2 }}>
+      <section className="section" style={{ background: C.cream2 }}>
         <div style={wrap}>
           <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
             <div style={barC} />
             <h2 style={{ ...h2, textAlign: 'center' }}>What Suppliers Can Expect</h2>
             <p style={{ color: C.muted, maxWidth: 540, margin: '0 auto', fontFamily: 'Plus Jakarta Sans, sans-serif', fontSize: '1rem' }}>When you establish a wholesale relationship with Urban Pulse Wholesale, here is what you can count on.</p>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.25rem' }}>
+          <div className="mob-1col tab-2col" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.25rem' }}>
             {[
               { title: 'Timely Communication',     desc: 'Responses within one business day. You will always have a clear point of contact and will never be left wondering about order status or account activity.',  items: ['Prompt inquiry responses', 'Proactive order updates', 'Clear escalation paths'] },
               { title: 'Professional Account Mgmt', desc: 'We maintain organized records of all transactions, communications, and account documentation. Our supplier relationships are managed systematically, not ad hoc.', items: ['Organized purchase orders', 'Clear invoice management', 'Documentation on request'] },
@@ -152,7 +152,7 @@ export default function PartnershipsPage() {
       </section>
 
       {/* ── RESPONSIBLE SELLING ── */}
-      <section style={{ padding: '6rem 0', background: C.rust, position: 'relative', overflow: 'hidden' }}>
+      <section className="section" style={{ background: C.rust, position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', width: 500, height: 500, borderRadius: '50%', background: 'radial-gradient(circle, rgba(255,255,255,0.06) 0%, transparent 70%)', top: -100, right: -100, pointerEvents: 'none' }} />
         <div style={{ ...wrap, position: 'relative', zIndex: 1 }}>
           <div style={{ textAlign: 'center', maxWidth: 700, margin: '0 auto 3.5rem' }}>
@@ -160,7 +160,7 @@ export default function PartnershipsPage() {
             <h2 style={{ fontFamily: 'Fraunces, Georgia, serif', fontWeight: 900, fontSize: 'clamp(1.75rem, 3vw, 2.5rem)', color: C.white, textAlign: 'center', marginBottom: '1rem' }}>Responsible Marketplace Selling</h2>
             <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1rem', lineHeight: 1.8, fontFamily: 'Plus Jakarta Sans, sans-serif' }}>We have zero tolerance for practices that harm brands — price erosion, unauthorized listings, or poor customer experiences.</p>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1.25rem' }}>
+          <div className="mob-2col tab-2col" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1.25rem' }}>
             {[
               { title: 'MAP Compliance',   desc: 'We never advertise or sell below your established Minimum Advertised Price, period.' },
               { title: 'Authorized Only',  desc: 'We only sell products we have purchased directly from authorized wholesale sources.' },
@@ -180,7 +180,7 @@ export default function PartnershipsPage() {
       </section>
 
       {/* ── RELATIONSHIP LIFECYCLE ── */}
-      <section style={{ padding: '6rem 0', background: C.white }}>
+      <section className="section" style={{ background: C.white }}>
         <div style={wrap}>
           <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
             <div style={barC} />

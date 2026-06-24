@@ -53,9 +53,9 @@ export default function FBAPage() {
       </section>
 
       {/* ── WHAT IS FBA ── */}
-      <section style={{ padding: '6rem 0', background: C.white }}>
+      <section className="section" style={{ background: C.white }}>
         <div style={wrap}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'start' }}>
+          <div className="mob-1col tab-1col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'start' }}>
             <div>
               <div style={bar} />
               <h2 style={h2}>What is Amazon FBA?</h2>
@@ -89,14 +89,14 @@ export default function FBAPage() {
       </section>
 
       {/* ── WORKFLOW ── */}
-      <section style={{ padding: '6rem 0', background: C.cream2 }}>
+      <section className="section" style={{ background: C.cream2 }}>
         <div style={wrap}>
           <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
             <div style={barC} />
             <h2 style={{ ...h2, textAlign: 'center' }}>Our FBA Workflow</h2>
             <p style={{ color: C.muted, maxWidth: 500, margin: '0 auto', fontFamily: 'Plus Jakarta Sans, sans-serif', fontSize: '1rem' }}>From purchase order to customer delivery — a structured, professional process at every step.</p>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.25rem' }}>
+          <div className="mob-1col tab-2col" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.25rem' }}>
             {[
               { n: '01', title: 'Market Research',  desc: 'Analyze demand, competition, and margin data to identify products and determine purchasing quantities before committing.' },
               { n: '02', title: 'Purchase Order',   desc: 'Issue a formal PO to the supplier per their requirements. Confirm lead times, shipping details, and delivery instructions.' },
@@ -116,9 +116,9 @@ export default function FBAPage() {
       </section>
 
       {/* ── INVENTORY + MARKETPLACE ── */}
-      <section style={{ padding: '6rem 0', background: C.white }}>
+      <section className="section" style={{ background: C.white }}>
         <div style={wrap}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem' }}>
+          <div className="mob-1col tab-1col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem' }}>
             <div>
               <div style={bar} />
               <h2 style={h2}>Inventory Management</h2>
@@ -165,9 +165,9 @@ export default function FBAPage() {
       </section>
 
       {/* ── FRAGRANCE DG ── */}
-      <section style={{ padding: '6rem 0', background: C.cream2 }}>
+      <section className="section" style={{ background: C.cream2 }}>
         <div style={wrap}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'start' }}>
+          <div className="mob-1col tab-1col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'start' }}>
             <div>
               <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(196,98,58,0.09)', border: '1px solid rgba(196,98,58,0.22)', borderRadius: 100, padding: '6px 16px', marginBottom: '1.25rem' }}>
                 <div style={{ width: 6, height: 6, borderRadius: '50%', background: C.rust }} />
@@ -212,10 +212,10 @@ export default function FBAPage() {
       </section>
 
       {/* ── FORECASTING ── */}
-      <section style={{ padding: '6rem 0', background: C.dark, position: 'relative', overflow: 'hidden' }}>
+      <section className="section" style={{ background: C.dark, position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', width: 500, height: 500, borderRadius: '50%', background: 'radial-gradient(circle, rgba(196,98,58,0.1) 0%, transparent 70%)', bottom: -150, left: -100, pointerEvents: 'none' }} />
         <div style={{ ...wrap, position: 'relative', zIndex: 1 }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'center' }}>
+          <div className="mob-1col tab-1col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'center' }}>
             <div>
               <div style={{ width: 36, height: 3, background: C.rust, borderRadius: 2, marginBottom: '1.25rem' }} />
               <h2 style={{ ...h2, color: C.white }}>Product Forecasting &amp; Planning</h2>
@@ -223,7 +223,7 @@ export default function FBAPage() {
               <p style={{ color: 'rgba(255,255,255,0.5)', lineHeight: 1.85, marginBottom: '2rem', fontFamily: 'Plus Jakarta Sans, sans-serif', fontSize: '0.95rem' }}>We are happy to share our forecasting rationale with suppliers upon request. Transparency about our purchasing intentions helps build trust and enables better planning on both sides of the relationship.</p>
               <Link href="/supplier-info" style={btn}>Submit Supplier Inquiry <ArrowRight size={15} /></Link>
             </div>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+            <div className="mob-2col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
               {[
                 { title: 'Historical Sales Data', desc: 'Past performance analyzed to project future demand with accuracy.' },
                 { title: 'Market Trend Analysis', desc: 'Category trends and competitive dynamics monitored continuously.' },

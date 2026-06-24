@@ -401,4 +401,22 @@ html, body { overflow-x: hidden; max-width: 100%; }
   .fba-img          { height: 240px !important; }
   .step-grid        { grid-template-columns: 1fr 1fr !important; }
   .hide-mobile      { display: none !important; }
+
+  /* ── Category hero image — taller on mobile since thumbs are hidden ── */
+  .cat-hero-img { height: 320px !important; }
+
+  /* ── Utility overrides for pages using inline gridTemplateColumns ── */
+  .mob-1col    { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
+  .mob-2col    { grid-template-columns: 1fr 1fr !important; gap: 1rem !important; }
+  .mob-hide    { display: none !important; }
+  .mob-order-1 { order: 1 !important; }
+  .mob-order-2 { order: 2 !important; }
+  .mob-img-sm  { height: 220px !important; }
+  .section     { padding: 4rem 0 !important; }
+  .section-sm  { padding: 3rem 0 !important; }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .tab-1col  { grid-template-columns: 1fr !important; gap: 3rem !important; }
+  .tab-2col  { grid-template-columns: 1fr 1fr !important; gap: 1.5rem !important; }
+  .section   { padding: 5rem 0; }
 }
