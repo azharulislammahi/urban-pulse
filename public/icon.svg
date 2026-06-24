@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="14" fill="#FAFAF5"/>
+
+  <!-- U shape -->
+  <rect x="6" y="10" width="8" height="30" rx="4" fill="#C4623A"/>
+  <rect x="26" y="10" width="8" height="30" rx="4" fill="#C4623A"/>
+  <rect x="6" y="32" width="28" height="8" rx="4" fill="#C4623A"/>
+
+  <!-- Pulse line -->
+  <polyline
+    points="38,34 43,34 46,20 50,48 54,26 57,34 63,34"
+    fill="none"
+    stroke="#1C1C1A"
+    stroke-width="4"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>
