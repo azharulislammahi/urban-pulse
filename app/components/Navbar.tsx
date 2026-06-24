@@ -5,17 +5,18 @@ import { Menu, X } from 'lucide-react'
 import Logo from './Logo'
 
 const links = [
-  { href: '/', label: 'Home' },
-  { href: '/about', label: 'About' },
-  { href: '/partnerships', label: 'Partnerships' },
-  { href: '/fba-operations', label: 'FBA Ops' },
-  { href: '/categories', label: 'Categories' },
+  { href: '/',              label: 'Home' },
+  { href: '/about',         label: 'About' },
+  { href: '/partnerships',  label: 'Partnerships' },
+  { href: '/fba-operations',label: 'FBA Ops' },
+  { href: '/categories',    label: 'Categories' },
+  { href: '/catalog',       label: 'Catalog' },
   { href: '/supplier-info', label: 'Suppliers' },
-  { href: '/contact', label: 'Contact' },
+  { href: '/contact',       label: 'Contact' },
 ]
 
 export default function Navbar() {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen]       = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
@@ -27,39 +28,47 @@ export default function Navbar() {
   return (
     <>
       <style>{`
-        .nav-desktop { display: none; }
+        .nav-desktop   { display: none; }
         .nav-hamburger { display: flex; }
         @media (min-width: 1024px) {
-          .nav-desktop { display: flex; }
-          .nav-hamburger { display: none; }
+          .nav-desktop   { display: flex; }
+          .nav-hamburger { display: none;  }
         }
       `}</style>
 
       <header style={{
-        position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000,
-        transition: 'all 0.4s ease',
-        background: scrolled ? 'rgba(5,13,31,0.97)' : 'rgba(5,13,31,0.6)',
+        position:  'fixed',
+        top: 0, left: 0, right: 0,
+        zIndex:    1000,
+        transition: 'all 0.35s ease',
+        background: scrolled
+          ? 'rgba(250,250,245,0.97)'
+          : 'rgba(250,250,245,0.88)',
         backdropFilter: 'blur(20px)',
         WebkitBackdropFilter: 'blur(20px)',
-        borderBottom: '1px solid rgba(212,168,67,0.12)',
-        padding: scrolled ? '0.6rem 0' : '1rem 0',
+        borderBottom: '1px solid rgba(196,98,58,0.14)',
+        padding: scrolled ? '0.6rem 0' : '0.9rem 0',
       }}>
         <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 1.25rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          <Logo size="sm" variant="light" />
+          <Logo size="sm" variant="dark" />
 
           {/* Desktop nav */}
-          <nav className="nav-desktop" style={{ alignItems: 'center', gap: '1.75rem' }}>
+          <nav className="nav-desktop" style={{ alignItems: 'center', gap: '1.5rem' }}>
             {links.map(l => (
-              <Link key={l.href} href={l.href} style={{ fontSize: '0.82rem', fontWeight: 600, color: 'rgba(255,255,255,0.75)', letterSpacing: '0.06em', textTransform: 'uppercase', textDecoration: 'none', fontFamily: 'Plus Jakarta Sans, sans-serif', transition: 'color 0.2s' }}
-                onMouseEnter={e => (e.currentTarget.style.color = 'white')}
-                onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.75)')}>
+              <Link
+                key={l.href}
+                href={l.href}
+                style={{ fontSize: '0.78rem', fontWeight: 600, color: '#6B6460', letterSpacing: '0.05em', textTransform: 'uppercase', textDecoration: 'none', fontFamily: 'Plus Jakarta Sans, sans-serif', transition: 'color 0.2s' }}
+                onMouseEnter={e => (e.currentTarget.style.color = '#1C1C1A')}
+                onMouseLeave={e => (e.currentTarget.style.color = '#6B6460')}
+              >
                 {l.label}
               </Link>
             ))}
           </nav>
 
           <div className="nav-desktop">
-            <Link href="/supplier-info" style={{ background: 'linear-gradient(135deg, #d4a843, #f0c96a)', color: '#050d1f', fontWeight: 800, padding: '0.65rem 1.5rem', borderRadius: 6, fontFamily: 'Plus Jakarta Sans, sans-serif', fontSize: '0.78rem', letterSpacing: '0.06em', textTransform: 'uppercase', textDecoration: 'none' }}>
+            <Link href="/supplier-info" style={{ background: '#C4623A', color: 'white', fontWeight: 700, padding: '0.6rem 1.4rem', borderRadius: 100, fontFamily: 'Plus Jakarta Sans, sans-serif', fontSize: '0.76rem', letterSpacing: '0.04em', textTransform: 'uppercase', textDecoration: 'none', display: 'inline-block' }}>
               Partner With Us
             </Link>
           </div>
@@ -68,24 +77,28 @@ export default function Navbar() {
           <button
             className="nav-hamburger"
             onClick={() => setOpen(!open)}
-            style={{ background: 'none', border: '1px solid rgba(212,168,67,0.3)', borderRadius: 8, padding: '0.5rem', cursor: 'pointer', color: 'white', alignItems: 'center', justifyContent: 'center' }}
+            style={{ background: 'none', border: '1px solid rgba(196,98,58,0.35)', borderRadius: 8, padding: '0.45rem', cursor: 'pointer', alignItems: 'center', justifyContent: 'center' }}
             aria-label="Toggle menu">
-            {open ? <X size={22} color="#d4a843" /> : <Menu size={22} color="#d4a843" />}
+            {open ? <X size={22} color="#C4623A" /> : <Menu size={22} color="#C4623A" />}
           </button>
         </div>
 
         {/* Mobile menu */}
         {open && (
-          <div style={{ background: 'rgba(3,11,26,0.98)', borderTop: '1px solid rgba(212,168,67,0.15)' }}>
+          <div style={{ background: '#FAFAF5', borderTop: '1px solid #EDE7DE' }}>
             <nav style={{ display: 'flex', flexDirection: 'column', padding: '1rem 1.25rem 1.5rem' }}>
               {links.map(l => (
-                <Link key={l.href} href={l.href} onClick={() => setOpen(false)}
-                  style={{ color: 'rgba(255,255,255,0.8)', padding: '0.85rem 0', fontSize: '0.95rem', fontWeight: 600, borderBottom: '1px solid rgba(255,255,255,0.06)', textDecoration: 'none', letterSpacing: '0.04em', fontFamily: 'Plus Jakarta Sans, sans-serif', display: 'block' }}>
+                <Link
+                  key={l.href}
+                  href={l.href}
+                  onClick={() => setOpen(false)}
+                  style={{ color: '#3D3D3B', padding: '0.85rem 0', fontSize: '0.95rem', fontWeight: 600, borderBottom: '1px solid #EDE7DE', textDecoration: 'none', letterSpacing: '0.03em', fontFamily: 'Plus Jakarta Sans, sans-serif', display: 'block' }}
+                >
                   {l.label}
                 </Link>
               ))}
               <Link href="/supplier-info" onClick={() => setOpen(false)}
-                style={{ marginTop: '1.25rem', background: 'linear-gradient(135deg, #d4a843, #f0c96a)', color: '#050d1f', fontWeight: 800, padding: '0.9rem', borderRadius: 6, fontFamily: 'Plus Jakarta Sans, sans-serif', fontSize: '0.875rem', letterSpacing: '0.06em', textTransform: 'uppercase', textDecoration: 'none', display: 'block', textAlign: 'center' }}>
+                style={{ marginTop: '1.25rem', background: '#C4623A', color: 'white', fontWeight: 700, padding: '0.9rem', borderRadius: 100, fontFamily: 'Plus Jakarta Sans, sans-serif', fontSize: '0.875rem', letterSpacing: '0.04em', textTransform: 'uppercase', textDecoration: 'none', display: 'block', textAlign: 'center' }}>
                 Partner With Us
               </Link>
             </nav>
