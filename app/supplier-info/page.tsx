@@ -4,8 +4,23 @@ import SupplierForm from '../components/SupplierForm'
 
 export const metadata: Metadata = {
   title: 'Supplier Information & Wholesale Inquiry | Urban Pulse Wholesale',
-  description: 'Brands and distributors: apply to work with Urban Pulse Wholesale as an authorized wholesale buyer. We provide LLC documentation, EIN, resale certificate, Amazon verification, and signed MAP agreements. Fast response.',
+  description: 'Brands and distributors: apply to work with Urban Pulse Wholesale as an authorized wholesale buyer. We provide LLC documentation, EIN, resale certificate, marketplace credentials, and signed MAP agreements. Fast response.',
   alternates: { canonical: 'https://www.urbanpulsewholesale.com/supplier-info' },
+  openGraph: {
+    type:        'website',
+    locale:      'en_US',
+    url:         'https://www.urbanpulsewholesale.com/supplier-info',
+    siteName:    'Urban Pulse Wholesale',
+    title:       'Supplier Inquiry & Wholesale Account Application — Urban Pulse Wholesale',
+    description: 'Apply to work with Urban Pulse Wholesale. We provide full onboarding documentation: LLC registration, EIN, resale certificate, MAP agreement. Warren, MI based. Responds within 1 business day.',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Urban Pulse Wholesale — Supplier Inquiry' }],
+  },
+  twitter: {
+    card:        'summary_large_image',
+    title:       'Supplier Inquiry & Wholesale Account Application — Urban Pulse Wholesale',
+    description: 'Full onboarding documentation ready. LLC, EIN, resale cert, MAP agreement. Warren, MI. Responds within 1 business day.',
+    images:      ['/og-image.jpg'],
+  },
 }
 
 const C = {
@@ -44,7 +59,24 @@ export default function SupplierInfoPage() {
             <span style={{ color: C.rust, fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>For Suppliers &amp; Brands</span>
           </div>
           <h1 style={{ fontFamily: 'Fraunces, Georgia, serif', fontWeight: 900, fontSize: 'clamp(2.5rem, 5vw, 3.75rem)', color: C.dark, marginBottom: '1.25rem', lineHeight: 1.05, maxWidth: 700 }}>Supplier Information &amp; Wholesale Inquiry</h1>
-          <p style={{ color: C.sub, fontSize: '1.1rem', lineHeight: 1.8, maxWidth: 620, fontFamily: 'Plus Jakarta Sans, sans-serif' }}>Urban Pulse Wholesale is actively seeking authorized wholesale accounts — with particular interest in Fragrance &amp; Perfume, Home &amp; Kitchen, and Pet Supplies. We are a Michigan-registered LLC with complete onboarding documentation ready, a clean Amazon Professional Seller account, and a track record of MAP-compliant purchasing. We respond to all supplier inquiries within one business day.</p>
+          <p style={{ color: C.sub, fontSize: '1.1rem', lineHeight: 1.8, maxWidth: 620, fontFamily: 'Plus Jakarta Sans, sans-serif' }}>Urban Pulse Wholesale is actively seeking authorized wholesale accounts — with particular interest in Fragrance &amp; Perfume, Home &amp; Kitchen, and Pet Supplies. We are a Michigan-registered LLC with complete onboarding documentation ready, an established distribution account in good standing, and a track record of MAP-compliant purchasing. We respond to all supplier inquiries within one business day.</p>
+        </div>
+      </section>
+
+      {/* ── QUICK STATS STRIP ── */}
+      <section style={{ background: C.dark, padding: '2rem 0' }}>
+        <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 1.25rem', display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+          {[
+            { label: 'Typical First Order',  value: '$500–$2,500' },
+            { label: 'Response Time',         value: '< 1 Business Day' },
+            { label: 'Documentation Ready',   value: 'Within 24 Hours' },
+            { label: 'MAP Compliance',         value: '100%' },
+          ].map(stat => (
+            <div key={stat.label} style={{ textAlign: 'center', padding: '0.5rem 2rem', borderRight: '1px solid rgba(255,255,255,0.1)' }}>
+              <div style={{ color: C.rust, fontFamily: 'Fraunces, Georgia, serif', fontWeight: 900, fontSize: '1.5rem' }}>{stat.value}</div>
+              <div style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.72rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>{stat.label}</div>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -61,7 +93,7 @@ export default function SupplierInfoPage() {
                   { doc: 'LLC Business Registration', desc: 'State registration confirming Urban Pulse Wholesale LLC as a registered business entity.' },
                   { doc: 'EIN / Federal Tax ID', desc: 'Federal Employer Identification Number for W-9 and all tax documentation.' },
                   { doc: 'State Resale Certificate', desc: 'Valid resale certificate confirming tax-exempt resale purchases.' },
-                  { doc: 'Amazon Seller Verification', desc: 'Evidence of our active, in-good-standing Amazon professional seller account.' },
+                  { doc: 'Marketplace Seller Credentials', desc: 'Evidence of our active, in-good-standing professional seller account in good standing.' },
                   { doc: 'Signed Supplier Agreements', desc: 'We sign all MAP policies, reseller agreements, and terms as required.' },
                   { doc: 'Business References', desc: 'Available upon request from existing business relationships.' },
                 ].map(item => (
@@ -85,7 +117,7 @@ export default function SupplierInfoPage() {
                   { n: '1', t: 'Initial Inquiry',    d: 'Professional wholesale account application with full business information through your preferred channel.' },
                   { n: '2', t: 'Documentation',      d: 'All requested documents provided promptly — EIN, resale certificate, LLC registration, any supplier-specific forms.' },
                   { n: '3', t: 'Agreement Review',   d: 'We review and sign all required agreements including MAP policies, reseller terms, and any other requirements.' },
-                  { n: '4', t: 'First Purchase',     d: 'Initial order sized appropriately for our market research and inventory plan. Payment per agreed terms.' },
+                  { n: '4', t: 'First Purchase',     d: 'Initial orders typically range $500–$2,500 depending on category — sized appropriately for our market research and inventory plan. Payment per agreed terms.' },
                   { n: '5', t: 'Ongoing Partnership', d: 'Consistent, growing orders based on sales data. Proactive communication and full account management.' },
                 ].map((step, i) => (
                   <div key={i} style={{ display: 'flex', gap: '1.1rem', alignItems: 'flex-start', paddingBottom: '1.5rem', position: 'relative' }}>

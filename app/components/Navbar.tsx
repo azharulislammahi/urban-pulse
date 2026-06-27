@@ -8,7 +8,7 @@ const links = [
   { href: '/',              label: 'Home' },
   { href: '/about',         label: 'About' },
   { href: '/partnerships',  label: 'Partnerships' },
-  { href: '/fba-operations',label: 'FBA Ops' },
+  { href: '/fba-operations',label: 'Operations' },
   { href: '/categories',    label: 'Categories' },
   { href: '/catalog',       label: 'Catalog' },
   { href: '/supplier-info', label: 'Suppliers' },
@@ -69,7 +69,7 @@ export default function Navbar() {
 
           <div className="nav-desktop">
             <Link href="/supplier-info" style={{ background: '#C4623A', color: 'white', fontWeight: 700, padding: '0.6rem 1.4rem', borderRadius: 100, fontFamily: 'Plus Jakarta Sans, sans-serif', fontSize: '0.76rem', letterSpacing: '0.04em', textTransform: 'uppercase', textDecoration: 'none', display: 'inline-block' }}>
-              Partner With Us
+              Apply for Wholesale Account
             </Link>
           </div>
 
@@ -99,7 +99,7 @@ export default function Navbar() {
               ))}
               <Link href="/supplier-info" onClick={() => setOpen(false)}
                 style={{ marginTop: '1.25rem', background: '#C4623A', color: 'white', fontWeight: 700, padding: '0.9rem', borderRadius: 100, fontFamily: 'Plus Jakarta Sans, sans-serif', fontSize: '0.875rem', letterSpacing: '0.04em', textTransform: 'uppercase', textDecoration: 'none', display: 'block', textAlign: 'center' }}>
-                Partner With Us
+                Apply for Wholesale Account
               </Link>
             </nav>
           </div>

@@ -3,9 +3,24 @@ import Link from 'next/link'
 import { CheckCircle2, ArrowRight } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'About Us | Urban Pulse Wholesale — Authorized Amazon FBA Distributor',
-  description: 'Learn about Urban Pulse Wholesale — a professionally registered wholesale distribution company operating on Amazon FBA. Specializing in pet supplies, fragrance, home & kitchen, and more with full MAP compliance.',
+  title: 'About Us | Urban Pulse Wholesale LLC — Michigan Wholesale Distributor',
+  description: 'Learn about Urban Pulse Wholesale LLC — a professionally registered wholesale distribution company based in Warren, MI. Authorized accounts, MAP compliant, nationwide fulfillment across 6 product categories.',
   alternates: { canonical: 'https://www.urbanpulsewholesale.com/about' },
+  openGraph: {
+    type:        'website',
+    locale:      'en_US',
+    url:         'https://www.urbanpulsewholesale.com/about',
+    siteName:    'Urban Pulse Wholesale',
+    title:       'About Urban Pulse Wholesale LLC — Michigan Wholesale Distributor',
+    description: 'Professionally registered wholesale distribution company in Warren, MI. Authorized accounts, MAP compliant, 6 active product categories. Learn who we are and how we operate.',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'About Urban Pulse Wholesale — Michigan Wholesale Distributor' }],
+  },
+  twitter: {
+    card:        'summary_large_image',
+    title:       'About Urban Pulse Wholesale LLC — Michigan Wholesale Distributor',
+    description: 'Warren, MI wholesale distribution company. Authorized accounts, MAP compliant, 6 product categories nationwide.',
+    images:      ['/og-image.jpg'],
+  },
 }
 
 const C = {
@@ -96,10 +111,10 @@ export default function AboutPage() {
             <h2 style={h2}>Who We Are</h2>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
               {[
-                'Urban Pulse Wholesale LLC is a professionally registered limited liability company engaged in wholesale product sourcing and Amazon FBA distribution. We purchase from authorized brands and licensed distributors and sell exclusively through Amazon\'s Fulfilled by Amazon (FBA) program — reaching millions of Prime customers across the United States.',
+                'Urban Pulse Wholesale LLC is a professionally registered limited liability company engaged in wholesale product sourcing and multi-channel distribution. We purchase from authorized brands and licensed distributors and distribute nationwide through professional fulfillment infrastructure — reaching customers across the United States.',
                 'We specialize in six high-velocity categories: Fragrance & Perfume, Home & Kitchen, Pet Supplies, Health & Wellness, Grocery & Food, and Sports & Outdoors. Our buying decisions are driven by verified sales velocity data and brand relationship quality — never guesswork.',
                 'We are not a broker, liquidator, or gray market reseller. Every product we carry comes from a legitimate, authorized wholesale account — signed agreements, documented purchasing, and full respect for each brand\'s MAP policies and reseller terms.',
-                'We have a particular focus on the Fragrance & Perfume category, one of the fastest-growing segments on Amazon. We are fully versed in Amazon Dangerous Goods compliance for fragrance products and provide complete SDS documentation for all applicable SKUs.',
+                'We have a particular focus on the Fragrance & Perfume category. We are fully versed in Dangerous Goods compliance for fragrance products — FHSA classification, SDS documentation, and full hazmat program enrollment — providing complete documentation for all applicable SKUs.',
               ].map((text, i) => (
                 <p key={i} style={i === 0 ? pLg : p}>{text}</p>
               ))}
@@ -108,8 +123,71 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── APPROACH ── */}
+      {/* ── BUSINESS CREDENTIALS ── */}
       <section className="section" style={{ background: C.white }}>
+        <div style={wrap}>
+          <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+            <div style={barC} />
+            <h2 style={{ ...h2, textAlign: 'center', marginBottom: '0.75rem' }}>Business Credentials & Legal Standing</h2>
+            <p style={{ color: C.muted, maxWidth: 540, margin: '0 auto', fontFamily: 'Plus Jakarta Sans, sans-serif', fontSize: '0.95rem' }}>Verified documentation available to all supplier and wholesale partners upon request.</p>
+          </div>
+          <div className="mob-1col tab-2col" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.25rem', marginBottom: '2.5rem' }}>
+            {[
+              {
+                label:   'LLC Registration',
+                value:   'Urban Pulse Wholesale LLC',
+                detail:  'Professionally registered limited liability company in the State of Michigan.',
+                icon:    '🏢',
+              },
+              {
+                label:   'Federal Tax ID (EIN)',
+                value:   'EIN on File',
+                detail:  'Federal Employer Identification Number available for all supplier W-9 and tax documentation.',
+                icon:    '📋',
+              },
+              {
+                label:   'State Resale Certificate',
+                value:   'Michigan — Active',
+                detail:  'Valid Michigan resale certificate confirming tax-exempt status for wholesale resale purchases.',
+                icon:    '✅',
+              },
+              {
+                label:   'Business Address',
+                value:   'Warren, MI 48093',
+                detail:  'Physical business address in Warren, Michigan — available to all wholesale account applications.',
+                icon:    '📍',
+              },
+              {
+                label:   'Seller Account Status',
+                value:   'Professional — In Good Standing',
+                detail:  'Active marketplace professional seller account maintained in good standing with documented performance metrics.',
+                icon:    '⭐',
+              },
+              {
+                label:   'MAP Policy Compliance',
+                value:   '100% Compliant',
+                detail:  'All pricing maintained strictly at or above Minimum Advertised Price for every brand we carry.',
+                icon:    '🔒',
+              },
+            ].map(cred => (
+              <div key={cred.label} style={{ ...card, display: 'flex', flexDirection: 'column', gap: '0.625rem' }}>
+                <div style={{ fontSize: '1.75rem', lineHeight: 1 }}>{cred.icon}</div>
+                <div style={{ color: C.muted, fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>{cred.label}</div>
+                <div style={{ color: C.dark, fontWeight: 800, fontSize: '0.95rem', fontFamily: 'Fraunces, Georgia, serif' }}>{cred.value}</div>
+                <div style={{ color: C.sub, fontSize: '0.8rem', lineHeight: 1.65, fontFamily: 'Plus Jakarta Sans, sans-serif' }}>{cred.detail}</div>
+              </div>
+            ))}
+          </div>
+          <div style={{ background: C.cream2, border: `1px solid ${C.beige}`, borderLeft: `3px solid ${C.rust}`, borderRadius: '0 12px 12px 0', padding: '1.5rem 2rem', maxWidth: 780, margin: '0 auto', textAlign: 'center' }}>
+            <p style={{ color: C.mid, fontSize: '0.9rem', lineHeight: 1.75, fontFamily: 'Plus Jakarta Sans, sans-serif', margin: 0 }}>
+              <strong style={{ color: C.dark }}>For Supplier Onboarding:</strong> We provide LLC registration, EIN/W-9, Michigan resale certificate, signed MAP agreement, and seller account verification documentation — all ready within 24 hours of account approval.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── APPROACH ── */}
+      <section className="section" style={{ background: C.cream2 }}>
         <div style={wrap}>
           <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
             <div style={barC} />
@@ -121,7 +199,7 @@ export default function AboutPage() {
               { num: '01', title: 'Sourcing with Integrity',     desc: 'We identify products where we can add genuine value — pursuing only authorized wholesale accounts and avoiding unauthorized sourcing.' },
               { num: '02', title: 'Supplier-First Communication', desc: 'We initiate supplier relationships with full disclosure of our business model. Account managers always know exactly who they are working with.' },
               { num: '03', title: 'Operational Excellence',      desc: 'Organized purchase orders, on-time payments, proper documentation, and proactive communication at every stage.' },
-              { num: '04', title: 'Marketplace Compliance',      desc: 'We maintain our Amazon seller account to the highest standards — ensuring listings, pricing, and representations comply with all policies.' },
+              { num: '04', title: 'Compliance Standards',         desc: 'We maintain our distribution and marketplace accounts to the highest standards — ensuring listings, pricing, and representations comply with all policies.' },
               { num: '05', title: 'Inventory Intelligence',      desc: 'We use sales data and market analysis to make smart purchasing decisions, maintaining consistent reorder patterns.' },
               { num: '06', title: 'Long-Term Perspective',       desc: 'We measure success by the depth and duration of supplier relationships. A trusted partnership is worth more than any single transaction.' },
             ].map(item => (
@@ -136,26 +214,26 @@ export default function AboutPage() {
       </section>
 
       {/* ── E-COMMERCE EXPERTISE ── */}
-      <section className="section" style={{ background: C.cream2, position: 'relative', overflow: 'hidden' }}>
+      <section className="section" style={{ background: C.white, position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', width: 400, height: 400, borderRadius: '50%', background: `radial-gradient(circle, rgba(196,98,58,0.06) 0%, transparent 70%)`, top: -100, right: -80, pointerEvents: 'none' }} />
         <div style={{ ...wrap, position: 'relative', zIndex: 1 }}>
           <div className="mob-1col tab-1col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'center' }}>
             <div>
               <div style={bar} />
-              <h2 style={h2}>Amazon FBA Expertise</h2>
-              <p style={{ ...pLg, marginBottom: '1.25rem' }}>Selling on Amazon FBA requires continuous management of inventory levels, listing quality, account health metrics, and fulfillment logistics. We apply structured processes to each aspect.</p>
+              <h2 style={h2}>Distribution & Fulfillment Expertise</h2>
+              <p style={{ ...pLg, marginBottom: '1.25rem' }}>Professional wholesale distribution requires continuous management of inventory levels, listing quality, fulfillment logistics, and compliance standards. We apply structured processes to each aspect.</p>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.625rem', marginBottom: '2rem' }}>
-                {['Amazon FBA Operations', 'Inventory Forecasting', 'Listing Management', 'Account Health Mgmt', 'FBA Prep & Compliance', 'Performance Monitoring', 'Returns Management', 'Supplier Documentation'].map(item => (
+                {['Distribution Operations', 'Inventory Forecasting', 'Listing Management', 'Account Health Mgmt', 'Fulfillment Prep & Compliance', 'Performance Monitoring', 'Returns Management', 'Supplier Documentation'].map(item => (
                   <div key={item} style={{ display: 'flex', alignItems: 'center', gap: 8, background: C.white, border: `1px solid ${C.beige}`, borderRadius: 8, padding: '0.6rem 0.85rem' }}>
                     <CheckCircle2 size={12} color={C.rust} style={{ flexShrink: 0 }} />
                     <span style={{ color: C.sub, fontSize: '0.78rem', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>{item}</span>
                   </div>
                 ))}
               </div>
-              <Link href="/fba-operations" style={btn}>View FBA Operations <ArrowRight size={15} /></Link>
+              <Link href="/fba-operations" style={btn}>View Distribution Operations <ArrowRight size={15} /></Link>
             </div>
             <div style={{ borderRadius: 20, overflow: 'hidden', border: `1px solid ${C.beige}`, boxShadow: '0 16px 48px rgba(28,28,26,0.08)' }}>
-              <img className="mob-img-sm" src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=700&q=85" alt="Wholesale warehouse operations and Amazon FBA fulfillment" style={{ width: '100%', height: 420, objectFit: 'cover', display: 'block' }} />
+              <img className="mob-img-sm" src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=700&q=85" alt="Wholesale warehouse and professional fulfillment operations" style={{ width: '100%', height: 420, objectFit: 'cover', display: 'block' }} />
             </div>
           </div>
         </div>

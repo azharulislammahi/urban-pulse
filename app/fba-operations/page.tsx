@@ -3,9 +3,24 @@ import Link from 'next/link'
 import { CheckCircle2, ArrowRight } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Amazon FBA Operations | Urban Pulse Wholesale',
-  description: 'Urban Pulse Wholesale runs a fully compliant Amazon FBA operation — fragrance DG handling, systematic inventory management, and professional marketplace standards.',
+  title: 'Distribution Operations & Fulfillment Infrastructure | Urban Pulse Wholesale',
+  description: 'Urban Pulse Wholesale operates professional distribution infrastructure — including Dangerous Goods compliance for fragrance, systematic inventory management, and nationwide fulfillment standards.',
   alternates: { canonical: 'https://www.urbanpulsewholesale.com/fba-operations' },
+  openGraph: {
+    type:        'website',
+    locale:      'en_US',
+    url:         'https://www.urbanpulsewholesale.com/fba-operations',
+    siteName:    'Urban Pulse Wholesale',
+    title:       'Distribution & Fulfillment Operations — Urban Pulse Wholesale',
+    description: 'Professional distribution infrastructure: Dangerous Goods compliance for fragrance, systematic inventory management, nationwide fulfillment. How Urban Pulse Wholesale operates.',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Urban Pulse Wholesale Distribution Operations' }],
+  },
+  twitter: {
+    card:        'summary_large_image',
+    title:       'Distribution & Fulfillment Operations — Urban Pulse Wholesale',
+    description: 'Professional distribution infrastructure including DG compliance, inventory management, and nationwide fulfillment.',
+    images:      ['/og-image.jpg'],
+  },
 }
 
 const C = {
@@ -40,12 +55,12 @@ export default function FBAPage() {
         <div style={wrap}>
           <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(196,98,58,0.1)', border: '1px solid rgba(196,98,58,0.22)', borderRadius: 100, padding: '6px 18px', marginBottom: '1.5rem' }}>
             <div style={{ width: 6, height: 6, borderRadius: '50%', background: C.rust }} />
-            <span style={{ color: C.rust, fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>Amazon FBA Operations</span>
+            <span style={{ color: C.rust, fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>Distribution Operations</span>
           </div>
-          <h1 style={{ fontFamily: 'Fraunces, Georgia, serif', fontWeight: 900, fontSize: 'clamp(2.5rem, 5vw, 3.75rem)', color: C.dark, marginBottom: '1.25rem', lineHeight: 1.05, maxWidth: 700 }}>Professional Amazon FBA Operations &amp; Fulfillment</h1>
-          <p style={{ color: C.sub, fontSize: '1.1rem', lineHeight: 1.8, maxWidth: 600, fontFamily: 'Plus Jakarta Sans, sans-serif' }}>We operate an organized, compliant Amazon FBA business with systematic processes for inventory management, product prep, and marketplace compliance — including full Amazon Dangerous Goods handling for Fragrance &amp; Perfume SKUs.</p>
+          <h1 style={{ fontFamily: 'Fraunces, Georgia, serif', fontWeight: 900, fontSize: 'clamp(2.5rem, 5vw, 3.75rem)', color: C.dark, marginBottom: '1.25rem', lineHeight: 1.05, maxWidth: 700 }}>Professional Distribution Operations &amp; Fulfillment Infrastructure</h1>
+          <p style={{ color: C.sub, fontSize: '1.1rem', lineHeight: 1.8, maxWidth: 600, fontFamily: 'Plus Jakarta Sans, sans-serif' }}>We operate organized, compliant distribution infrastructure with systematic processes for inventory management, product fulfillment prep, and compliance standards — including full Dangerous Goods handling for Fragrance &amp; Perfume SKUs.</p>
           <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', marginTop: '1.75rem' }}>
-            {['FBA Prep Compliant', 'DG / Hazmat Ready', 'MAP Enforced', 'Account Health Monitored'].map(tag => (
+            {['Fulfillment Compliant', 'DG / Hazmat Ready', 'MAP Enforced', 'Account Health Monitored'].map(tag => (
               <span key={tag} style={{ background: 'rgba(196,98,58,0.09)', border: `1px solid rgba(196,98,58,0.22)`, borderRadius: 100, padding: '5px 14px', color: C.rust, fontSize: '0.78rem', fontFamily: 'Plus Jakarta Sans, sans-serif', fontWeight: 600 }}>{tag}</span>
             ))}
           </div>
@@ -58,21 +73,21 @@ export default function FBAPage() {
           <div className="mob-1col tab-1col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'start' }}>
             <div>
               <div style={bar} />
-              <h2 style={h2}>What is Amazon FBA?</h2>
-              <p style={{ ...pLg, marginBottom: '1.25rem' }}>Fulfilled by Amazon (FBA) is Amazon's fulfillment program that allows sellers to store products in Amazon's fulfillment centers. Amazon then picks, packs, ships, and provides customer service for those products.</p>
-              <p style={{ ...p, marginBottom: '1.25rem' }}>For brands and suppliers, this means that products purchased by Urban Pulse Wholesale will be handled by Amazon's world-class logistics infrastructure — stored in secure, climate-controlled facilities and delivered to customers with Amazon's trusted service standards.</p>
-              <p style={p}>We leverage FBA as our primary fulfillment model because it provides the best possible customer experience and enables us to scale efficiently while maintaining the quality standards our supplier partners expect.</p>
+              <h2 style={h2}>Our Fulfillment Infrastructure</h2>
+              <p style={{ ...pLg, marginBottom: '1.25rem' }}>Urban Pulse Wholesale operates through established fulfillment infrastructure that allows products to reach customers nationwide with speed, reliability, and full compliance with all handling requirements.</p>
+              <p style={{ ...p, marginBottom: '1.25rem' }}>For brands and suppliers, this means that products purchased by Urban Pulse Wholesale are stored in secure, climate-controlled facilities, processed to strict preparation standards, and delivered to customers through trusted logistics networks.</p>
+              <p style={p}>We leverage professional fulfillment infrastructure because it provides the best possible customer experience and enables us to scale efficiently while maintaining the quality standards our supplier partners expect.</p>
             </div>
             <div style={{ background: C.cream2, borderRadius: 20, padding: '2rem', border: `1px solid ${C.beige}` }}>
-              <div style={{ color: C.rust, fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', marginBottom: '1.5rem', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>FBA Benefits for Supplier Partners</div>
+              <div style={{ color: C.rust, fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', marginBottom: '1.5rem', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>Fulfillment Benefits for Supplier Partners</div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                 {[
-                  { label: 'Storage Security',  desc: "Products stored in Amazon's secure, climate-controlled fulfillment centers." },
-                  { label: 'Customer Service',  desc: 'Amazon handles all customer service, returns, and refunds on FBA orders.' },
-                  { label: 'Prime Eligible',    desc: "2-day Prime shipping available to Amazon's 200M+ Prime members." },
-                  { label: 'Reliable Delivery', desc: "Amazon's trusted logistics network ensures fast, reliable delivery." },
-                  { label: 'Data Visibility',   desc: 'Transparent order and inventory data through Amazon Seller Central.' },
-                  { label: 'Fraud Protection',  desc: "Amazon's fraud protection and buyer verification systems." },
+                  { label: 'Storage Security',     desc: 'Products stored in secure, climate-controlled fulfillment facilities.' },
+                  { label: 'Customer Service',      desc: 'All customer service, returns, and refunds handled professionally.' },
+                  { label: 'Fast Delivery',         desc: 'Expedited shipping available — fast, reliable nationwide delivery.' },
+                  { label: 'Reliable Logistics',    desc: 'Trusted logistics network ensures consistent, on-time delivery.' },
+                  { label: 'Data Visibility',       desc: 'Transparent order and inventory data shared with supplier partners.' },
+                  { label: 'Compliance Standards',  desc: 'Rigorous preparation and compliance standards at every step.' },
                 ].map(item => (
                   <div key={item.label} style={{ display: 'flex', gap: '0.75rem', paddingBottom: '0.875rem', borderBottom: `1px solid ${C.beige}` }}>
                     <CheckCircle2 size={15} color={C.rust} style={{ flexShrink: 0, marginTop: 2 }} />
@@ -93,16 +108,16 @@ export default function FBAPage() {
         <div style={wrap}>
           <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
             <div style={barC} />
-            <h2 style={{ ...h2, textAlign: 'center' }}>Our FBA Workflow</h2>
+            <h2 style={{ ...h2, textAlign: 'center' }}>Our Order-to-Fulfillment Workflow</h2>
             <p style={{ color: C.muted, maxWidth: 500, margin: '0 auto', fontFamily: 'Plus Jakarta Sans, sans-serif', fontSize: '1rem' }}>From purchase order to customer delivery — a structured, professional process at every step.</p>
           </div>
           <div className="mob-1col tab-2col" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.25rem' }}>
             {[
               { n: '01', title: 'Market Research',  desc: 'Analyze demand, competition, and margin data to identify products and determine purchasing quantities before committing.' },
               { n: '02', title: 'Purchase Order',   desc: 'Issue a formal PO to the supplier per their requirements. Confirm lead times, shipping details, and delivery instructions.' },
-              { n: '03', title: 'Receive & Inspect', desc: 'Inspect incoming inventory for accuracy and condition. Verify every item against the purchase order before FBA prep begins.' },
-              { n: '04', title: 'FBA Preparation',  desc: "Label, bundle, and package products exactly according to Amazon's FBA requirements — barcodes, packaging, and shipment plans." },
-              { n: '05', title: 'Ship to Amazon',   desc: "Create FBA shipments in Seller Central and deliver inventory to Amazon's designated fulfillment centers on schedule." },
+              { n: '03', title: 'Receive & Inspect', desc: 'Inspect incoming inventory for accuracy and condition. Verify every item against the purchase order before fulfillment prep begins.' },
+              { n: '04', title: 'Fulfillment Prep',  desc: 'Label, bundle, and package products according to all fulfillment requirements — barcodes, packaging, and shipment plans.' },
+              { n: '05', title: 'Ship to Fulfillment', desc: 'Create inbound shipments and deliver inventory to designated fulfillment centers on schedule.' },
               { n: '06', title: 'Monitor & Reorder', desc: 'Track inventory levels, sales velocity, and account health metrics to plan timely reorders and maintain in-stock rates.' },
             ].map(step => (
               <div key={step.n} style={card}>
@@ -122,13 +137,13 @@ export default function FBAPage() {
             <div>
               <div style={bar} />
               <h2 style={h2}>Inventory Management</h2>
-              <p style={{ ...p, marginBottom: '1.75rem' }}>Effective inventory management is the backbone of our FBA operations. We use data-driven processes to maintain appropriate stock levels — neither over-investing in slow-moving products nor running out of high-demand items.</p>
+              <p style={{ ...p, marginBottom: '1.75rem' }}>Effective inventory management is the backbone of our distribution operations. We use data-driven processes to maintain appropriate stock levels — neither over-investing in slow-moving products nor running out of high-demand items.</p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                 {[
                   { title: 'Sales Velocity Tracking', desc: 'We monitor daily, weekly, and monthly sales rates to understand product performance and forecast future demand.' },
-                  { title: 'Reorder Point Calculation', desc: 'Systems alert us when inventory reaches reorder thresholds, accounting for supplier lead times and Amazon processing windows.' },
+                  { title: 'Reorder Point Calculation', desc: 'Systems alert us when inventory reaches reorder thresholds, accounting for supplier lead times and fulfillment processing windows.' },
                   { title: 'Seasonal Adjustment', desc: 'We anticipate seasonal demand shifts and adjust purchasing accordingly, ensuring stock availability during peak periods.' },
-                  { title: 'Storage Optimization', desc: 'We balance inventory levels to optimize Amazon storage costs while maintaining strong in-stock rates for customers.' },
+                  { title: 'Storage Optimization', desc: 'We balance inventory levels to optimize fulfillment storage costs while maintaining strong in-stock rates for customers.' },
                 ].map(item => (
                   <div key={item.title} style={{ display: 'flex', gap: '0.75rem' }}>
                     <CheckCircle2 size={15} color={C.rust} style={{ flexShrink: 0, marginTop: 4 }} />
@@ -142,11 +157,11 @@ export default function FBAPage() {
             </div>
             <div>
               <div style={bar} />
-              <h2 style={h2}>Marketplace Standards</h2>
-              <p style={{ ...p, marginBottom: '1.75rem' }}>Our Amazon seller account is managed to maintain excellent performance metrics — a direct reflection of our commitment to quality operations and supplier trust.</p>
+              <h2 style={h2}>Distribution Standards</h2>
+              <p style={{ ...p, marginBottom: '1.75rem' }}>Our distribution accounts are managed to maintain excellent performance metrics — a direct reflection of our commitment to quality operations and supplier trust.</p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
                 {[
-                  { metric: 'Order Defect Rate',  detail: "Maintained well below Amazon's 1% threshold" },
+                  { metric: 'Order Defect Rate',  detail: 'Maintained well below industry threshold standards' },
                   { metric: 'Listing Accuracy',   detail: 'All product listings match actual products exactly' },
                   { metric: 'MAP Compliance',     detail: 'Zero tolerance for below-MAP pricing, ever' },
                   { metric: 'Policy Compliance',  detail: 'Zero tolerance for policy violations' },
@@ -174,10 +189,10 @@ export default function FBAPage() {
                 <span style={{ color: C.rust, fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>Fragrance Category</span>
               </div>
               <div style={bar} />
-              <h2 style={h2}>Amazon Dangerous Goods Compliance for Fragrance</h2>
-              <p style={{ ...pLg, marginBottom: '1.25rem' }}>Fragrance and perfume products are classified as Dangerous Goods (hazmat) on Amazon due to their flammable liquid content. We are fully prepared to handle the complete DG compliance process — from product classification through FBA hazmat program enrollment.</p>
-              <p style={{ ...p, marginBottom: '1.25rem' }}>This is one of the most common barriers preventing new sellers from entering the fragrance category. We have invested in understanding the regulatory requirements so that fragrance brands can trust their products will arrive at FBA — and reach customers — without compliance delays or account risk.</p>
-              <p style={p}>Every fragrance SKU we carry is documented, classified, and enrolled in Amazon's hazmat review process before the first unit ships.</p>
+              <h2 style={h2}>Dangerous Goods Compliance for Fragrance</h2>
+              <p style={{ ...pLg, marginBottom: '1.25rem' }}>Fragrance and perfume products are classified as Dangerous Goods (hazmat) due to their flammable liquid content. We are fully prepared to handle the complete DG compliance process — from FHSA product classification through hazmat program enrollment and ongoing SDS management.</p>
+              <p style={{ ...p, marginBottom: '1.25rem' }}>This is one of the most common barriers preventing new buyers from handling fragrance. We have invested in understanding all regulatory requirements so that fragrance brands can trust their products will be received, processed, and fulfilled without compliance delays or account risk.</p>
+              <p style={p}>Every fragrance SKU we carry is documented, classified, and enrolled in the appropriate hazmat review process before the first unit ships.</p>
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
               <div style={{ background: C.white, borderRadius: 20, padding: '1.75rem', border: `1px solid ${C.beige}`, marginBottom: '0.5rem' }}>
@@ -186,8 +201,8 @@ export default function FBAPage() {
                   {[
                     { step: '1', title: 'FHSA Classification Review', desc: 'Each fragrance product reviewed for flammable liquid classification under the Federal Hazardous Substances Act.' },
                     { step: '2', title: 'SDS Collection', desc: 'Safety Data Sheet requested and obtained from supplier for every applicable SKU prior to inbound shipment.' },
-                    { step: '3', title: 'Amazon DG Submission', desc: "Product submitted through Amazon's Dangerous Goods review program with SDS and product documentation." },
-                    { step: '4', title: 'Hazmat FBA Enrollment', desc: "Products enrolled in Amazon's FBA hazmat storage program once review is complete." },
+                    { step: '3', title: 'DG Review Submission', desc: 'Product submitted through the Dangerous Goods review program with SDS and full product documentation.' },
+                    { step: '4', title: 'Hazmat Program Enrollment', desc: 'Products enrolled in the hazmat storage and fulfillment program once DG review is complete.' },
                     { step: '5', title: 'Ongoing Monitoring', desc: 'DG status and SDS validity monitored continuously to prevent compliance gaps.' },
                   ].map(item => (
                     <div key={item.step} style={{ display: 'flex', gap: '0.875rem', alignItems: 'flex-start', paddingBottom: '0.875rem', borderBottom: `1px solid ${C.beige}` }}>
@@ -204,7 +219,7 @@ export default function FBAPage() {
               </div>
               <div style={{ background: 'rgba(196,98,58,0.07)', border: '1px solid rgba(196,98,58,0.2)', borderRadius: 12, padding: '1.1rem 1.25rem' }}>
                 <div style={{ color: C.rust, fontWeight: 700, fontSize: '0.82rem', marginBottom: 4, fontFamily: 'Plus Jakarta Sans, sans-serif' }}>What This Means for Fragrance Suppliers</div>
-                <p style={{ color: C.sub, fontSize: '0.84rem', lineHeight: 1.7, fontFamily: 'Plus Jakarta Sans, sans-serif', margin: 0 }}>When you grant Urban Pulse Wholesale an authorized account, your fragrance products will be handled by a buyer who knows exactly how to get them into FBA compliantly — protecting your brand and your Amazon presence.</p>
+                <p style={{ color: C.sub, fontSize: '0.84rem', lineHeight: 1.7, fontFamily: 'Plus Jakarta Sans, sans-serif', margin: 0 }}>When you grant Urban Pulse Wholesale an authorized account, your fragrance products will be handled by a buyer who knows exactly how to receive, classify, and fulfill them compliantly — protecting your brand at every stage.</p>
               </div>
             </div>
           </div>

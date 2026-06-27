@@ -4,8 +4,23 @@ import { CheckCircle2, ArrowRight, Shield, TrendingUp, Clock, FileText } from 'l
 
 export const metadata: Metadata = {
   title: 'Wholesale Partnerships | Fragrance & Brand Wholesale Accounts',
-  description: 'Urban Pulse Wholesale actively seeks authorized wholesale accounts — with a priority focus on Fragrance & Perfume brands. Fully documented, MAP-compliant, Amazon FBA operator.',
+  description: 'Urban Pulse Wholesale LLC actively seeks authorized wholesale accounts — priority focus on Fragrance, Home & Kitchen, and Pet Supplies. Michigan LLC registered, fully documented, MAP-compliant wholesale buyer.',
   alternates: { canonical: 'https://www.urbanpulsewholesale.com/partnerships' },
+  openGraph: {
+    type:        'website',
+    locale:      'en_US',
+    url:         'https://www.urbanpulsewholesale.com/partnerships',
+    siteName:    'Urban Pulse Wholesale',
+    title:       'Wholesale Partnership Opportunities — Urban Pulse Wholesale LLC',
+    description: 'Seeking authorized wholesale accounts — Fragrance priority. Michigan LLC, fully documented, MAP-compliant wholesale buyer. Apply for a wholesale account today.',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Urban Pulse Wholesale Partnership Opportunities' }],
+  },
+  twitter: {
+    card:        'summary_large_image',
+    title:       'Wholesale Partnership Opportunities — Urban Pulse Wholesale LLC',
+    description: 'Michigan LLC seeking authorized wholesale accounts. Fragrance priority. MAP compliant. Fully documented and ready to onboard.',
+    images:      ['/og-image.jpg'],
+  },
 }
 
 const C = {
@@ -45,7 +60,7 @@ export default function PartnershipsPage() {
           <h1 style={{ fontFamily: 'Fraunces, Georgia, serif', fontWeight: 900, fontSize: 'clamp(2.5rem, 5vw, 3.75rem)', color: C.dark, marginBottom: '1.25rem', lineHeight: 1.05, maxWidth: 700 }}>Professional Wholesale Relationships Built to Last</h1>
           <p style={{ color: C.sub, fontSize: '1.1rem', lineHeight: 1.8, maxWidth: 600, fontFamily: 'Plus Jakarta Sans, sans-serif' }}>We approach every supplier relationship as a long-term partnership, not a one-time transaction. We are currently prioritizing authorized wholesale accounts in Fragrance &amp; Perfume, Home &amp; Kitchen, and Pet Supplies.</p>
           <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', marginTop: '1.75rem' }}>
-            {['Fragrance Priority', 'MAP Compliant', 'LLC Registered', 'Amazon FBA Seller'].map(tag => (
+            {['Fragrance Priority', 'MAP Compliant', 'Michigan LLC Registered', 'Authorized Accounts Only'].map(tag => (
               <span key={tag} style={{ background: 'rgba(196,98,58,0.09)', border: '1px solid rgba(196,98,58,0.22)', borderRadius: 100, padding: '5px 14px', color: C.rust, fontSize: '0.78rem', fontFamily: 'Plus Jakarta Sans, sans-serif', fontWeight: 600 }}>{tag}</span>
             ))}
           </div>
@@ -94,7 +109,7 @@ export default function PartnershipsPage() {
                 <span style={{ color: C.rust, fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>Fragrance &amp; Perfume — Priority Category</span>
               </div>
               <h2 style={{ ...h2, color: C.white, fontSize: 'clamp(1.75rem, 3vw, 2.4rem)' }}>Why Fragrance Brands Should Work With Us</h2>
-              <p style={{ color: 'rgba(255,255,255,0.65)', lineHeight: 1.85, marginBottom: '1.25rem', fontFamily: 'Plus Jakarta Sans, sans-serif', fontSize: '1rem' }}>Fragrance is the most brand-sensitive category on Amazon — and the one most damaged by gray-market and unauthorized resellers. Urban Pulse Wholesale is exactly the kind of buyer fragrance brands need: authorized, documented, MAP-compliant, and Amazon DG-ready.</p>
+              <p style={{ color: 'rgba(255,255,255,0.65)', lineHeight: 1.85, marginBottom: '1.25rem', fontFamily: 'Plus Jakarta Sans, sans-serif', fontSize: '1rem' }}>Fragrance is the most brand-sensitive wholesale category — and the one most damaged by gray-market and unauthorized resellers. Urban Pulse Wholesale is exactly the kind of buyer fragrance brands need: authorized, documented, MAP-compliant, and fully DG-compliant.</p>
               <p style={{ color: 'rgba(255,255,255,0.5)', lineHeight: 1.85, fontFamily: 'Plus Jakarta Sans, sans-serif', fontSize: '0.9rem' }}>We are not a liquidator, discount reseller, or gray-market source. We are a registered Michigan LLC applying for your authorized wholesale program through your preferred channel, with complete documentation ready on day one.</p>
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>

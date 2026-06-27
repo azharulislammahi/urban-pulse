@@ -11,7 +11,7 @@ export default function Footer() {
           <div>
             <Logo size="sm" variant="light" />
             <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.875rem', lineHeight: 1.75, marginTop: '1rem', marginBottom: '1.25rem', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
-              Authorized wholesale distribution across 6 Amazon FBA categories. Building lasting supplier partnerships with professional, transparent operations.
+              Professional wholesale distribution across 6 product categories. Building lasting supplier partnerships with transparent, MAP-compliant operations.
             </p>
             <a href="https://linkedin.com/company/urban-pulse-wholesale" target="_blank" rel="noopener noreferrer"
               style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', color: '#C4623A', fontSize: '0.78rem', fontWeight: 600, textDecoration: 'none', letterSpacing: '0.06em', textTransform: 'uppercase', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
@@ -27,7 +27,7 @@ export default function Footer() {
                 ['/', 'Home'],
                 ['/about', 'About Us'],
                 ['/partnerships', 'Partnerships'],
-                ['/fba-operations', 'FBA Operations'],
+                ['/fba-operations', 'Operations'],
                 ['/categories', 'Product Categories'],
                 ['/catalog', 'Product Catalog'],
               ],
@@ -72,6 +72,10 @@ export default function Footer() {
                 <a href="tel:5862008750" style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.8rem', lineHeight: 1.5, textDecoration: 'none', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>(586) 200-8750</a>
               </li>
               <li style={{ display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
+                <span style={{ color: '#C4623A', fontSize: '0.85rem', marginTop: 1 }}>⊙</span>
+                <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.8rem', lineHeight: 1.5, fontFamily: 'Plus Jakarta Sans, sans-serif' }}>Warren, MI 48093</span>
+              </li>
+              <li style={{ display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
                 <span style={{ color: '#C4623A', fontSize: '0.85rem', marginTop: 1 }}>+</span>
                 <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.8rem', lineHeight: 1.5, fontFamily: 'Plus Jakarta Sans, sans-serif' }}>Mon–Fri 9AM–5PM EST</span>
               </li>
@@ -81,7 +85,7 @@ export default function Footer() {
 
         <div style={{ paddingTop: '1.5rem', display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '1rem' }}>
           <p style={{ color: 'rgba(255,255,255,0.2)', fontSize: '0.78rem', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
-            © {year} Urban Pulse Wholesale LLC. All rights reserved. Authorized wholesale distributor — Amazon FBA.
+            © {year} Urban Pulse Wholesale LLC. All rights reserved. Professional wholesale distributor — Warren, MI.
           </p>
           <div style={{ display: 'flex', gap: '1.5rem' }}>
             {[['/privacy','Privacy'],['/terms','Terms'],['/cookies','Cookies']].map(([h,l]) => (

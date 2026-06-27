@@ -3,8 +3,8 @@ import Link from 'next/link'
 import { ArrowRight, CheckCircle2, Shield, Handshake, BarChart3, TrendingUp, Package, Star } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Urban Pulse Wholesale LLC | Authorized Amazon FBA Wholesale Distributor',
-  description: 'Urban Pulse Wholesale LLC is a professional authorized wholesale distributor operating on Amazon FBA. Sourcing from licensed brands in fragrance, home & kitchen, pet supplies, health & wellness, and more. MAP compliant. Authorized channels only.',
+  title: 'Urban Pulse Wholesale LLC | Professional Wholesale Distributor — Michigan',
+  description: 'Urban Pulse Wholesale LLC is a Michigan-based wholesale distribution company sourcing authorized products in Fragrance, Home & Kitchen, Pet Supplies, Health & Wellness, and more. MAP compliant. Authorized accounts only.',
 }
 
 const categories = [
@@ -19,9 +19,9 @@ const categories = [
 const pillars = [
   { icon: <Shield size={20}/>,    title: 'Brand Protection',    desc: 'Strict MAP compliance and authorized reseller agreements at every step. Your brand integrity is always protected.' },
   { icon: <Handshake size={20}/>, title: 'Long-Term Focus',     desc: 'We build lasting partnerships, not one-time transactions — delivering consistent orders and predictable volume.' },
-  { icon: <BarChart3 size={20}/>, title: 'Data-Driven Buying',  desc: 'Every purchasing decision guided by Amazon sales velocity and BSR data — never guesswork.' },
+  { icon: <BarChart3 size={20}/>, title: 'Data-Driven Buying',  desc: 'Every purchasing decision guided by verified sales velocity data and market analysis — never guesswork.' },
   { icon: <TrendingUp size={20}/>,title: 'Reliable Growth',     desc: 'As products perform well we scale purchasing. Your success drives our continued investment.' },
-  { icon: <Package size={20}/>,   title: 'FBA Excellence',      desc: 'Products reach millions of Prime members through Amazon fulfillment — fast, reliable, Prime-eligible.' },
+  { icon: <Package size={20}/>,   title: 'Nationwide Fulfillment', desc: 'Products reach customers nationwide through professional fulfillment infrastructure — fast, reliable, and fully tracked.' },
   { icon: <Star size={20}/>,      title: 'Professional Standards', desc: 'Organized documentation, on-time payments, and transparent communication at every stage.' },
 ]
 
@@ -88,7 +88,7 @@ export default function HomePage() {
           {/* Badge */}
           <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(196,98,58,0.1)', border: '1px solid rgba(196,98,58,0.22)', borderRadius: 100, padding: '6px 18px', marginBottom: '1.75rem' }}>
             <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#C4623A', display: 'inline-block', flexShrink: 0 }} />
-            <span style={{ color: '#C4623A', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>Authorized Wholesale Distributor — Amazon FBA</span>
+            <span style={{ color: '#C4623A', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>Professional Wholesale Distributor — Warren, MI</span>
           </div>
 
           {/* Big heading */}
@@ -115,16 +115,16 @@ export default function HomePage() {
           <div style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', fontWeight: 300, fontSize: 'clamp(0.8rem, 3vw, 1rem)', color: '#9A9086', letterSpacing: '0.28em', textTransform: 'uppercase', marginBottom: '2rem' }}>Wholesale LLC</div>
 
           <p style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#6B6460', fontSize: 'clamp(0.95rem, 3vw, 1.1rem)', lineHeight: 1.85, maxWidth: 540, margin: '0 auto 1rem' }}>
-            Authorized wholesale distribution in Fragrance, Home &amp; Kitchen, Pet Supplies, Health &amp; Wellness, and more — sourced from licensed brands, sold on Amazon FBA to millions of Prime shoppers.
+            Authorized wholesale distribution in Fragrance, Home &amp; Kitchen, Pet Supplies, Health &amp; Wellness, and more — sourced from licensed brands, distributed nationwide through professional fulfillment infrastructure.
           </p>
 
           <div style={{ display: 'flex', gap: '0.875rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '2.5rem' }}>
-            <Link href="/supplier-info" className="rust-btn">Become a Supplier <ArrowRight size={15}/></Link>
+            <Link href="/supplier-info" className="rust-btn">Wholesale Inquiry <ArrowRight size={15}/></Link>
             <Link href="/about" className="outline-btn">Learn More</Link>
           </div>
 
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.25rem', justifyContent: 'center' }}>
-            {['MAP Compliant Pricing', 'Amazon FBA Specialist', 'Authorized Brands Only', 'Professional Seller'].map(b => (
+            {['MAP Compliant Pricing', 'Michigan LLC Registered', 'Authorized Brands Only', 'Nationwide Fulfillment'].map(b => (
               <div key={b} style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
                 <CheckCircle2 size={13} color="#C4623A"/>
                 <span style={{ color: '#9A9086', fontSize: '0.8rem', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>{b}</span>
@@ -145,9 +145,9 @@ export default function HomePage() {
         <div className="page-wrap">
           <div className="four-col">
             {[
-              { num: '500+', label: 'Wholesale Products'    },
+              { num: '500+', label: 'Wholesale SKUs'        },
               { num: '6',    label: 'Product Categories'    },
-              { num: 'FBA',  label: 'Amazon Fulfillment'    },
+              { num: '48hr', label: 'Fulfillment Speed'     },
               { num: 'MAP',  label: 'Price Protection'      },
             ].map((s, i) => (
               <div key={i} style={{ textAlign: 'center', padding: '0.5rem', borderRight: i < 3 ? '1px solid rgba(255,255,255,0.2)' : 'none' }}>
@@ -167,7 +167,7 @@ export default function HomePage() {
               <div className="rust-bar" />
               <h2 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: 'clamp(1.75rem, 4vw, 2.75rem)', color: '#1C1C1A', marginBottom: '1.25rem', fontWeight: 900 }}>Who We Are</h2>
               <p style={{ color: '#6B6460', fontSize: 'clamp(0.9rem, 2.5vw, 1.05rem)', lineHeight: 1.85, marginBottom: '1.25rem', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
-                Urban Pulse Wholesale LLC is a professionally registered wholesale distribution company. We source products exclusively from authorized brands and distributors and sell through Amazon FBA — reaching millions of Prime customers across the United States.
+                Urban Pulse Wholesale LLC is a professionally registered wholesale distribution company. We source products exclusively from authorized brands and distributors and distribute nationwide through professional fulfillment infrastructure — reaching customers across the United States.
               </p>
               <p style={{ color: '#9A9086', lineHeight: 1.85, marginBottom: '1.25rem', fontFamily: 'Plus Jakarta Sans, sans-serif', fontSize: '0.95rem' }}>
                 We specialize in Fragrance &amp; Perfume, Home &amp; Kitchen, Pet Supplies, Health &amp; Wellness, Grocery &amp; Food, and Sports &amp; Outdoors. Our buying decisions are driven by sales velocity data and brand relationship quality — never guesswork.
@@ -191,7 +191,7 @@ export default function HomePage() {
                 <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=600&q=80" alt="Wholesale warehouse operations" />
               </div>
               <div className="photo-item" style={{ marginTop: '1.5rem' }}>
-                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&q=80" alt="Amazon FBA fulfillment center" />
+                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&q=80" alt="Professional wholesale fulfillment center" />
               </div>
               <div className="photo-item">
                 <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&q=80" alt="Retail products shelf" />
@@ -211,12 +211,12 @@ export default function HomePage() {
           <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
             <div className="rust-bar-c" />
             <h2 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: 'clamp(1.75rem, 4vw, 2.75rem)', color: '#1C1C1A', marginBottom: '1rem', fontWeight: 900 }}>Categories We Distribute</h2>
-            <p style={{ color: '#9A9086', fontSize: '0.95rem', maxWidth: 520, margin: '0 auto', lineHeight: 1.75, fontFamily: 'Plus Jakarta Sans, sans-serif' }}>Six high-velocity Amazon FBA categories — authorized brands only, MAP compliant, data-driven purchasing across each.</p>
+            <p style={{ color: '#9A9086', fontSize: '0.95rem', maxWidth: 520, margin: '0 auto', lineHeight: 1.75, fontFamily: 'Plus Jakarta Sans, sans-serif' }}>Six high-velocity product categories — authorized brands only, MAP compliant, data-driven purchasing across each.</p>
           </div>
           <div className="six-col">
             {categories.map((cat, i) => (
               <div key={i} className="cat-item">
-                <img src={cat.img} alt={`${cat.name} wholesale products — Amazon FBA`} />
+                <img src={cat.img} alt={`${cat.name} wholesale products — Urban Pulse Wholesale`} />
                 <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(28,28,26,0.0) 20%, rgba(28,28,26,0.82) 100%)' }} />
                 <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '1rem 0.875rem' }}>
                   <div style={{ color: 'white', fontFamily: 'Fraunces, Georgia, serif', fontSize: 'clamp(0.78rem, 2vw, 0.9rem)', fontWeight: 700, marginBottom: 3, lineHeight: 1.2 }}>{cat.name}</div>
@@ -236,7 +236,7 @@ export default function HomePage() {
         <div className="page-wrap">
           <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
             <div className="rust-bar-c" />
-            <h2 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: 'clamp(1.75rem, 4vw, 2.75rem)', color: '#1C1C1A', marginBottom: '1rem', fontWeight: 900 }}>Why Partner With Urban Pulse?</h2>
+            <h2 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: 'clamp(1.75rem, 4vw, 2.75rem)', color: '#1C1C1A', marginBottom: '1rem', fontWeight: 900 }}>Why Brands Choose Urban Pulse</h2>
           </div>
           <div className="three-col">
             {pillars.map((p, i) => (
@@ -257,12 +257,12 @@ export default function HomePage() {
           <div className="two-col">
             <div>
               <div className="rust-bar" />
-              <h2 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: 'clamp(1.75rem, 4vw, 2.75rem)', color: '#1C1C1A', marginBottom: '1.25rem', fontWeight: 900 }}>Amazon FBA Operations</h2>
+              <h2 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: 'clamp(1.75rem, 4vw, 2.75rem)', color: '#1C1C1A', marginBottom: '1.25rem', fontWeight: 900 }}>Distribution & Fulfillment Operations</h2>
               <p style={{ color: '#6B6460', fontSize: '0.95rem', lineHeight: 1.85, marginBottom: '1.75rem', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
-                Your products reach millions of Prime members through Amazon&apos;s trusted network — with professional listing management, inventory planning, and full MAP compliance.
+                Your products move through a professional fulfillment infrastructure — with systematic inventory management, listing quality control, and full MAP compliance at every stage.
               </p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '2rem' }}>
-                {['Inventory forecasting & demand planning', 'Amazon FBA prep & compliance', 'Account health monitoring', 'MAP & brand policy adherence', 'Professional listing management'].map(item => (
+                {['Inventory forecasting & demand planning', 'Fulfillment prep & compliance', 'Account health monitoring', 'MAP & brand policy adherence', 'Professional distribution management'].map(item => (
                   <div key={item} style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
                     <div style={{ width: 18, height: 18, borderRadius: '50%', background: 'rgba(196,98,58,0.12)', border: '1px solid rgba(196,98,58,0.35)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                       <CheckCircle2 size={10} color="#C4623A" />
@@ -271,12 +271,12 @@ export default function HomePage() {
                   </div>
                 ))}
               </div>
-              <Link href="/fba-operations" className="rust-btn">View FBA Operations <ArrowRight size={15}/></Link>
+              <Link href="/fba-operations" className="rust-btn">View Operations <ArrowRight size={15}/></Link>
             </div>
 
             <div style={{ position: 'relative' }}>
               <div style={{ borderRadius: 20, overflow: 'hidden', border: '1px solid #EDE7DE', boxShadow: '0 20px 60px rgba(28,28,26,0.08)' }}>
-                <img className="fba-img" src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80" alt="Amazon FBA warehouse fulfillment center operations" style={{ width: '100%', height: 420, objectFit: 'cover', display: 'block' }} />
+                <img className="fba-img" src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80" alt="Professional wholesale fulfillment center operations" style={{ width: '100%', height: 420, objectFit: 'cover', display: 'block' }} />
               </div>
               <div className="hide-mob" style={{ position: 'absolute', bottom: -18, left: -18, background: 'white', border: '1px solid #EDE7DE', borderRadius: 12, padding: '1rem 1.25rem', boxShadow: '0 8px 24px rgba(28,28,26,0.08)' }}>
                 <div style={{ color: '#9A9086', fontSize: '0.62rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 2, fontFamily: 'Plus Jakarta Sans, sans-serif' }}>Pet Supplies</div>
@@ -291,7 +291,7 @@ export default function HomePage() {
       <section style={{ padding: '5rem 0', background: '#C4623A', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px)', backgroundSize: '24px 24px', pointerEvents: 'none' }} />
         <div className="page-wrap" style={{ textAlign: 'center', position: 'relative', zIndex: 1 }}>
-          <h2 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: 'clamp(1.75rem, 4vw, 2.75rem)', color: 'white', marginBottom: '1rem', fontWeight: 900 }}>Ready to Put Your Products in Front of Prime Shoppers?</h2>
+          <h2 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: 'clamp(1.75rem, 4vw, 2.75rem)', color: 'white', marginBottom: '1rem', fontWeight: 900 }}>Ready to Establish a Wholesale Account?</h2>
           <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: '1rem', maxWidth: 560, margin: '0 auto 0.75rem', lineHeight: 1.75, fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
             We are actively building wholesale account relationships across all six categories — with particular interest in Pet Supplies, Fragrance &amp; Perfume, and Home &amp; Kitchen.
           </p>

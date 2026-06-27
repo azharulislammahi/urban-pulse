@@ -829,7 +829,7 @@ export default function CatalogPage() {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
     name: 'Urban Pulse Wholesale Product Catalog',
-    description: 'Wholesale products available from Urban Pulse Wholesale LLC — authorized Amazon FBA distributor',
+    description: 'Wholesale products available from Urban Pulse Wholesale LLC — Michigan-based authorized wholesale distributor',
     numberOfItems: PRODUCTS.length,
     url: 'https://www.urbanpulsewholesale.com/catalog',
   }
@@ -848,7 +848,7 @@ export default function CatalogPage() {
           </div>
           <h1 style={{ fontFamily: 'Fraunces, Georgia, serif', fontWeight: 900, fontSize: 'clamp(2rem, 4vw, 3rem)', color: C.dark, marginBottom: '0.75rem', lineHeight: 1.05 }}>Browse Our Wholesale Catalog</h1>
           <p style={{ color: C.sub, fontSize: '1rem', maxWidth: 640, lineHeight: 1.8, fontFamily: 'Plus Jakarta Sans, sans-serif', marginBottom: '2rem' }}>
-            Real wholesale products sourced from authorized distributors across multiple categories — BCI pet supplies, UnitedPerfumes fragrance lines, home & kitchen, health & wellness, sports & outdoors, and grocery. All pricing reflects estimated Amazon FBA sell price and profitability.
+            Real wholesale products sourced from authorized distributors across multiple categories — BCI pet supplies, UnitedPerfumes fragrance lines, home & kitchen, health & wellness, sports & outdoors, and grocery. All pricing reflects estimated retail sell price and profitability data.
           </p>
           <div style={{ display: 'flex', gap: '2.5rem', flexWrap: 'wrap' }}>
             {[
@@ -992,7 +992,7 @@ export default function CatalogPage() {
       <section style={{ padding: '2rem 0', background: C.cream2, borderTop: `1px solid ${C.beige}` }}>
         <div style={{ ...wrap, textAlign: 'center' }}>
           <p style={{ color: C.muted, fontSize: '0.8rem', fontFamily: 'Plus Jakarta Sans, sans-serif', lineHeight: 1.7, maxWidth: 700, margin: '0 auto' }}>
-            <strong style={{ color: C.sub }}>Pricing Disclaimer:</strong> Sell prices, profit estimates, and ROI figures are based on wholesale cost data from authorized distributors and estimated Amazon FBA fees. Actual figures may vary based on current market conditions, FBA fee changes, and sell-through velocity. All data is for informational purposes only.
+            <strong style={{ color: C.sub }}>Pricing Disclaimer:</strong> Sell prices, profit estimates, and ROI figures are based on wholesale cost data from authorized distributors and estimated fulfillment fees. Actual figures may vary based on current market conditions, fee changes, and sell-through velocity. All data is for informational purposes only.
           </p>
         </div>
       </section>
@@ -1002,7 +1002,7 @@ export default function CatalogPage() {
         <div style={wrap}>
           <div style={{ width: 36, height: 3, background: 'rgba(255,255,255,0.35)', borderRadius: 2, margin: '0 auto 1.25rem' }} />
           <h2 style={{ fontFamily: 'Fraunces, Georgia, serif', fontWeight: 900, fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', color: C.white, marginBottom: '0.875rem' }}>Interested in Supplying These Products?</h2>
-          <p style={{ color: 'rgba(255,255,255,0.75)', maxWidth: 500, margin: '0 auto 2rem', lineHeight: 1.75, fontFamily: 'Plus Jakarta Sans, sans-serif', fontSize: '0.95rem' }}>All products ship via Amazon FBA from authorized distributors. We maintain full MAP compliance across our entire catalog.</p>
+          <p style={{ color: 'rgba(255,255,255,0.75)', maxWidth: 500, margin: '0 auto 2rem', lineHeight: 1.75, fontFamily: 'Plus Jakarta Sans, sans-serif', fontSize: '0.95rem' }}>All products are sourced from authorized distributors and distributed through professional fulfillment infrastructure. We maintain full MAP compliance across our entire catalog.</p>
           <Link href="/supplier-info" style={{ background: C.dark, color: C.white, fontWeight: 700, padding: '0.85rem 2rem', borderRadius: 100, fontFamily: 'Plus Jakarta Sans, sans-serif', fontSize: '0.85rem', letterSpacing: '0.04em', textTransform: 'uppercase', textDecoration: 'none', display: 'inline-block' }}>
             Supplier Inquiry
           </Link>

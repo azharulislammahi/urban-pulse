@@ -6,26 +6,26 @@ import Footer from './components/Footer'
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.urbanpulsewholesale.com'),
   title: {
-    default:  'Urban Pulse Wholesale | Authorized Amazon FBA Wholesale Distributor',
+    default:  'Urban Pulse Wholesale LLC | Professional Wholesale Distributor — Michigan',
     template: '%s | Urban Pulse Wholesale',
   },
-  description: 'Urban Pulse Wholesale is an authorized wholesale distributor operating on Amazon FBA. We source from licensed brands in pet supplies, fragrance, home & kitchen, health & wellness, grocery, and sports. MAP compliant. Authorized channels only.',
+  description: 'Urban Pulse Wholesale LLC is a Michigan-based wholesale distribution company sourcing authorized products across Fragrance, Home & Kitchen, Pet Supplies, Health & Wellness, and more. MAP compliant. Authorized accounts only.',
   keywords: [
-    'wholesale distributor Amazon FBA',
-    'authorized wholesale distributor',
-    'Amazon FBA wholesale',
-    'buy wholesale products Amazon',
-    'wholesale pet supplies Amazon',
+    'wholesale distributor Michigan',
+    'authorized wholesale buyer',
+    'wholesale distribution company',
+    'B2B wholesale supplier',
+    'MAP compliant wholesale',
     'wholesale fragrance distributor',
-    'wholesale home kitchen Amazon',
-    'wholesale health wellness Amazon',
+    'wholesale home kitchen distributor',
+    'wholesale pet supplies distributor',
+    'wholesale health wellness',
     'Urban Pulse Wholesale',
     'authorized brand wholesaler',
-    'MAP compliant wholesale',
-    'FBA wholesale distributor',
-    'brand authorized wholesale buyer',
-    'Amazon wholesale account',
-    'wholesale supplier inquiry',
+    'multi-channel wholesale distributor',
+    'wholesale distribution Warren MI',
+    'authorized wholesale accounts',
+    'B2B product sourcing',
   ],
   icons: {
     icon: [
@@ -43,14 +43,14 @@ export const metadata: Metadata = {
     locale:      'en_US',
     url:         'https://www.urbanpulsewholesale.com',
     siteName:    'Urban Pulse Wholesale',
-    title:       'Urban Pulse Wholesale | Authorized Amazon FBA Wholesale Distributor',
-    description: 'Authorized wholesale distributor specializing in pet supplies, fragrance, home & kitchen, health & wellness, grocery, and sports. Amazon FBA. MAP compliant.',
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Urban Pulse Wholesale — Authorized Amazon FBA Distributor' }],
+    title:       'Urban Pulse Wholesale LLC | Professional Wholesale Distributor — Michigan',
+    description: 'Michigan-based wholesale distribution company specializing in Fragrance, Home & Kitchen, Pet Supplies, Health & Wellness, Grocery, and Sports. MAP compliant. Authorized accounts only.',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Urban Pulse Wholesale — Professional Wholesale Distributor' }],
   },
   twitter: {
     card:        'summary_large_image',
-    title:       'Urban Pulse Wholesale | Authorized Amazon FBA Wholesale Distributor',
-    description: 'Authorized wholesale distributor operating on Amazon FBA. Pet supplies, fragrance, home & kitchen, health & wellness, and more.',
+    title:       'Urban Pulse Wholesale LLC | Professional Wholesale Distributor — Michigan',
+    description: 'Michigan-based wholesale distribution company. Fragrance, Home & Kitchen, Pet Supplies, Health & Wellness, and more. MAP compliant. Authorized accounts only.',
     images:      ['/og-image.jpg'],
   },
   robots: {
@@ -70,14 +70,15 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const orgSchema = {
     '@context': 'https://schema.org',
-    '@type':    'Organization',
-    name:       'Urban Pulse Wholesale',
+    '@type':    ['Organization', 'LocalBusiness'],
+    name:       'Urban Pulse Wholesale LLC',
     legalName:  'Urban Pulse Wholesale LLC',
     url:        'https://www.urbanpulsewholesale.com',
     logo:       'https://www.urbanpulsewholesale.com/icon-512.png',
-    description: 'Authorized wholesale distributor operating on Amazon FBA. Specializing in pet supplies, fragrance, home & kitchen, health & wellness, grocery, and sports.',
+    description: 'Michigan-based wholesale distribution company sourcing authorized products across Fragrance, Home & Kitchen, Pet Supplies, Health & Wellness, Grocery, and Sports. MAP compliant.',
     address: {
       '@type':           'PostalAddress',
+      streetAddress:     'Warren, MI',
       addressLocality:   'Warren',
       addressRegion:     'MI',
       postalCode:        '48093',
@@ -88,26 +89,32 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     areaServed:  'US',
     sameAs:      ['https://linkedin.com/company/urban-pulse-wholesale'],
     knowsAbout:  [
-      'Amazon FBA wholesale distribution',
-      'Authorized brand wholesale',
+      'Wholesale distribution',
+      'Authorized brand wholesale accounts',
       'MAP compliant pricing',
-      'Pet supplies wholesale',
+      'B2B product sourcing',
       'Fragrance wholesale distribution',
+      'Pet supplies wholesale',
+      'Home and kitchen wholesale',
     ],
   }
 
   const websiteSchema = {
     '@context':        'https://schema.org',
     '@type':           'WebSite',
-    name:              'Urban Pulse Wholesale',
+    name:              'Urban Pulse Wholesale LLC',
     url:               'https://www.urbanpulsewholesale.com',
-    description:       'Authorized Amazon FBA wholesale distributor — pet supplies, fragrance, home & kitchen, health & wellness, grocery, sports.',
+    description:       'Michigan-based professional wholesale distributor — Fragrance, Home & Kitchen, Pet Supplies, Health & Wellness, Grocery, and Sports.',
     potentialAction: {
       '@type':         'SearchAction',
       target:          'https://www.urbanpulsewholesale.com/catalog?q={search_term_string}',
       'query-input':   'required name=search_term_string',
     },
   }
+
+  // ─── GA4 Measurement ID ───────────────────────────────────────────────────
+  // Replace G-XXXXXXXXXX with your real GA4 Measurement ID from analytics.google.com
+  const GA_ID = 'G-0F9LGHPQD2'
 
   return (
     <html lang="en">
@@ -118,6 +125,27 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
           rel="stylesheet"
         />
+
+        {/* ── Google Analytics 4 ── */}
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${GA_ID}', {
+                page_path: window.location.pathname,
+                send_page_view: true
+              });
+            `,
+          }}
+        />
+
+        {/* ── Google Search Console Verification ── */}
+        {/* Replace content value with your GSC verification token */}
+        {/* <meta name="google-site-verification" content="YOUR_GSC_TOKEN_HERE" /> */}
+
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema)     }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
       </head>

@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Product Categories | Fragrance, Home, Pet, Health & More',
-  description: 'Urban Pulse Wholesale distributes products across 6 high-velocity Amazon FBA categories: Fragrance & Perfume, Home & Kitchen, Pet Supplies, Health & Wellness, Grocery & Food, and Sports & Outdoors. Authorized brands only. MAP compliant.',
+  description: 'Urban Pulse Wholesale distributes products across 6 high-velocity categories: Fragrance & Perfume, Home & Kitchen, Pet Supplies, Health & Wellness, Grocery & Food, and Sports & Outdoors. Authorized brands only. MAP compliant.',
 }
 
 const categories = [
@@ -100,13 +100,13 @@ export default function CategoriesPage() {
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <div style={{ maxWidth: '700px' }}>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'rgba(196,98,58,0.1)', border: '1px solid rgba(196,98,58,0.22)', borderRadius: '100px', padding: '6px 16px', marginBottom: '1.5rem' }}>
-              <span style={{ color: '#C4623A', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>6 Active Product Categories — Amazon FBA Wholesale</span>
+              <span style={{ color: '#C4623A', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>6 Active Product Categories — Authorized Wholesale Distribution</span>
             </div>
             <h1 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', color: '#1C1C1A', marginBottom: '1.25rem', fontWeight: 900, fontFamily: 'Fraunces, Georgia, serif' }}>
               Product Categories <span style={{ color: '#C4623A', fontStyle: 'italic' }}>We Distribute</span>
             </h1>
             <p style={{ color: '#6B6460', fontSize: '1.05rem', lineHeight: 1.8, fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
-              Urban Pulse Wholesale operates across six high-velocity Amazon FBA categories — authorized brands only, MAP compliant, data-driven purchasing. Fragrance &amp; Perfume is our newest and fastest-growing vertical.
+              Urban Pulse Wholesale operates across six high-velocity distribution categories — authorized brands only, MAP compliant, data-driven purchasing. Fragrance &amp; Perfume is our newest and fastest-growing vertical.
             </p>
           </div>
         </div>
@@ -144,7 +144,7 @@ export default function CategoriesPage() {
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.65rem' }} className="card-3d">
                   {/* Main hero image */}
                   <div className="cat-hero-img" style={{ borderRadius: '18px', overflow: 'hidden', position: 'relative', height: '260px', border: '1px solid #EDE7DE', boxShadow: '0 8px 32px rgba(28,28,26,0.07)' }}>
-                    <img src={cat.img} alt={`${cat.name} wholesale products Amazon FBA`} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                    <img src={cat.img} alt={`${cat.name} wholesale products — Urban Pulse Wholesale`} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
                     <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '1.25rem 1.5rem', background: 'linear-gradient(transparent, rgba(28,28,26,0.82))' }}>
                       <div style={{ color: 'white', fontFamily: 'Fraunces, Georgia, serif', fontSize: '1.2rem', fontWeight: 700 }}>{cat.name}</div>
                     </div>
