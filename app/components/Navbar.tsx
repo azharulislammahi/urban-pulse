@@ -5,62 +5,80 @@ import { Menu, X } from 'lucide-react'
 import Logo from './Logo'
 
 const links = [
-  { href: '/',              label: 'Home' },
-  { href: '/about',         label: 'About' },
-  { href: '/partnerships',  label: 'Partnerships' },
-  { href: '/fba-operations',label: 'Operations' },
-  { href: '/categories',    label: 'Categories' },
-  { href: '/catalog',       label: 'Catalog' },
-  { href: '/supplier-info', label: 'Suppliers' },
-  { href: '/contact',       label: 'Contact' },
+  { href: '/',               label: 'Home' },
+  { href: '/about',          label: 'About' },
+  { href: '/categories',     label: 'Fragrance & Beauty' },
+  { href: '/partnerships',   label: 'Partnerships' },
+  { href: '/fba-operations', label: 'Operations' },
+  { href: '/supplier-info',  label: 'Suppliers' },
+  { href: '/contact',        label: 'Contact' },
 ]
 
 export default function Navbar() {
-  const [open, setOpen]       = useState(false)
+  const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
-    const fn = () => setScrolled(window.scrollY > 50)
-    window.addEventListener('scroll', fn)
+    const fn = () => setScrolled(window.scrollY > 40)
+    fn()
+    window.addEventListener('scroll', fn, { passive: true })
     return () => window.removeEventListener('scroll', fn)
   }, [])
+
+  useEffect(() => {
+    document.body.style.overflow = open ? 'hidden' : ''
+    return () => { document.body.style.overflow = '' }
+  }, [open])
+
+  const solid = scrolled || open
+  const linkColor = solid ? '#6B5F51' : 'rgba(255,255,255,0.72)'
+  const linkHover = solid ? '#14100D' : '#FFFFFF'
 
   return (
     <>
       <style>{`
         .nav-desktop   { display: none; }
         .nav-hamburger { display: flex; }
-        @media (min-width: 1024px) {
+        @media (min-width: 1100px) {
           .nav-desktop   { display: flex; }
-          .nav-hamburger { display: none;  }
+          .nav-hamburger { display: none; }
         }
       `}</style>
 
-      <header style={{
-        position:  'fixed',
-        top: 0, left: 0, right: 0,
-        zIndex:    1000,
-        transition: 'all 0.35s ease',
-        background: scrolled
-          ? 'rgba(250,250,245,0.97)'
-          : 'rgba(250,250,245,0.88)',
-        backdropFilter: 'blur(20px)',
-        WebkitBackdropFilter: 'blur(20px)',
-        borderBottom: '1px solid rgba(196,98,58,0.14)',
-        padding: scrolled ? '0.6rem 0' : '0.9rem 0',
-      }}>
-        <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 1.25rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          <Logo size="sm" variant="dark" />
+      <header
+        style={{
+          position: 'fixed',
+          top: 0, left: 0, right: 0,
+          zIndex: 1000,
+          transition: 'background 0.4s ease, padding 0.4s ease, border-color 0.4s ease',
+          background: solid ? 'rgba(251,248,243,0.94)' : 'transparent',
+          backdropFilter: solid ? 'blur(18px)' : 'none',
+          WebkitBackdropFilter: solid ? 'blur(18px)' : 'none',
+          borderBottom: `1px solid ${solid ? 'rgba(184,135,60,0.20)' : 'transparent'}`,
+          padding: solid ? '0.7rem 0' : '1.35rem 0',
+        }}
+      >
+        <div style={{ maxWidth: 1180, margin: '0 auto', padding: '0 1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1.5rem' }}>
+          <Logo size="sm" variant={solid ? 'dark' : 'light'} />
 
-          {/* Desktop nav */}
-          <nav className="nav-desktop" style={{ alignItems: 'center', gap: '1.5rem' }}>
+          <nav className="nav-desktop" style={{ alignItems: 'center', gap: '1.9rem' }}>
             {links.map(l => (
               <Link
                 key={l.href}
                 href={l.href}
-                style={{ fontSize: '0.78rem', fontWeight: 600, color: '#6B6460', letterSpacing: '0.05em', textTransform: 'uppercase', textDecoration: 'none', fontFamily: 'Plus Jakarta Sans, sans-serif', transition: 'color 0.2s' }}
-                onMouseEnter={e => (e.currentTarget.style.color = '#1C1C1A')}
-                onMouseLeave={e => (e.currentTarget.style.color = '#6B6460')}
+                style={{
+                  fontFamily: 'Plus Jakarta Sans, sans-serif',
+                  fontSize: '0.7rem',
+                  fontWeight: 600,
+                  color: linkColor,
+                  letterSpacing: '0.16em',
+                  textTransform: 'uppercase',
+                  textDecoration: 'none',
+                  whiteSpace: 'nowrap',
+                  transition: 'color 0.2s',
+                }}
+                onMouseEnter={e => (e.currentTarget.style.color = linkHover)}
+                onMouseLeave={e => (e.currentTarget.style.color = linkColor)}
               >
                 {l.label}
               </Link>
@@ -68,38 +86,91 @@ export default function Navbar() {
           </nav>
 
           <div className="nav-desktop">
-            <Link href="/supplier-info" style={{ background: '#C4623A', color: 'white', fontWeight: 700, padding: '0.6rem 1.4rem', borderRadius: 100, fontFamily: 'Plus Jakarta Sans, sans-serif', fontSize: '0.76rem', letterSpacing: '0.04em', textTransform: 'uppercase', textDecoration: 'none', display: 'inline-block' }}>
-              Apply for Wholesale Account
+            <Link
+              href="/supplier-info"
+              style={{
+                background: '#B8873C',
+                color: '#fff',
+                fontFamily: 'Plus Jakarta Sans, sans-serif',
+                fontWeight: 700,
+                fontSize: '0.68rem',
+                letterSpacing: '0.16em',
+                textTransform: 'uppercase',
+                padding: '0.85rem 1.55rem',
+                borderRadius: 2,
+                textDecoration: 'none',
+                whiteSpace: 'nowrap',
+              }}
+            >
+              Brand Inquiry
             </Link>
           </div>
 
-          {/* Hamburger */}
           <button
             className="nav-hamburger"
             onClick={() => setOpen(!open)}
-            style={{ background: 'none', border: '1px solid rgba(196,98,58,0.35)', borderRadius: 8, padding: '0.45rem', cursor: 'pointer', alignItems: 'center', justifyContent: 'center' }}
-            aria-label="Toggle menu">
-            {open ? <X size={22} color="#C4623A" /> : <Menu size={22} color="#C4623A" />}
+            aria-label={open ? 'Close menu' : 'Open menu'}
+            aria-expanded={open}
+            style={{
+              background: 'none',
+              border: `1px solid ${solid ? 'rgba(184,135,60,0.4)' : 'rgba(255,255,255,0.35)'}`,
+              borderRadius: 2,
+              padding: '0.5rem',
+              cursor: 'pointer',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            {open
+              ? <X size={20} color={solid ? '#B8873C' : '#fff'} />
+              : <Menu size={20} color={solid ? '#B8873C' : '#fff'} />}
           </button>
         </div>
 
-        {/* Mobile menu */}
         {open && (
-          <div style={{ background: '#FAFAF5', borderTop: '1px solid #EDE7DE' }}>
-            <nav style={{ display: 'flex', flexDirection: 'column', padding: '1rem 1.25rem 1.5rem' }}>
+          <div style={{ background: '#FBF8F3', borderTop: '1px solid #EDE4D6', maxHeight: 'calc(100vh - 64px)', overflowY: 'auto' }}>
+            <nav style={{ display: 'flex', flexDirection: 'column', padding: '0.75rem 1.5rem 2rem' }}>
               {links.map(l => (
                 <Link
                   key={l.href}
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  style={{ color: '#3D3D3B', padding: '0.85rem 0', fontSize: '0.95rem', fontWeight: 600, borderBottom: '1px solid #EDE7DE', textDecoration: 'none', letterSpacing: '0.03em', fontFamily: 'Plus Jakarta Sans, sans-serif', display: 'block' }}
+                  style={{
+                    color: '#3B3229',
+                    padding: '1rem 0',
+                    fontSize: '0.82rem',
+                    fontWeight: 600,
+                    letterSpacing: '0.14em',
+                    textTransform: 'uppercase',
+                    borderBottom: '1px solid #EDE4D6',
+                    textDecoration: 'none',
+                    fontFamily: 'Plus Jakarta Sans, sans-serif',
+                    display: 'block',
+                  }}
                 >
                   {l.label}
                 </Link>
               ))}
-              <Link href="/supplier-info" onClick={() => setOpen(false)}
-                style={{ marginTop: '1.25rem', background: '#C4623A', color: 'white', fontWeight: 700, padding: '0.9rem', borderRadius: 100, fontFamily: 'Plus Jakarta Sans, sans-serif', fontSize: '0.875rem', letterSpacing: '0.04em', textTransform: 'uppercase', textDecoration: 'none', display: 'block', textAlign: 'center' }}>
-                Apply for Wholesale Account
+              <Link
+                href="/supplier-info"
+                onClick={() => setOpen(false)}
+                style={{
+                  marginTop: '1.5rem',
+                  background: '#B8873C',
+                  color: '#fff',
+                  fontWeight: 700,
+                  padding: '1rem',
+                  borderRadius: 2,
+                  fontFamily: 'Plus Jakarta Sans, sans-serif',
+                  fontSize: '0.75rem',
+                  letterSpacing: '0.16em',
+                  textTransform: 'uppercase',
+                  textDecoration: 'none',
+                  display: 'block',
+                  textAlign: 'center',
+                }}
+              >
+                Brand Inquiry
               </Link>
             </nav>
           </div>

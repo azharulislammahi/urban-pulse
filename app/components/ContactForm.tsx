@@ -1,128 +1,126 @@
 'use client'
 import { useForm, ValidationError } from '@formspree/react'
-import { ArrowRight, CheckCircle2, Loader2 } from 'lucide-react'
+import { ArrowRight, Check, Loader2 } from 'lucide-react'
+
+const err: React.CSSProperties = {
+  color: '#B4402C',
+  fontSize: '0.76rem',
+  fontFamily: 'Plus Jakarta Sans, sans-serif',
+  marginTop: '0.35rem',
+  display: 'block',
+}
 
 export default function ContactForm() {
   const [state, handleSubmit] = useForm('xaqzdwpn')
 
-  const inp: React.CSSProperties = {
-    width: '100%', padding: '0.8rem 1rem',
-    border: '1.5px solid #e2e8f0', borderRadius: 8,
-    fontFamily: 'Plus Jakarta Sans, sans-serif', fontSize: '0.9rem',
-    color: '#1e293b', background: 'white', outline: 'none',
-    transition: 'border-color 0.2s', boxSizing: 'border-box',
-  }
-  const lbl: React.CSSProperties = {
-    display: 'block', fontSize: '0.75rem', fontWeight: 700,
-    color: '#1e293b', marginBottom: '0.35rem',
-    letterSpacing: '0.08em', textTransform: 'uppercase',
-    fontFamily: 'Plus Jakarta Sans, sans-serif',
-  }
-  const err: React.CSSProperties = {
-    color: '#dc2626', fontSize: '0.78rem',
-    fontFamily: 'Plus Jakarta Sans, sans-serif',
-    marginTop: '0.25rem', display: 'block',
-  }
-
   if (state.succeeded) {
     return (
-      <div style={{ background: 'white', borderRadius: 20, padding: '3rem', border: '1px solid #e2e8f0', textAlign: 'center' }}>
-        <div style={{ width: 72, height: 72, borderRadius: '50%', background: 'rgba(14,165,176,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem' }}>
-          <CheckCircle2 size={36} color="#0ea5b0" />
+      <div style={{ background: '#fff', border: '1px solid #EDE4D6', borderRadius: 3, padding: '3.5rem 2.5rem', textAlign: 'center' }}>
+        <div style={{ width: 56, height: 56, borderRadius: '50%', border: '1px solid #B8873C', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.75rem' }}>
+          <Check size={24} color="#B8873C" />
         </div>
-        <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '1.5rem', color: '#050d1f', marginBottom: '0.75rem', fontWeight: 700 }}>Message Sent!</h3>
-        <p style={{ color: '#64748b', fontSize: '0.95rem', lineHeight: 1.7, fontFamily: 'Plus Jakarta Sans, sans-serif', maxWidth: 380, margin: '0 auto' }}>
-          Thank you for reaching out. We will respond within one business day (Mon–Fri, 9AM–5PM).
+        <h3 style={{ fontFamily: 'Fraunces, Georgia, serif', fontWeight: 400, fontSize: '1.6rem', color: '#14100D', marginBottom: '0.85rem' }}>
+          Message received
+        </h3>
+        <p style={{ color: '#6B5F51', fontSize: '0.9rem', lineHeight: 1.85, fontFamily: 'Plus Jakarta Sans, sans-serif', maxWidth: 400, margin: '0 auto' }}>
+          Thank you for reaching out. We reply within one business day, Monday to Friday, 9:00 AM – 5:00 PM EST.
         </p>
       </div>
     )
   }
 
   return (
-    <div style={{ background: 'white', borderRadius: 20, padding: '2.5rem', border: '1px solid #e2e8f0', boxShadow: '0 8px 60px rgba(5,13,31,0.07)' }}>
-      <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '1.4rem', color: '#050d1f', marginBottom: '0.4rem', fontWeight: 700 }}>Send Us a Message</h3>
-      <p style={{ color: '#94a3b8', fontSize: '0.875rem', marginBottom: '2rem', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>We respond within 1 business day.</p>
+    <div style={{ background: '#fff', border: '1px solid #EDE4D6', borderRadius: 3, padding: '2.75rem' }}>
+      <div className="eyebrow" style={{ marginBottom: '0.75rem' }}>Send a message</div>
+      <h3 style={{ fontFamily: 'Fraunces, Georgia, serif', fontWeight: 400, fontSize: '1.6rem', color: '#14100D', marginBottom: '0.6rem' }}>
+        Tell us what you need
+      </h3>
+      <p style={{ color: '#9A8B79', fontSize: '0.85rem', marginBottom: '2.25rem', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
+        We reply within one business day.
+      </p>
 
-      <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+      {state.errors && Object.keys(state.errors).length > 0 && (
+        <div style={{ background: '#FBF0ED', border: '1px solid #E8C8BE', borderRadius: 2, padding: '0.9rem 1rem', marginBottom: '1.5rem', color: '#B4402C', fontSize: '0.85rem', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
+          Please correct the fields below and try again.
+        </div>
+      )}
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }} className="form-grid">
+      <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.35rem' }}>
+        <div className="form-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
           <div>
-            <label htmlFor="contact-name" style={lbl}>Full Name *</label>
-            <input id="contact-name" name="name" type="text" required placeholder="Your Name" style={inp}
-              onFocus={e => e.target.style.borderColor='#d4a843'} onBlur={e => e.target.style.borderColor='#e2e8f0'} />
+            <label htmlFor="contact-name" className="lbl">Full name *</label>
+            <input id="contact-name" name="name" type="text" required placeholder="Your name" className="inp" />
             <ValidationError field="name" errors={state.errors} style={err} />
           </div>
           <div>
-            <label htmlFor="contact-company" style={lbl}>Company</label>
-            <input id="contact-company" name="company" type="text" placeholder="Your Company" style={inp}
-              onFocus={e => e.target.style.borderColor='#d4a843'} onBlur={e => e.target.style.borderColor='#e2e8f0'} />
+            <label htmlFor="contact-company" className="lbl">Company / brand</label>
+            <input id="contact-company" name="company" type="text" placeholder="Company name" className="inp" />
           </div>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }} className="form-grid">
+        <div className="form-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
           <div>
-            <label htmlFor="contact-email" style={lbl}>Email *</label>
-            <input id="contact-email" name="email" type="email" required placeholder="you@company.com" style={inp}
-              onFocus={e => e.target.style.borderColor='#d4a843'} onBlur={e => e.target.style.borderColor='#e2e8f0'} />
+            <label htmlFor="contact-email" className="lbl">Business email *</label>
+            <input id="contact-email" name="email" type="email" required placeholder="you@company.com" className="inp" />
             <ValidationError field="email" errors={state.errors} style={err} />
           </div>
           <div>
-            <label htmlFor="contact-phone" style={lbl}>Phone</label>
-            <input id="contact-phone" name="phone" type="tel" placeholder="(000) 000-0000" style={inp}
-              onFocus={e => e.target.style.borderColor='#d4a843'} onBlur={e => e.target.style.borderColor='#e2e8f0'} />
+            <label htmlFor="contact-phone" className="lbl">Phone</label>
+            <input id="contact-phone" name="phone" type="tel" placeholder="(000) 000-0000" className="inp" />
           </div>
         </div>
 
         <div>
-          <label htmlFor="contact-subject" style={lbl}>Subject *</label>
-          <select id="contact-subject" name="subject" required style={{ ...inp, cursor: 'pointer' }}
-            onFocus={e => e.target.style.borderColor='#d4a843'} onBlur={e => e.target.style.borderColor='#e2e8f0'}>
-            <option value="">Select a subject...</option>
-            <option>Supplier / Wholesale Account Inquiry</option>
-            <option>Documentation Request</option>
-            <option>Partnership Question</option>
-            <option>Business Verification</option>
-            <option>General Question</option>
+          <label htmlFor="contact-subject" className="lbl">Subject *</label>
+          <select id="contact-subject" name="subject" required className="inp" style={{ cursor: 'pointer' }}>
+            <option value="">Select a subject…</option>
+            <option>Fragrance wholesale account inquiry</option>
+            <option>Beauty &amp; personal care account inquiry</option>
+            <option>Documentation request (LLC, EIN, resale certificate)</option>
+            <option>Authorized reseller / MAP policy question</option>
+            <option>Business verification</option>
+            <option>General question</option>
             <option>Other</option>
           </select>
           <ValidationError field="subject" errors={state.errors} style={err} />
         </div>
 
         <div>
-          <label htmlFor="contact-message" style={lbl}>Message *</label>
-          <textarea id="contact-message" name="message" required rows={5}
-            placeholder="Please describe your inquiry in detail..."
-            style={{ ...inp, resize: 'vertical' }}
-            onFocus={e => e.target.style.borderColor='#d4a843'} onBlur={e => e.target.style.borderColor='#e2e8f0'} />
+          <label htmlFor="contact-message" className="lbl">Message *</label>
+          <textarea
+            id="contact-message"
+            name="message"
+            required
+            rows={5}
+            placeholder="Please describe your inquiry…"
+            className="inp"
+            style={{ resize: 'vertical' }}
+          />
           <ValidationError field="message" errors={state.errors} style={err} />
         </div>
 
-        <div style={{ display: 'flex', alignItems: 'flex-start', gap: 10 }}>
-          <input type="checkbox" id="contact-privacy" name="privacy" required
-            style={{ marginTop: 3, accentColor: '#d4a843', width: 16, height: 16, flexShrink: 0 }} />
-          <label htmlFor="contact-privacy" style={{ color: '#64748b', fontSize: '0.82rem', lineHeight: 1.6, fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
-            I agree to the <a href="/privacy" style={{ color: '#050d1f', textDecoration: 'underline' }}>Privacy Policy</a>. My information will only be used to respond to this inquiry.
+        <div style={{ display: 'flex', alignItems: 'flex-start', gap: 11 }}>
+          <input type="checkbox" id="contact-privacy" name="privacy" required style={{ marginTop: 3, accentColor: '#B8873C', width: 15, height: 15, flexShrink: 0 }} />
+          <label htmlFor="contact-privacy" style={{ color: '#6B5F51', fontSize: '0.8rem', lineHeight: 1.7, fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
+            I agree to the <a href="/privacy" style={{ color: '#14100D' }}>Privacy Policy</a>. My information will only be used to respond to this inquiry.
           </label>
         </div>
 
-        <button type="submit" disabled={state.submitting} style={{
-          background: state.submitting ? '#94a3b8' : 'linear-gradient(135deg, #d4a843, #f0c96a)',
-          color: '#050d1f', fontWeight: 800, padding: '0.95rem',
-          borderRadius: 8, fontFamily: 'Plus Jakarta Sans, sans-serif',
-          fontSize: '0.85rem', letterSpacing: '0.06em', textTransform: 'uppercase',
-          border: 'none', cursor: state.submitting ? 'not-allowed' : 'pointer',
-          width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8,
-          transition: 'all 0.2s',
-        }}>
+        <button
+          type="submit"
+          disabled={state.submitting}
+          className="btn btn-gold"
+          style={{ width: '100%', justifyContent: 'center', opacity: state.submitting ? 0.6 : 1, cursor: state.submitting ? 'not-allowed' : 'pointer' }}
+        >
           {state.submitting
-            ? <><Loader2 size={16} style={{ animation: 'spin 1s linear infinite' }} /> Sending...</>
-            : <>Send Message <ArrowRight size={15} /></>}
+            ? <><Loader2 size={15} style={{ animation: 'spin 1s linear infinite' }} /> Sending…</>
+            : <>Send message <ArrowRight size={14} /></>}
         </button>
-
       </form>
+
       <style>{`
         @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-        @media(max-width: 600px) { .form-grid { grid-template-columns: 1fr !important; } }
+        @media (max-width: 600px) { .form-grid { grid-template-columns: 1fr !important; } }
       `}</style>
     </div>
   )

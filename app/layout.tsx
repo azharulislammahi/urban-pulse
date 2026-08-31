@@ -3,117 +3,142 @@ import './globals.css'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 
+const SITE = 'https://www.urbanpulsewholesale.com'
+
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.urbanpulsewholesale.com'),
+  metadataBase: new URL(SITE),
   title: {
-    default:  'Urban Pulse Wholesale LLC | Professional Wholesale Distributor — Michigan',
+    default:  'Urban Pulse Wholesale LLC | Fragrance & Beauty Wholesale Distributor — Michigan',
     template: '%s | Urban Pulse Wholesale',
   },
-  description: 'Urban Pulse Wholesale LLC is a Michigan-based wholesale distribution company sourcing authorized products across Fragrance, Home & Kitchen, Pet Supplies, Health & Wellness, and more. MAP compliant. Authorized accounts only.',
+  description:
+    'Urban Pulse Wholesale LLC is a Michigan-registered wholesale distributor specializing in fragrance, perfume and beauty. Authorized accounts only, MAP compliant, Amazon Dangerous Goods and FDA cosmetic labeling literate.',
   keywords: [
-    'wholesale distributor Michigan',
-    'authorized wholesale buyer',
-    'wholesale distribution company',
-    'B2B wholesale supplier',
-    'MAP compliant wholesale',
     'wholesale fragrance distributor',
-    'wholesale home kitchen distributor',
-    'wholesale pet supplies distributor',
-    'wholesale health wellness',
+    'wholesale perfume distributor',
+    'authorized fragrance wholesale account',
+    'wholesale beauty distributor',
+    'wholesale cosmetics distributor',
+    'oud and attar wholesale',
+    'niche fragrance wholesale USA',
+    'MAP compliant fragrance reseller',
+    'authorized reseller perfume',
+    'Amazon dangerous goods fragrance compliance',
+    'wholesale personal care distributor',
+    'B2B fragrance sourcing',
+    'wholesale distributor Warren MI',
+    'Michigan fragrance wholesaler',
     'Urban Pulse Wholesale',
-    'authorized brand wholesaler',
-    'multi-channel wholesale distributor',
-    'wholesale distribution Warren MI',
-    'authorized wholesale accounts',
-    'B2B product sourcing',
   ],
+  authors: [{ name: 'Urban Pulse Wholesale LLC' }],
+  creator: 'Urban Pulse Wholesale LLC',
+  publisher: 'Urban Pulse Wholesale LLC',
+  category: 'Wholesale Distribution',
   icons: {
     icon: [
-      { url: '/favicon.ico',    sizes: 'any' },
-      { url: '/icon.svg',       type: 'image/svg+xml' },
-      { url: '/icon-192.png',   sizes: '192x192', type: 'image/png' },
-      { url: '/icon-512.png',   sizes: '512x512', type: 'image/png' },
+      { url: '/favicon.ico',  sizes: 'any' },
+      { url: '/icon.svg',     type: 'image/svg+xml' },
+      { url: '/icon-192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/icon-512.png', sizes: '512x512', type: 'image/png' },
     ],
     apple:    [{ url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
     shortcut: '/favicon.ico',
   },
   manifest: '/manifest.json',
   openGraph: {
-    type:        'website',
-    locale:      'en_US',
-    url:         'https://www.urbanpulsewholesale.com',
-    siteName:    'Urban Pulse Wholesale',
-    title:       'Urban Pulse Wholesale LLC | Professional Wholesale Distributor — Michigan',
-    description: 'Michigan-based wholesale distribution company specializing in Fragrance, Home & Kitchen, Pet Supplies, Health & Wellness, Grocery, and Sports. MAP compliant. Authorized accounts only.',
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Urban Pulse Wholesale — Professional Wholesale Distributor' }],
+    type:     'website',
+    locale:   'en_US',
+    url:      SITE,
+    siteName: 'Urban Pulse Wholesale',
+    title:    'Urban Pulse Wholesale LLC | Fragrance & Beauty Wholesale Distributor',
+    description:
+      'Michigan-registered wholesale distributor specializing in fragrance, perfume and beauty. Authorized accounts only. MAP compliant.',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Urban Pulse Wholesale — Fragrance & Beauty Wholesale Distribution' }],
   },
   twitter: {
     card:        'summary_large_image',
-    title:       'Urban Pulse Wholesale LLC | Professional Wholesale Distributor — Michigan',
-    description: 'Michigan-based wholesale distribution company. Fragrance, Home & Kitchen, Pet Supplies, Health & Wellness, and more. MAP compliant. Authorized accounts only.',
+    title:       'Urban Pulse Wholesale LLC | Fragrance & Beauty Wholesale Distributor',
+    description: 'Michigan-registered wholesale distributor for fragrance, perfume and beauty. Authorized accounts only. MAP compliant.',
     images:      ['/og-image.jpg'],
   },
   robots: {
-    index:             true,
-    follow:            true,
+    index: true,
+    follow: true,
     googleBot: {
-      index:           true,
-      follow:          true,
+      index: true,
+      follow: true,
       'max-video-preview': -1,
       'max-image-preview': 'large',
-      'max-snippet':   -1,
+      'max-snippet': -1,
     },
   },
-  alternates: { canonical: 'https://www.urbanpulsewholesale.com' },
+  alternates: { canonical: SITE },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const orgSchema = {
     '@context': 'https://schema.org',
-    '@type':    ['Organization', 'LocalBusiness'],
-    name:       'Urban Pulse Wholesale LLC',
-    legalName:  'Urban Pulse Wholesale LLC',
-    url:        'https://www.urbanpulsewholesale.com',
-    logo:       'https://www.urbanpulsewholesale.com/icon-512.png',
-    description: 'Michigan-based wholesale distribution company sourcing authorized products across Fragrance, Home & Kitchen, Pet Supplies, Health & Wellness, Grocery, and Sports. MAP compliant.',
+    '@type': ['Organization', 'LocalBusiness'],
+    '@id': `${SITE}/#organization`,
+    name: 'Urban Pulse Wholesale LLC',
+    legalName: 'Urban Pulse Wholesale LLC',
+    url: SITE,
+    logo: `${SITE}/icon-512.png`,
+    image: `${SITE}/og-image.jpg`,
+    description:
+      'Michigan-registered wholesale distribution company specializing in fragrance, perfume and beauty. Sources exclusively from brands and authorized distributors. MAP compliant, authorized accounts only.',
     address: {
-      '@type':           'PostalAddress',
-      streetAddress:     'Warren, MI',
-      addressLocality:   'Warren',
-      addressRegion:     'MI',
-      postalCode:        '48093',
-      addressCountry:    'US',
+      '@type': 'PostalAddress',
+      addressLocality: 'Warren',
+      addressRegion: 'MI',
+      postalCode: '48093',
+      addressCountry: 'US',
     },
-    telephone:   '+15862008750',
-    email:       'support@urbanpulsewholesale.com',
-    areaServed:  'US',
-    sameAs:      ['https://linkedin.com/company/urban-pulse-wholesale'],
-    knowsAbout:  [
-      'Wholesale distribution',
-      'Authorized brand wholesale accounts',
+    telephone: '+15862008750',
+    email: 'support@urbanpulsewholesale.com',
+    areaServed: { '@type': 'Country', name: 'United States' },
+    openingHoursSpecification: [{
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '09:00',
+      closes: '17:00',
+    }],
+    contactPoint: [{
+      '@type': 'ContactPoint',
+      contactType: 'Wholesale & supplier inquiries',
+      telephone: '+15862008750',
+      email: 'support@urbanpulsewholesale.com',
+      areaServed: 'US',
+      availableLanguage: ['English'],
+    }],
+    sameAs: ['https://linkedin.com/company/urban-pulse-wholesale'],
+    knowsAbout: [
+      'Wholesale fragrance distribution',
+      'Wholesale perfume distribution',
+      'Oud and attar sourcing',
+      'Niche and designer fragrance wholesale',
+      'Wholesale beauty and personal care distribution',
+      'Authorized reseller agreements',
       'MAP compliant pricing',
+      'Amazon Dangerous Goods and SDS compliance',
+      'FDA cosmetic labeling requirements',
       'B2B product sourcing',
-      'Fragrance wholesale distribution',
-      'Pet supplies wholesale',
-      'Home and kitchen wholesale',
     ],
   }
 
   const websiteSchema = {
-    '@context':        'https://schema.org',
-    '@type':           'WebSite',
-    name:              'Urban Pulse Wholesale LLC',
-    url:               'https://www.urbanpulsewholesale.com',
-    description:       'Michigan-based professional wholesale distributor — Fragrance, Home & Kitchen, Pet Supplies, Health & Wellness, Grocery, and Sports.',
-    potentialAction: {
-      '@type':         'SearchAction',
-      target:          'https://www.urbanpulsewholesale.com/catalog?q={search_term_string}',
-      'query-input':   'required name=search_term_string',
-    },
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${SITE}/#website`,
+    name: 'Urban Pulse Wholesale LLC',
+    url: SITE,
+    publisher: { '@id': `${SITE}/#organization` },
+    inLanguage: 'en-US',
+    description:
+      'Michigan-registered wholesale distributor of fragrance, perfume and beauty products. Authorized accounts only. MAP compliant.',
   }
 
   // ─── GA4 Measurement ID ───────────────────────────────────────────────────
-  // Replace G-XXXXXXXXXX with your real GA4 Measurement ID from analytics.google.com
   const GA_ID = 'G-0F9LGHPQD2'
 
   return (
@@ -122,7 +147,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
           rel="stylesheet"
         />
 
@@ -146,7 +171,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Replace content value with your GSC verification token */}
         {/* <meta name="google-site-verification" content="YOUR_GSC_TOKEN_HERE" /> */}
 
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema)     }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
       </head>
       <body>

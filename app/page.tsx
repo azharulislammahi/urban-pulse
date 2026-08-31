@@ -1,309 +1,396 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowRight, CheckCircle2, Shield, Handshake, BarChart3, TrendingUp, Package, Star } from 'lucide-react'
+import { ArrowRight, ShieldCheck, FileCheck2, LineChart, PackageCheck, Handshake, ScrollText } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Urban Pulse Wholesale LLC | Professional Wholesale Distributor — Michigan',
-  description: 'Urban Pulse Wholesale LLC is a Michigan-based wholesale distribution company sourcing authorized products in Fragrance, Home & Kitchen, Pet Supplies, Health & Wellness, and more. MAP compliant. Authorized accounts only.',
+  title: 'Fragrance & Beauty Wholesale Distributor | Urban Pulse Wholesale LLC',
+  description:
+    'Urban Pulse Wholesale LLC is a Michigan-registered wholesale distributor of fragrance, perfume and beauty products. Authorized accounts only, MAP compliant, Amazon Dangerous Goods and FDA cosmetic labeling literate.',
+  alternates: { canonical: 'https://www.urbanpulsewholesale.com' },
 }
 
-const categories = [
-  { name: 'Fragrance & Perfume', img: 'https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=800&q=80', desc: 'Oud, attar, parfum & home scent' },
-  { name: 'Home & Kitchen',      img: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80', desc: 'Cookware, appliances & décor' },
-  { name: 'Pet Supplies',        img: 'https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=800&q=80', desc: 'Food, toys & accessories' },
-  { name: 'Health & Wellness',   img: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&q=80', desc: 'Supplements & personal care' },
-  { name: 'Grocery & Food',      img: 'https://images.unsplash.com/photo-1542838132-92c53300491e?w=800&q=80', desc: 'Pantry staples & specialty' },
-  { name: 'Sports & Outdoors',   img: 'https://images.unsplash.com/photo-1517649763962-0c623066013b?w=800&q=80', desc: 'Fitness & outdoor gear' },
+const IMG = {
+  hero:     'https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=1400&q=80',
+  bottles:  'https://images.unsplash.com/photo-1608721279136-cd41b752fa41?w=900&q=80',
+  amber:    'https://images.unsplash.com/photo-1624613533305-28d421d70875?w=900&q=80',
+  beauty:   'https://images.unsplash.com/photo-1624362772755-4d5843e67047?w=900&q=80',
+  care:     'https://images.unsplash.com/photo-1648139346494-2b961c5a2bb7?w=900&q=80',
+  ops:      'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1000&q=80',
+}
+
+const proof = [
+  { k: 'Michigan LLC', v: 'Registered entity, EIN on file' },
+  { k: 'Authorized only', v: 'Brands & authorized distributors' },
+  { k: 'MAP compliant', v: 'Enforced on every listing' },
+  { k: 'DG & SDS ready', v: 'Flammables handled correctly' },
 ]
 
 const pillars = [
-  { icon: <Shield size={20}/>,    title: 'Brand Protection',    desc: 'Strict MAP compliance and authorized reseller agreements at every step. Your brand integrity is always protected.' },
-  { icon: <Handshake size={20}/>, title: 'Long-Term Focus',     desc: 'We build lasting partnerships, not one-time transactions — delivering consistent orders and predictable volume.' },
-  { icon: <BarChart3 size={20}/>, title: 'Data-Driven Buying',  desc: 'Every purchasing decision guided by verified sales velocity data and market analysis — never guesswork.' },
-  { icon: <TrendingUp size={20}/>,title: 'Reliable Growth',     desc: 'As products perform well we scale purchasing. Your success drives our continued investment.' },
-  { icon: <Package size={20}/>,   title: 'Nationwide Fulfillment', desc: 'Products reach customers nationwide through professional fulfillment infrastructure — fast, reliable, and fully tracked.' },
-  { icon: <Star size={20}/>,      title: 'Professional Standards', desc: 'Organized documentation, on-time payments, and transparent communication at every stage.' },
+  {
+    icon: <ShieldCheck size={19} />,
+    title: 'Brand protection first',
+    desc: 'Signed authorized-reseller terms, MAP enforced on every listing, and no diversion into unauthorized channels. Counterfeits are the fragrance category’s biggest problem — we are part of the solution, not the noise.',
+  },
+  {
+    icon: <FileCheck2 size={19} />,
+    title: 'Compliance literacy',
+    desc: 'Amazon Dangerous Goods classification and SDS submission for alcohol-based fragrance, FDA cosmetic labeling requirements, and lot/batch traceability from invoice to shipment.',
+  },
+  {
+    icon: <ScrollText size={19} />,
+    title: 'Documentation you can audit',
+    desc: 'Clean purchase invoices, letters of authorization, W-9 and resale certificates, and a documented chain of custody for every unit we sell.',
+  },
+  {
+    icon: <LineChart size={19} />,
+    title: 'Data-led purchasing',
+    desc: 'Buying decisions come from verified sell-through, offer-count trends and price stability — not guesswork. We forecast before we commit, and we reorder on evidence.',
+  },
+  {
+    icon: <PackageCheck size={19} />,
+    title: 'Controlled fulfillment',
+    desc: 'Prep, labeling and shipment through professional fulfillment infrastructure, with inventory forecasting so your SKUs stay in stock instead of cycling in and out.',
+  },
+  {
+    icon: <Handshake size={19} />,
+    title: 'Built for the long term',
+    desc: 'We open accounts we intend to keep. Consistent reorders, predictable volume, and a single point of contact who answers within one business day.',
+  },
+]
+
+const lines = [
+  {
+    tag: 'Core focus',
+    name: 'Fragrance & Perfume',
+    img: IMG.bottles,
+    copy: 'Eau de parfum and eau de toilette, oud, attar and Middle Eastern compositions, perfume oils and roll-ons, body mists and cologne sprays, gift sets, and home fragrance including diffusers and candles.',
+  },
+  {
+    tag: 'Adjacent line',
+    name: 'Beauty & Personal Care',
+    img: IMG.beauty,
+    copy: 'Scented body care, bath and shower, skincare and haircare, cosmetics and grooming — the categories fragrance buyers already shop, from the same authorized-account model.',
+  },
+]
+
+const process = [
+  { n: '01', h: 'Introduction', p: 'You receive a short, specific inquiry — who we are, which of your SKUs we want, and where they will be sold.' },
+  { n: '02', h: 'Account review', p: 'We supply the LLC documents, EIN, resale certificate and references your onboarding team needs. No chasing.' },
+  { n: '03', h: 'Terms & MAP', p: 'We sign your authorized-reseller agreement and MAP policy as written, and confirm the channels we are approved for.' },
+  { n: '04', h: 'First order', p: 'A sized opening order, prepped and compliant, followed by sell-through reporting and a scheduled reorder.' },
 ]
 
 export default function HomePage() {
   return (
-    <div style={{ background: '#FAFAF5', overflowX: 'hidden', maxWidth: '100vw' }}>
-
+    <div style={{ background: '#FBF8F3', overflowX: 'hidden' }}>
       <style>{`
-        .page-wrap   { max-width: 1200px; margin: 0 auto; padding: 0 1.25rem; }
-        .two-col     { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
-        .three-col   { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
-        .four-col    { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
-        .six-col     { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1rem; }
-        .photo-grid-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 0.875rem; }
-        .photo-item  { border-radius: 14px; overflow: hidden; height: 200px; }
-        .photo-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
-        .cat-item    { border-radius: 14px; overflow: hidden; position: relative; height: 260px; cursor: pointer; transition: transform 0.3s ease; }
-        .cat-item:hover { transform: scale(1.02); }
-        .cat-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
-        .section-pad { padding: 6rem 0; }
-        .rust-bar    { width: 36px; height: 3px; background: #C4623A; border-radius: 2px; margin-bottom: 1.25rem; }
-        .rust-bar-c  { width: 36px; height: 3px; background: #C4623A; border-radius: 2px; margin: 0 auto 1.25rem; }
-        .rust-btn    { background: #C4623A; color: white; font-weight: 700; padding: 0.9rem 1.75rem; border-radius: 100px; font-family: Plus Jakarta Sans, sans-serif; font-size: 0.82rem; letter-spacing: 0.04em; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s; }
-        .rust-btn:hover { background: #D97048; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(196,98,58,0.25); }
-        .outline-btn { border: 1.5px solid #C4623A; color: #C4623A; font-weight: 700; padding: 0.85rem 1.75rem; border-radius: 100px; font-family: Plus Jakarta Sans, sans-serif; font-size: 0.82rem; letter-spacing: 0.04em; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s; }
-        .outline-btn:hover { background: #C4623A; color: white; transform: translateY(-2px); }
-        .gold-btn    { background: #C4623A; color: white; font-weight: 700; padding: 0.9rem 1.75rem; border-radius: 100px; font-family: Plus Jakarta Sans, sans-serif; font-size: 0.82rem; letter-spacing: 0.04em; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s; }
-        .gold-btn:hover { background: #D97048; transform: translateY(-2px); }
-
-        @media (max-width: 767px) {
-          .two-col   { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
-          .three-col { grid-template-columns: 1fr !important; gap: 1rem !important; }
-          .four-col  { grid-template-columns: 1fr 1fr !important; gap: 0.75rem !important; }
-          .six-col   { grid-template-columns: 1fr 1fr !important; gap: 0.75rem !important; }
-          .photo-grid-wrap { grid-template-columns: 1fr !important; gap: 0.75rem !important; }
-          .photo-item { height: 220px !important; margin-top: 0 !important; }
-          .cat-item  { height: 180px !important; }
-          .section-pad { padding: 3.5rem 0 !important; }
-          .hide-mob  { display: none !important; }
-          .fba-img   { height: 220px !important; }
+        .hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 4.5rem; align-items: center; }
+        .line-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+        .proof-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+        .step-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+        @media (max-width: 1023px) {
+          .hero-grid { grid-template-columns: 1fr !important; gap: 3rem !important; }
+          .step-grid { grid-template-columns: 1fr 1fr !important; gap: 2rem !important; }
         }
-        @media (min-width: 768px) and (max-width: 1023px) {
-          .two-col   { grid-template-columns: 1fr !important; gap: 3rem !important; }
-          .six-col   { grid-template-columns: repeat(3, 1fr) !important; }
-          .three-col { grid-template-columns: 1fr 1fr !important; }
+        @media (max-width: 767px) {
+          .line-grid { grid-template-columns: 1fr !important; }
+          .proof-grid { grid-template-columns: 1fr 1fr !important; }
+          .step-grid { grid-template-columns: 1fr !important; gap: 1.75rem !important; }
         }
       `}</style>
 
-      {/* ── HERO — all light, cream background ── */}
-      <section style={{
-        minHeight: '100vh',
-        background: 'linear-gradient(160deg, #F5F0EA 0%, #FAFAF5 50%, #F0EBE3 100%)',
-        display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
-        position: 'relative', overflow: 'hidden',
-        paddingTop: '7rem', paddingBottom: '4rem',
-      }}>
-        {/* Subtle dot grid */}
-        <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(rgba(196,98,58,0.08) 1px, transparent 1px)', backgroundSize: '32px 32px', pointerEvents: 'none' }} />
-        {/* Warm orbs */}
-        <div style={{ position: 'absolute', width: '55%', maxWidth: 540, aspectRatio: '1', borderRadius: '50%', background: 'radial-gradient(circle, rgba(196,98,58,0.07) 0%, transparent 70%)', top: '-15%', right: '-8%', pointerEvents: 'none' }} />
-        <div style={{ position: 'absolute', width: '45%', maxWidth: 420, aspectRatio: '1', borderRadius: '50%', background: 'radial-gradient(circle, rgba(196,98,58,0.05) 0%, transparent 70%)', bottom: '-8%', left: '-6%', pointerEvents: 'none' }} />
-
-        <div className="page-wrap" style={{ position: 'relative', zIndex: 2, width: '100%', textAlign: 'center' }}>
-          {/* Badge */}
-          <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(196,98,58,0.1)', border: '1px solid rgba(196,98,58,0.22)', borderRadius: 100, padding: '6px 18px', marginBottom: '1.75rem' }}>
-            <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#C4623A', display: 'inline-block', flexShrink: 0 }} />
-            <span style={{ color: '#C4623A', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>Professional Wholesale Distributor — Warren, MI</span>
-          </div>
-
-          {/* Big heading */}
-          <h1 style={{ fontFamily: 'Fraunces, Georgia, serif', fontWeight: 900, fontSize: 'clamp(3rem, 12vw, 7rem)', color: '#1C1C1A', letterSpacing: '0.04em', lineHeight: 1, display: 'block', marginBottom: '0.5rem' }}>
-            URBAN PULSE
-          </h1>
-
-          {/* Pulse line SVG — now in rust/warm tones */}
-          <div style={{ maxWidth: 600, margin: '0 auto 0.75rem', padding: '0 1rem' }}>
-            <svg width="100%" viewBox="0 0 600 18" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: 'block' }}>
-              <defs>
-                <linearGradient id="hp" x1="0%" y1="50%" x2="100%" y2="50%">
-                  <stop offset="0%"   stopColor="rgba(196,98,58,0)"/>
-                  <stop offset="15%"  stopColor="#C4623A"/>
-                  <stop offset="50%"  stopColor="#D97048"/>
-                  <stop offset="85%"  stopColor="#C4623A"/>
-                  <stop offset="100%" stopColor="rgba(196,98,58,0)"/>
-                </linearGradient>
-              </defs>
-              <polyline points="0,9 40,9 60,9 75,2 90,16 105,4 120,14 135,9 165,9 195,9 210,2 225,16 240,4 255,14 270,9 300,9 330,9 345,2 360,16 375,4 390,14 405,9 435,9 465,9 480,2 495,16 510,4 525,14 540,9 560,9 600,9" stroke="url(#hp)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-            </svg>
-          </div>
-
-          <div style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', fontWeight: 300, fontSize: 'clamp(0.8rem, 3vw, 1rem)', color: '#9A9086', letterSpacing: '0.28em', textTransform: 'uppercase', marginBottom: '2rem' }}>Wholesale LLC</div>
-
-          <p style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#6B6460', fontSize: 'clamp(0.95rem, 3vw, 1.1rem)', lineHeight: 1.85, maxWidth: 540, margin: '0 auto 1rem' }}>
-            Authorized wholesale distribution in Fragrance, Home &amp; Kitchen, Pet Supplies, Health &amp; Wellness, and more — sourced from licensed brands, distributed nationwide through professional fulfillment infrastructure.
-          </p>
-
-          <div style={{ display: 'flex', gap: '0.875rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '2.5rem' }}>
-            <Link href="/supplier-info" className="rust-btn">Wholesale Inquiry <ArrowRight size={15}/></Link>
-            <Link href="/about" className="outline-btn">Learn More</Link>
-          </div>
-
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.25rem', justifyContent: 'center' }}>
-            {['MAP Compliant Pricing', 'Michigan LLC Registered', 'Authorized Brands Only', 'Nationwide Fulfillment'].map(b => (
-              <div key={b} style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-                <CheckCircle2 size={13} color="#C4623A"/>
-                <span style={{ color: '#9A9086', fontSize: '0.8rem', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>{b}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Scroll indicator */}
-        <div style={{ position: 'absolute', bottom: '1.5rem', left: '50%', transform: 'translateX(-50%)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 5 }}>
-          <span style={{ color: '#C4B8A8', fontSize: '0.6rem', letterSpacing: '0.18em', textTransform: 'uppercase', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>Scroll</span>
-          <div style={{ width: 1, height: 32, background: 'linear-gradient(180deg, rgba(196,98,58,0.5), transparent)' }} />
-        </div>
-      </section>
-
-      {/* ── TRUST BAR ── */}
-      <section style={{ background: '#C4623A', padding: '1.75rem 0' }}>
-        <div className="page-wrap">
-          <div className="four-col">
-            {[
-              { num: '500+', label: 'Wholesale SKUs'        },
-              { num: '6',    label: 'Product Categories'    },
-              { num: '48hr', label: 'Fulfillment Speed'     },
-              { num: 'MAP',  label: 'Price Protection'      },
-            ].map((s, i) => (
-              <div key={i} style={{ textAlign: 'center', padding: '0.5rem', borderRight: i < 3 ? '1px solid rgba(255,255,255,0.2)' : 'none' }}>
-                <div style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: 'clamp(1.5rem, 5vw, 2.2rem)', fontWeight: 900, color: 'white', lineHeight: 1, marginBottom: 5 }}>{s.num}</div>
-                <div style={{ color: 'rgba(255,255,255,0.7)', fontSize: 'clamp(0.6rem, 2vw, 0.7rem)', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>{s.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── WHO WE ARE ── */}
-      <section className="section-pad" style={{ background: '#FAFAF5' }}>
-        <div className="page-wrap">
-          <div className="two-col">
+      {/* ══ HERO ══ */}
+      <section
+        className="amber-wash grain"
+        style={{ position: 'relative', overflow: 'hidden', paddingTop: '11rem', paddingBottom: '7rem' }}
+      >
+        <div
+          aria-hidden="true"
+          style={{
+            position: 'absolute', inset: 0,
+            backgroundImage: `linear-gradient(90deg, rgba(20,16,13,0.96) 0%, rgba(20,16,13,0.86) 45%, rgba(20,16,13,0.42) 100%), url(${IMG.hero})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center right',
+            pointerEvents: 'none',
+          }}
+        />
+        <div className="page-wrap" style={{ position: 'relative', zIndex: 2 }}>
+          <div className="hero-grid">
             <div>
-              <div className="rust-bar" />
-              <h2 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: 'clamp(1.75rem, 4vw, 2.75rem)', color: '#1C1C1A', marginBottom: '1.25rem', fontWeight: 900 }}>Who We Are</h2>
-              <p style={{ color: '#6B6460', fontSize: 'clamp(0.9rem, 2.5vw, 1.05rem)', lineHeight: 1.85, marginBottom: '1.25rem', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
-                Urban Pulse Wholesale LLC is a professionally registered wholesale distribution company. We source products exclusively from authorized brands and distributors and distribute nationwide through professional fulfillment infrastructure — reaching customers across the United States.
-              </p>
-              <p style={{ color: '#9A9086', lineHeight: 1.85, marginBottom: '1.25rem', fontFamily: 'Plus Jakarta Sans, sans-serif', fontSize: '0.95rem' }}>
-                We specialize in Fragrance &amp; Perfume, Home &amp; Kitchen, Pet Supplies, Health &amp; Wellness, Grocery &amp; Food, and Sports &amp; Outdoors. Our buying decisions are driven by sales velocity data and brand relationship quality — never guesswork.
-              </p>
-              <p style={{ color: '#9A9086', lineHeight: 1.85, marginBottom: '2rem', fontFamily: 'Plus Jakarta Sans, sans-serif', fontSize: '0.95rem' }}>
-                We are not brokers, liquidators, or gray market sellers. Every product we carry comes from a legitimate, authorized wholesale account — signed agreements, documented purchasing, and full MAP compliance.
-              </p>
-              {/* Mission quote */}
-              <div style={{ background: '#F5F0EA', borderLeft: '3px solid #C4623A', borderRadius: '0 10px 10px 0', padding: '1.25rem 1.5rem', marginBottom: '2rem' }}>
-                <div style={{ color: '#C4623A', fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', marginBottom: '0.5rem', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>Our Mission</div>
-                <p style={{ color: '#3D3D3B', fontStyle: 'italic', fontSize: '0.9rem', lineHeight: 1.8, fontFamily: 'Fraunces, Georgia, serif', margin: 0 }}>
-                  "Committed to building lasting relationships with brands through professional purchasing, transparent communication, and responsible marketplace representation."
-                </p>
+              <div style={{ display: 'inline-flex', alignItems: 'center', gap: 10, border: '1px solid rgba(200,151,74,0.4)', borderRadius: 2, padding: '7px 16px', marginBottom: '2.25rem' }}>
+                <span style={{ width: 5, height: 5, borderRadius: '50%', background: '#D4A85C', flexShrink: 0 }} />
+                <span className="eyebrow eyebrow-light">Fragrance &amp; Beauty Wholesale — Warren, Michigan</span>
               </div>
-              <Link href="/about" className="rust-btn">About Us <ArrowRight size={15}/></Link>
+
+              <h1 className="display display-xl" style={{ color: '#FBF8F3', marginBottom: '1.75rem' }}>
+                Authorized wholesale
+                <br />
+                distribution for
+                <br />
+                <em style={{ fontStyle: 'italic', color: '#D4A85C' }}>fragrance</em> brands.
+              </h1>
+
+              <p style={{ color: 'rgba(255,255,255,0.66)', fontFamily: 'Plus Jakarta Sans, sans-serif', fontWeight: 300, fontSize: 'clamp(1rem, 2.2vw, 1.12rem)', lineHeight: 1.9, maxWidth: 560, marginBottom: '2.5rem' }}>
+                Urban Pulse Wholesale LLC buys fragrance, perfume and beauty products directly from brands and their
+                authorized distributors, and sells them under MAP through controlled, documented channels. No gray
+                market. No diversion. No surprises on your brand page.
+              </p>
+
+              <div style={{ display: 'flex', gap: '0.875rem', flexWrap: 'wrap', marginBottom: '3rem' }}>
+                <Link href="/supplier-info" className="btn btn-gold">
+                  Open a wholesale account <ArrowRight size={14} />
+                </Link>
+                <Link href="/partnerships" className="btn btn-outline-light">
+                  Why brands work with us
+                </Link>
+              </div>
             </div>
 
-            {/* Photo grid */}
-            <div className="photo-grid-wrap">
-              <div className="photo-item">
-                <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=600&q=80" alt="Wholesale warehouse operations" />
-              </div>
-              <div className="photo-item" style={{ marginTop: '1.5rem' }}>
-                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&q=80" alt="Professional wholesale fulfillment center" />
-              </div>
-              <div className="photo-item">
-                <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&q=80" alt="Retail products shelf" />
-              </div>
-              <div className="photo-item" style={{ marginTop: '-1.5rem' }}>
-                <img src="https://images.unsplash.com/photo-1560472355-536de3962603?w=600&q=80" alt="Business partnership meeting" />
-              </div>
-            </div>
+            <div />
           </div>
         </div>
       </section>
 
-      {/* ── CATEGORIES ── */}
-      <section className="section-pad" style={{ background: '#F5F0EA', position: 'relative', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', width: '40%', maxWidth: 400, aspectRatio: '1', borderRadius: '50%', background: 'radial-gradient(circle, rgba(196,98,58,0.06) 0%, transparent 70%)', top: '-10%', right: '-5%', pointerEvents: 'none' }} />
-        <div className="page-wrap" style={{ position: 'relative', zIndex: 1 }}>
-          <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-            <div className="rust-bar-c" />
-            <h2 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: 'clamp(1.75rem, 4vw, 2.75rem)', color: '#1C1C1A', marginBottom: '1rem', fontWeight: 900 }}>Categories We Distribute</h2>
-            <p style={{ color: '#9A9086', fontSize: '0.95rem', maxWidth: 520, margin: '0 auto', lineHeight: 1.75, fontFamily: 'Plus Jakarta Sans, sans-serif' }}>Six high-velocity product categories — authorized brands only, MAP compliant, data-driven purchasing across each.</p>
-          </div>
-          <div className="six-col">
-            {categories.map((cat, i) => (
-              <div key={i} className="cat-item">
-                <img src={cat.img} alt={`${cat.name} wholesale products — Urban Pulse Wholesale`} />
-                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(28,28,26,0.0) 20%, rgba(28,28,26,0.82) 100%)' }} />
-                <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '1rem 0.875rem' }}>
-                  <div style={{ color: 'white', fontFamily: 'Fraunces, Georgia, serif', fontSize: 'clamp(0.78rem, 2vw, 0.9rem)', fontWeight: 700, marginBottom: 3, lineHeight: 1.2 }}>{cat.name}</div>
-                  <div style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.68rem', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>{cat.desc}</div>
+      {/* ══ PROOF STRIP ══ */}
+      <section style={{ background: '#1F1913', borderTop: '1px solid rgba(200,151,74,0.18)' }}>
+        <div className="page-wrap">
+          <div className="proof-grid">
+            {proof.map((p, i) => (
+              <div
+                key={p.k}
+                style={{
+                  padding: '2rem 1.5rem',
+                  borderRight: i < proof.length - 1 ? '1px solid rgba(255,255,255,0.07)' : 'none',
+                }}
+              >
+                <div style={{ fontFamily: 'Fraunces, Georgia, serif', fontWeight: 400, fontSize: '1.2rem', color: '#D4A85C', marginBottom: '0.4rem' }}>
+                  {p.k}
+                </div>
+                <div style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.78rem', lineHeight: 1.6, fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
+                  {p.v}
                 </div>
               </div>
             ))}
           </div>
-          <div style={{ textAlign: 'center', marginTop: '2.5rem' }}>
-            <Link href="/categories" className="outline-btn">View All Categories <ArrowRight size={15}/></Link>
+        </div>
+      </section>
+
+      {/* ══ WHO WE ARE ══ */}
+      <section className="section" style={{ background: '#FBF8F3' }}>
+        <div className="page-wrap">
+          <div className="two-col">
+            <div>
+              <div className="rule" />
+              <div className="eyebrow" style={{ marginBottom: '1rem' }}>Who we are</div>
+              <h2 className="display display-lg" style={{ color: '#14100D', marginBottom: '1.75rem' }}>
+                A small, specialised distributor — not a marketplace reseller.
+              </h2>
+              <p className="body-copy" style={{ marginBottom: '1.25rem' }}>
+                Urban Pulse Wholesale LLC is a registered Michigan wholesale distribution company. We have narrowed our
+                focus to a single category family — fragrance and the beauty products that sit beside it — because that
+                is where authorized distribution matters most, and where a distributor who understands the compliance
+                burden is worth more than one who carries everything.
+              </p>
+              <p className="body-copy" style={{ marginBottom: '1.25rem' }}>
+                We source exclusively from brands and their authorized distributors. Every unit we sell has an invoice
+                behind it, a signed agreement above it, and a MAP price attached to it.
+              </p>
+              <p className="body-copy" style={{ marginBottom: '2.25rem' }}>
+                We are not brokers, liquidators, or gray-market sellers, and we do not buy from other resellers.
+              </p>
+
+              <blockquote
+                style={{
+                  borderLeft: '1px solid #B8873C',
+                  paddingLeft: '1.75rem',
+                  marginBottom: '2.5rem',
+                }}
+              >
+                <p style={{ fontFamily: 'Fraunces, Georgia, serif', fontStyle: 'italic', fontWeight: 300, fontSize: '1.2rem', lineHeight: 1.7, color: '#3B3229', margin: 0 }}>
+                  “The brands worth carrying are the ones that are careful about who carries them. We built this company
+                  to be easy to approve and difficult to regret.”
+                </p>
+              </blockquote>
+
+              <Link href="/about" className="btn btn-outline">
+                About the company <ArrowRight size={14} />
+              </Link>
+            </div>
+
+            <div className="photo-grid-wrap">
+              <div className="photo-item media" style={{ height: 230 }}>
+                <img src={IMG.amber} alt="Amber fragrance bottles held in wholesale inventory" loading="lazy" />
+              </div>
+              <div className="photo-item media" style={{ height: 230, marginTop: '2rem' }}>
+                <img src={IMG.care} alt="Beauty and personal care products in wholesale distribution" loading="lazy" />
+              </div>
+              <div className="photo-item media" style={{ height: 230 }}>
+                <img src={IMG.bottles} alt="Perfume bottles prepared for authorized wholesale distribution" loading="lazy" />
+              </div>
+              <div className="photo-item media" style={{ height: 230, marginTop: '-2rem' }}>
+                <img src={IMG.ops} alt="Fulfillment operations for wholesale fragrance orders" loading="lazy" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ── WHY PARTNER ── */}
-      <section className="section-pad" style={{ background: '#FAFAF5' }}>
+      {/* ══ WHAT WE DISTRIBUTE ══ */}
+      <section className="section" style={{ background: '#F5EFE6' }}>
         <div className="page-wrap">
-          <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-            <div className="rust-bar-c" />
-            <h2 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: 'clamp(1.75rem, 4vw, 2.75rem)', color: '#1C1C1A', marginBottom: '1rem', fontWeight: 900 }}>Why Brands Choose Urban Pulse</h2>
+          <div style={{ maxWidth: 620, marginBottom: '3.5rem' }}>
+            <div className="rule" />
+            <div className="eyebrow" style={{ marginBottom: '1rem' }}>What we distribute</div>
+            <h2 className="display display-lg" style={{ color: '#14100D', marginBottom: '1.25rem' }}>
+              Two lines. One standard.
+            </h2>
+            <p className="body-copy">
+              Fragrance is the core of the business. Beauty and personal care is the adjacent line — same authorized
+              accounts, same MAP discipline, same documentation.
+            </p>
           </div>
+
+          <div className="line-grid">
+            {lines.map(l => (
+              <article key={l.name} style={{ background: '#FFFFFF', border: '1px solid #EDE4D6', borderRadius: 3, overflow: 'hidden' }}>
+                <div className="media" style={{ height: 260, borderRadius: 0 }}>
+                  <img src={l.img} alt={`${l.name} wholesale distribution — Urban Pulse Wholesale`} loading="lazy" />
+                </div>
+                <div style={{ padding: '2.25rem' }}>
+                  <div className="eyebrow" style={{ marginBottom: '0.85rem' }}>{l.tag}</div>
+                  <h3 style={{ fontFamily: 'Fraunces, Georgia, serif', fontWeight: 400, fontSize: '1.65rem', color: '#14100D', marginBottom: '1rem' }}>
+                    {l.name}
+                  </h3>
+                  <p className="body-copy" style={{ marginBottom: '1.5rem' }}>{l.copy}</p>
+                  <Link href="/categories" className="nav-link" style={{ color: '#B8873C' }}>
+                    See the full range
+                  </Link>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══ WHY BRANDS CHOOSE US ══ */}
+      <section className="section grain" style={{ background: '#14100D', position: 'relative' }}>
+        <div className="page-wrap" style={{ position: 'relative', zIndex: 2 }}>
+          <div style={{ maxWidth: 640, marginBottom: '3.5rem' }}>
+            <div className="rule" />
+            <div className="eyebrow eyebrow-light" style={{ marginBottom: '1rem' }}>Why brands approve us</div>
+            <h2 className="display display-lg" style={{ color: '#FBF8F3', marginBottom: '1.25rem' }}>
+              The things a fragrance brand actually checks.
+            </h2>
+            <p style={{ color: 'rgba(255,255,255,0.55)', fontFamily: 'Plus Jakarta Sans, sans-serif', fontSize: '0.95rem', lineHeight: 1.85 }}>
+              Wholesale applications get declined for predictable reasons. We built the company around removing each one.
+            </p>
+          </div>
+
           <div className="three-col">
-            {pillars.map((p, i) => (
-              <div key={i} style={{ background: '#F5F0EA', borderRadius: 16, padding: '1.75rem', border: '1px solid #EDE7DE' }}>
-                <div style={{ width: 44, height: 44, borderRadius: 12, background: 'rgba(196,98,58,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#C4623A', marginBottom: '1.1rem' }}>{p.icon}</div>
-                <h3 style={{ color: '#1C1C1A', fontSize: '1rem', fontFamily: 'Fraunces, Georgia, serif', marginBottom: '0.6rem', fontWeight: 700 }}>{p.title}</h3>
-                <p style={{ color: '#9A9086', fontSize: '0.875rem', lineHeight: 1.75, fontFamily: 'Plus Jakarta Sans, sans-serif', margin: 0 }}>{p.desc}</p>
+            {pillars.map(p => (
+              <div key={p.title} className="card-ink">
+                <div style={{ width: 40, height: 40, borderRadius: 2, border: '1px solid rgba(200,151,74,0.35)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#D4A85C', marginBottom: '1.4rem' }}>
+                  {p.icon}
+                </div>
+                <h3 style={{ fontFamily: 'Fraunces, Georgia, serif', fontWeight: 400, fontSize: '1.25rem', color: '#FBF8F3', marginBottom: '0.85rem' }}>
+                  {p.title}
+                </h3>
+                <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.875rem', lineHeight: 1.85, fontFamily: 'Plus Jakarta Sans, sans-serif', margin: 0 }}>
+                  {p.desc}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── FBA OPERATIONS ── */}
-      <section className="section-pad" style={{ background: '#F5F0EA', position: 'relative', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', width: '40%', maxWidth: 400, aspectRatio: '1', borderRadius: '50%', background: 'radial-gradient(circle, rgba(196,98,58,0.05) 0%, transparent 70%)', bottom: '-10%', left: '-5%', pointerEvents: 'none' }} />
-        <div className="page-wrap" style={{ position: 'relative', zIndex: 1 }}>
-          <div className="two-col">
-            <div>
-              <div className="rust-bar" />
-              <h2 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: 'clamp(1.75rem, 4vw, 2.75rem)', color: '#1C1C1A', marginBottom: '1.25rem', fontWeight: 900 }}>Distribution & Fulfillment Operations</h2>
-              <p style={{ color: '#6B6460', fontSize: '0.95rem', lineHeight: 1.85, marginBottom: '1.75rem', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
-                Your products move through a professional fulfillment infrastructure — with systematic inventory management, listing quality control, and full MAP compliance at every stage.
-              </p>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '2rem' }}>
-                {['Inventory forecasting & demand planning', 'Fulfillment prep & compliance', 'Account health monitoring', 'MAP & brand policy adherence', 'Professional distribution management'].map(item => (
-                  <div key={item} style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                    <div style={{ width: 18, height: 18, borderRadius: '50%', background: 'rgba(196,98,58,0.12)', border: '1px solid rgba(196,98,58,0.35)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                      <CheckCircle2 size={10} color="#C4623A" />
-                    </div>
-                    <span style={{ color: '#6B6460', fontSize: '0.875rem', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>{item}</span>
-                  </div>
-                ))}
-              </div>
-              <Link href="/fba-operations" className="rust-btn">View Operations <ArrowRight size={15}/></Link>
-            </div>
+      {/* ══ HOW ONBOARDING WORKS ══ */}
+      <section className="section" style={{ background: '#FBF8F3' }}>
+        <div className="page-wrap">
+          <div style={{ maxWidth: 620, marginBottom: '3.5rem' }}>
+            <div className="rule" />
+            <div className="eyebrow" style={{ marginBottom: '1rem' }}>How it works</div>
+            <h2 className="display display-lg" style={{ color: '#14100D' }}>
+              Four steps, no chasing.
+            </h2>
+          </div>
 
-            <div style={{ position: 'relative' }}>
-              <div style={{ borderRadius: 20, overflow: 'hidden', border: '1px solid #EDE7DE', boxShadow: '0 20px 60px rgba(28,28,26,0.08)' }}>
-                <img className="fba-img" src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80" alt="Professional wholesale fulfillment center operations" style={{ width: '100%', height: 420, objectFit: 'cover', display: 'block' }} />
+          <div className="step-grid">
+            {process.map(s => (
+              <div key={s.n} style={{ borderTop: '1px solid #E2D5C2', paddingTop: '1.5rem' }}>
+                <div style={{ fontFamily: 'Fraunces, Georgia, serif', fontWeight: 300, fontSize: '2.25rem', color: '#B8873C', lineHeight: 1, marginBottom: '1rem' }}>
+                  {s.n}
+                </div>
+                <h3 style={{ fontFamily: 'Fraunces, Georgia, serif', fontWeight: 400, fontSize: '1.2rem', color: '#14100D', marginBottom: '0.6rem' }}>
+                  {s.h}
+                </h3>
+                <p style={{ color: '#6B5F51', fontSize: '0.875rem', lineHeight: 1.85, fontFamily: 'Plus Jakarta Sans, sans-serif', margin: 0 }}>
+                  {s.p}
+                </p>
               </div>
-              <div className="hide-mob" style={{ position: 'absolute', bottom: -18, left: -18, background: 'white', border: '1px solid #EDE7DE', borderRadius: 12, padding: '1rem 1.25rem', boxShadow: '0 8px 24px rgba(28,28,26,0.08)' }}>
-                <div style={{ color: '#9A9086', fontSize: '0.62rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 2, fontFamily: 'Plus Jakarta Sans, sans-serif' }}>Pet Supplies</div>
-                <div style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: '1.1rem', fontWeight: 900, color: '#C4623A' }}>Featured Category</div>
-              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══ OPERATIONS ══ */}
+      <section className="section" style={{ background: '#F5EFE6' }}>
+        <div className="page-wrap">
+          <div className="two-col">
+            <div className="media" style={{ height: 460 }}>
+              <img src={IMG.ops} alt="Wholesale fragrance fulfillment and prep operations" loading="lazy" />
+            </div>
+            <div>
+              <div className="rule" />
+              <div className="eyebrow" style={{ marginBottom: '1rem' }}>Operations</div>
+              <h2 className="display display-lg" style={{ color: '#14100D', marginBottom: '1.5rem' }}>
+                Fragrance is a harder category to ship. We treat it that way.
+              </h2>
+              <p className="body-copy" style={{ marginBottom: '2rem' }}>
+                Alcohol-based fragrance is regulated freight and a restricted marketplace category. Handling it properly
+                is not an afterthought — it is the operational core of the business.
+              </p>
+
+              <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1rem', marginBottom: '2.5rem' }}>
+                {[
+                  'Dangerous Goods classification and SDS documentation for flammable liquids',
+                  'FDA cosmetic labeling review before a single unit ships',
+                  'Lot and batch traceability from supplier invoice to outbound shipment',
+                  'MAP monitoring and enforcement across every channel we sell in',
+                  'Inventory forecasting so approved SKUs stay in stock',
+                ].map(item => (
+                  <li key={item} style={{ display: 'flex', gap: 14, alignItems: 'flex-start' }}>
+                    <span style={{ width: 5, height: 5, borderRadius: '50%', background: '#B8873C', marginTop: 10, flexShrink: 0 }} />
+                    <span style={{ color: '#3B3229', fontSize: '0.9rem', lineHeight: 1.75, fontFamily: 'Plus Jakarta Sans, sans-serif' }}>{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <Link href="/fba-operations" className="btn btn-outline">
+                How we operate <ArrowRight size={14} />
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── CTA ── */}
-      <section style={{ padding: '5rem 0', background: '#C4623A', position: 'relative', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px)', backgroundSize: '24px 24px', pointerEvents: 'none' }} />
-        <div className="page-wrap" style={{ textAlign: 'center', position: 'relative', zIndex: 1 }}>
-          <h2 style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: 'clamp(1.75rem, 4vw, 2.75rem)', color: 'white', marginBottom: '1rem', fontWeight: 900 }}>Ready to Establish a Wholesale Account?</h2>
-          <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: '1rem', maxWidth: 560, margin: '0 auto 0.75rem', lineHeight: 1.75, fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
-            We are actively building wholesale account relationships across all six categories — with particular interest in Pet Supplies, Fragrance &amp; Perfume, and Home &amp; Kitchen.
-          </p>
-          <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.9rem', maxWidth: 500, margin: '0 auto 2.5rem', lineHeight: 1.75, fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
-            We provide complete onboarding documentation and respond to all supplier inquiries within one business day.
+      {/* ══ CTA ══ */}
+      <section className="grain" style={{ background: '#1F1913', padding: '7rem 0', position: 'relative' }}>
+        <div className="page-wrap" style={{ position: 'relative', zIndex: 2, maxWidth: 760, textAlign: 'center' }}>
+          <div className="rule-c" />
+          <h2 className="display display-lg" style={{ color: '#FBF8F3', marginBottom: '1.5rem' }}>
+            Considering a new authorized account?
+          </h2>
+          <p style={{ color: 'rgba(255,255,255,0.58)', fontFamily: 'Plus Jakarta Sans, sans-serif', fontWeight: 300, fontSize: '1.05rem', lineHeight: 1.9, marginBottom: '2.5rem' }}>
+            Send us the SKUs you want represented properly. We will return our LLC documentation, EIN, resale
+            certificate and channel plan — usually the same day, and always within one business day.
           </p>
           <div style={{ display: 'flex', gap: '0.875rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Link href="/supplier-info" style={{ background: '#1C1C1A', color: 'white', fontWeight: 700, padding: '0.9rem 2rem', borderRadius: 100, fontFamily: 'Plus Jakarta Sans, sans-serif', fontSize: '0.82rem', letterSpacing: '0.04em', textTransform: 'uppercase', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8 }}>
-              Submit Inquiry <ArrowRight size={15}/>
+            <Link href="/supplier-info" className="btn btn-gold">
+              Start a wholesale inquiry <ArrowRight size={14} />
             </Link>
-            <Link href="/contact" style={{ border: '2px solid rgba(255,255,255,0.5)', color: 'white', fontWeight: 700, padding: '0.85rem 1.75rem', borderRadius: 100, fontFamily: 'Plus Jakarta Sans, sans-serif', fontSize: '0.82rem', letterSpacing: '0.04em', textTransform: 'uppercase', textDecoration: 'none' }}>
-              Contact Us
+            <Link href="/contact" className="btn btn-outline-light">
+              Contact us directly
             </Link>
           </div>
         </div>
