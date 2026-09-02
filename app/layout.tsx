@@ -8,26 +8,26 @@ const SITE = 'https://www.urbanpulsewholesale.com'
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: {
-    default:  'Urban Pulse Wholesale LLC | Fragrance & Beauty Wholesale Distributor — Michigan',
+    default:  'Urban Pulse Wholesale LLC | Arabian Perfume Wholesale Distributor — Michigan',
     template: '%s | Urban Pulse Wholesale',
   },
   description:
-    'Urban Pulse Wholesale LLC is a Michigan-registered wholesale distributor specializing in fragrance, perfume and beauty. Authorized accounts only, MAP compliant, Amazon Dangerous Goods and FDA cosmetic labeling literate.',
+    'Urban Pulse Wholesale LLC is a Michigan-registered wholesale distributor of Arabian perfumery — oud, saffron, amber and attar from Gulf houses. Sourced through authorized channels, MAP compliant, Dangerous Goods and FDA cosmetic labeling literate.',
   keywords: [
-    'wholesale fragrance distributor',
-    'wholesale perfume distributor',
-    'authorized fragrance wholesale account',
-    'wholesale beauty distributor',
-    'wholesale cosmetics distributor',
-    'oud and attar wholesale',
-    'niche fragrance wholesale USA',
+    'Arabian perfume wholesale',
+    'wholesale oud distributor USA',
+    'attar wholesale distributor',
+    'bakhoor and bukhoor wholesale',
+    'Lattafa wholesale supplier',
+    'Ard Al Zaafaran wholesale',
+    'RiiFFS wholesale',
+    'Paris Corner perfume wholesale',
+    'Middle Eastern perfume distributor USA',
+    'Gulf fragrance wholesale',
+    'wholesale perfume distributor Michigan',
     'MAP compliant fragrance reseller',
-    'authorized reseller perfume',
     'Amazon dangerous goods fragrance compliance',
-    'wholesale personal care distributor',
-    'B2B fragrance sourcing',
-    'wholesale distributor Warren MI',
-    'Michigan fragrance wholesaler',
+    'B2B Arabian fragrance sourcing',
     'Urban Pulse Wholesale',
   ],
   authors: [{ name: 'Urban Pulse Wholesale LLC' }],
@@ -50,15 +50,15 @@ export const metadata: Metadata = {
     locale:   'en_US',
     url:      SITE,
     siteName: 'Urban Pulse Wholesale',
-    title:    'Urban Pulse Wholesale LLC | Fragrance & Beauty Wholesale Distributor',
+    title:    'Urban Pulse Wholesale LLC | Arabian Perfume Wholesale Distributor',
     description:
-      'Michigan-registered wholesale distributor specializing in fragrance, perfume and beauty. Authorized accounts only. MAP compliant.',
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Urban Pulse Wholesale — Fragrance & Beauty Wholesale Distribution' }],
+      'Michigan-registered wholesale distributor of Arabian perfumery — oud, saffron, amber and attar from Gulf houses. MAP compliant.',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Urban Pulse Wholesale — Arabian Perfume Wholesale Distribution' }],
   },
   twitter: {
     card:        'summary_large_image',
-    title:       'Urban Pulse Wholesale LLC | Fragrance & Beauty Wholesale Distributor',
-    description: 'Michigan-registered wholesale distributor for fragrance, perfume and beauty. Authorized accounts only. MAP compliant.',
+    title:       'Urban Pulse Wholesale LLC | Arabian Perfume Wholesale Distributor',
+    description: 'Michigan-registered wholesale distributor of Arabian perfumery from Gulf houses. MAP compliant.',
     images:      ['/og-image.jpg'],
   },
   robots: {
@@ -86,7 +86,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     logo: `${SITE}/icon-512.png`,
     image: `${SITE}/og-image.jpg`,
     description:
-      'Michigan-registered wholesale distribution company specializing in fragrance, perfume and beauty. Sources exclusively from brands and authorized distributors. MAP compliant, authorized accounts only.',
+      'Michigan-registered wholesale distribution company specializing in Arabian perfumery — oud, attar, saffron and amber from Gulf houses. Sources from the houses themselves and their authorized distributors. MAP compliant.',
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Warren',
@@ -113,11 +113,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     }],
     sameAs: ['https://linkedin.com/company/urban-pulse-wholesale'],
     knowsAbout: [
-      'Wholesale fragrance distribution',
-      'Wholesale perfume distribution',
-      'Oud and attar sourcing',
-      'Niche and designer fragrance wholesale',
-      'Wholesale beauty and personal care distribution',
+      'Arabian perfume wholesale distribution',
+      'Oud, attar and bakhoor sourcing',
+      'Gulf and Middle Eastern perfume houses',
+      'Concentrated perfume oil distribution',
       'Authorized reseller agreements',
       'MAP compliant pricing',
       'Amazon Dangerous Goods and SDS compliance',
@@ -135,7 +134,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     publisher: { '@id': `${SITE}/#organization` },
     inLanguage: 'en-US',
     description:
-      'Michigan-registered wholesale distributor of fragrance, perfume and beauty products. Authorized accounts only. MAP compliant.',
+      'Michigan-registered wholesale distributor of Arabian perfumery. Sourced through authorized channels. MAP compliant.',
   }
 
   // ─── GA4 Measurement ID ───────────────────────────────────────────────────
@@ -147,7 +146,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
           rel="stylesheet"
         />
 

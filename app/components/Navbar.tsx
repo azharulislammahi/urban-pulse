@@ -7,7 +7,7 @@ import Logo from './Logo'
 const links = [
   { href: '/',               label: 'Home' },
   { href: '/about',          label: 'About' },
-  { href: '/categories',     label: 'Fragrance & Beauty' },
+  { href: '/houses',         label: 'The Houses' },
   { href: '/partnerships',   label: 'Partnerships' },
   { href: '/fba-operations', label: 'Operations' },
   { href: '/supplier-info',  label: 'Suppliers' },
@@ -51,7 +51,9 @@ export default function Navbar() {
           top: 0, left: 0, right: 0,
           zIndex: 1000,
           transition: 'background 0.4s ease, padding 0.4s ease, border-color 0.4s ease',
-          background: solid ? 'rgba(251,248,243,0.94)' : 'transparent',
+          background: solid
+            ? 'rgba(251,248,243,0.94)'
+            : 'linear-gradient(180deg, rgba(20,16,13,0.72) 0%, rgba(20,16,13,0.38) 55%, rgba(20,16,13,0) 100%)',
           backdropFilter: solid ? 'blur(18px)' : 'none',
           WebkitBackdropFilter: solid ? 'blur(18px)' : 'none',
           borderBottom: `1px solid ${solid ? 'rgba(184,135,60,0.20)' : 'transparent'}`,

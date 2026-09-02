@@ -10,7 +10,7 @@ const columns: { title: string; links: [string, string][] }[] = [
     links: [
       ['/', 'Home'],
       ['/about', 'About Us'],
-      ['/categories', 'Fragrance & Beauty'],
+      ['/houses', 'The Houses'],
       ['/partnerships', 'Partnerships'],
       ['/fba-operations', 'Operations'],
     ],
@@ -70,8 +70,8 @@ export default function Footer() {
                 maxWidth: 300,
               }}
             >
-              A Michigan-registered wholesale distributor focused on fragrance, perfume and beauty — sourced
-              exclusively from brands and authorized distributors, sold under MAP.
+              A Michigan-registered wholesale distributor of Arabian perfumery — sourced from the houses themselves
+              and their authorized distributors, sold under MAP.
             </p>
             <a
               href="https://linkedin.com/company/urban-pulse-wholesale"
@@ -185,7 +185,7 @@ export default function Footer() {
           }}
         >
           <p style={{ color: 'rgba(255,255,255,0.24)', fontSize: '0.76rem', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
-            © {year} Urban Pulse Wholesale LLC. All rights reserved. Fragrance &amp; beauty wholesale distribution — Warren, MI.
+            © {year} Urban Pulse Wholesale LLC. All rights reserved. Arabian perfume wholesale distribution — Warren, MI.
           </p>
           <div style={{ display: 'flex', gap: '1.5rem' }}>
             {[['/privacy', 'Privacy'], ['/terms', 'Terms'], ['/cookies', 'Cookies']].map(([h, l]) => (

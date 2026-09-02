@@ -1,0 +1,2409 @@
+{
+ "lattafa": [
+  {
+   "slug": "victoria",
+   "name": "Victoria",
+   "arabic": "فيكتوريا",
+   "top": [
+    "Lemon Meringue Pie"
+   ],
+   "heart": [
+    "Neroli"
+   ],
+   "base": [
+    "Vanilla"
+   ],
+   "size": null,
+   "gender": null,
+   "description": null,
+   "hero": true,
+   "image": "/houses/lattafa/victoria.jpg",
+   "w": 1240,
+   "h": 1289
+  },
+  {
+   "slug": "eclaire",
+   "name": "Eclaire",
+   "arabic": "اكلاير",
+   "top": [
+    "Caramel",
+    "Milk",
+    "Sugar"
+   ],
+   "heart": [
+    "White Flowers",
+    "Honey"
+   ],
+   "base": [
+    "Vanilla",
+    "Praline",
+    "Musk"
+   ],
+   "size": "100ml",
+   "gender": null,
+   "description": null,
+   "hero": true,
+   "image": "/houses/lattafa/eclaire.jpg",
+   "w": 1240,
+   "h": 1289
+  },
+  {
+   "slug": "angham",
+   "name": "Angham",
+   "arabic": "انغام",
+   "top": [
+    "Mandarin",
+    "Ginger",
+    "Pink Pepper"
+   ],
+   "heart": [
+    "Praline",
+    "Lavender",
+    "Cacao"
+   ],
+   "base": [
+    "Musk",
+    "Amber",
+    "Vanilla"
+   ],
+   "size": "100ml",
+   "gender": null,
+   "description": null,
+   "hero": true,
+   "image": "/houses/lattafa/angham.jpg",
+   "w": 1240,
+   "h": 1289
+  },
+  {
+   "slug": "yara-candy",
+   "name": "Yara Candy",
+   "arabic": "يارا",
+   "top": [
+    "Green Mandarin",
+    "Blackcurrant"
+   ],
+   "heart": [
+    "Strawberry Fizz Candy",
+    "Gardenia"
+   ],
+   "base": [
+    "Sandalwood",
+    "Vanilla Syrup",
+    "Musk",
+    "Amber"
+   ],
+   "size": "100ml",
+   "gender": null,
+   "description": null,
+   "hero": true,
+   "image": "/houses/lattafa/yara-candy.jpg",
+   "w": 1240,
+   "h": 1289
+  },
+  {
+   "slug": "asad-bourbon",
+   "name": "Asad Bourbon",
+   "arabic": "أسد",
+   "top": [
+    "Pink Pepper",
+    "Lavender",
+    "Mirabelle Plum"
+   ],
+   "heart": [
+    "Cacao",
+    "Davana",
+    "Nutmeg"
+   ],
+   "base": [
+    "Vetiver",
+    "Vanilla Bourbon",
+    "Amber"
+   ],
+   "size": "100ml",
+   "gender": null,
+   "description": null,
+   "hero": true,
+   "image": "/houses/lattafa/asad-bourbon.jpg",
+   "w": 1240,
+   "h": 1289
+  },
+  {
+   "slug": "mayar-cherry-intense",
+   "name": "Mayar Cherry Intense",
+   "arabic": "ميار",
+   "top": [
+    "Strawberry",
+    "Bergamot"
+   ],
+   "heart": [
+    "Cherry Jam",
+    "Cacao"
+   ],
+   "base": [
+    "Vanilla",
+    "Patchouli",
+    "Amber"
+   ],
+   "size": null,
+   "gender": null,
+   "description": null,
+   "hero": true,
+   "image": "/houses/lattafa/mayar-cherry-intense.jpg",
+   "w": 1240,
+   "h": 1289
+  },
+  {
+   "slug": "yara-moi",
+   "name": "Yara Moi",
+   "arabic": "يارا",
+   "top": [
+    "Pear",
+    "Pink Pepper",
+    "Black currant"
+   ],
+   "heart": [
+    "Tuberose",
+    "Jasmine",
+    "Almond"
+   ],
+   "base": [
+    "Vanilla",
+    "Cashmeran",
+    "Patchouli"
+   ],
+   "size": "100ml",
+   "gender": null,
+   "description": null,
+   "hero": true,
+   "image": "/houses/lattafa/yara-moi.jpg",
+   "w": 1240,
+   "h": 1289
+  },
+  {
+   "slug": "maahir-legacy",
+   "name": "Maahir Legacy",
+   "arabic": "ماهر - ليجاسي",
+   "top": [
+    "Lime",
+    "Grapefruit",
+    "Lavender",
+    "Spearmint",
+    "Pineapple"
+   ],
+   "heart": [
+    "Juniper Berry",
+    "Rosemary",
+    "Olibanum Resinoid",
+    "Geranium",
+    "Black Pepper"
+   ],
+   "base": [
+    "Vetiver",
+    "Cashmeran",
+    "Amborx",
+    "Oak Moss",
+    "Tonka Bean"
+   ],
+   "size": "100ml",
+   "gender": null,
+   "description": null,
+   "hero": true,
+   "image": "/houses/lattafa/maahir-legacy.jpg",
+   "w": 1240,
+   "h": 1289
+  },
+  {
+   "slug": "musk-mood",
+   "name": "Musk Mood",
+   "arabic": "مسك مود",
+   "top": [
+    "Creamy",
+    "Lily of the Valley",
+    "Rose"
+   ],
+   "heart": [
+    "Rose",
+    "Musk"
+   ],
+   "base": [
+    "Ambery",
+    "Musk"
+   ],
+   "size": "100ml",
+   "gender": null,
+   "description": null,
+   "hero": true,
+   "image": "/houses/lattafa/musk-mood.jpg",
+   "w": 1240,
+   "h": 1289
+  },
+  {
+   "slug": "oud-mood",
+   "name": "Oud Mood",
+   "arabic": "عود مود",
+   "top": [
+    "Rose",
+    "Saffron"
+   ],
+   "heart": [
+    "Patchouli",
+    "Caramel"
+   ],
+   "base": [
+    "Vanilla",
+    "Dry Amber",
+    "Oud"
+   ],
+   "size": "100ml",
+   "gender": null,
+   "description": null,
+   "hero": true,
+   "image": "/houses/lattafa/oud-mood.jpg",
+   "w": 1240,
+   "h": 1289
+  },
+  {
+   "slug": "jasoor",
+   "name": "Jasoor",
+   "arabic": "جسور",
+   "top": [
+    "Bergamot",
+    "Cardamom",
+    "Pepper",
+    "Cinnamon"
+   ],
+   "heart": [
+    "Lavender",
+    "Geranium",
+    "Tobacco"
+   ],
+   "base": [
+    "Tonka",
+    "Vetiver",
+    "Leather",
+    "Patchouli"
+   ],
+   "size": "100ml",
+   "gender": null,
+   "description": null,
+   "hero": true,
+   "image": "/houses/lattafa/jasoor.jpg",
+   "w": 1240,
+   "h": 1289
+  },
+  {
+   "slug": "bade-e-al-oud-honor-glory",
+   "name": "Bade'e Al Oud Honor & Glory",
+   "arabic": "بديع العود",
+   "top": [
+    "Pineapple Brûlée"
+   ],
+   "heart": [
+    "Turmeric",
+    "Cinnamon",
+    "Black Pepper",
+    "Benzoin"
+   ],
+   "base": [
+    "Vanilla",
+    "Cashmeran",
+    "Sandalwood",
+    "Moss"
+   ],
+   "size": null,
+   "gender": null,
+   "description": null,
+   "hero": true,
+   "image": "/houses/lattafa/bade-e-al-oud-honor-glory.jpg",
+   "w": 1240,
+   "h": 1289
+  },
+  {
+   "slug": "atheeri",
+   "name": "Atheeri",
+   "arabic": "أثيري",
+   "top": [
+    "Passion Flower",
+    "Dewdrop"
+   ],
+   "heart": [
+    "Orchid",
+    "Jasmine"
+   ],
+   "base": [
+    "Vanilla",
+    "Amberwood"
+   ],
+   "size": null,
+   "gender": null,
+   "description": null,
+   "hero": false,
+   "image": "/houses/lattafa/atheeri.jpg",
+   "w": 760,
+   "h": 790
+  },
+  {
+   "slug": "ana-abiyedh-coral",
+   "name": "Ana Abiyedh Coral",
+   "arabic": "انا الأبيض / كورال",
+   "top": [
+    "Peach",
+    "Watermelon",
+    "Orange"
+   ],
+   "heart": [
+    "Coconut",
+    "White Floral"
+   ],
+   "base": [
+    "Vanilla",
+    "Amber",
+    "Musk"
+   ],
+   "size": null,
+   "gender": null,
+   "description": null,
+   "hero": false,
+   "image": "/houses/lattafa/ana-abiyedh-coral.jpg",
+   "w": 760,
+   "h": 790
+  },
+  {
+   "slug": "lail-maleki-moroccan-blue",
+   "name": "Lail Maleki Moroccan Blue",
+   "arabic": "ليل ملكي",
+   "top": [],
+   "heart": [],
+   "base": [],
+   "size": null,
+   "gender": null,
+   "description": null,
+   "hero": false,
+   "image": "/houses/lattafa/lail-maleki-moroccan-blue.jpg",
+   "w": 760,
+   "h": 790
+  },
+  {
+   "slug": "najdia-intense",
+   "name": "Najdia Intense",
+   "arabic": "نجدية",
+   "top": [
+    "Pineapple",
+    "Mint",
+    "Ginger",
+    "Apple"
+   ],
+   "heart": [
+    "Marine notes",
+    "Lavender",
+    "Geranium"
+   ],
+   "base": [
+    "Patchouli",
+    "Sandalwood",
+    "Tonka Bean",
+    "Musk"
+   ],
+   "size": "100ml",
+   "gender": null,
+   "description": null,
+   "hero": false,
+   "image": "/houses/lattafa/najdia-intense.jpg",
+   "w": 760,
+   "h": 790
+  },
+  {
+   "slug": "sehr-lattafa",
+   "name": "Sehr Lattafa",
+   "arabic": "سحر لطافة",
+   "top": [
+    "Cinnamon",
+    "Bitter Almond"
+   ],
+   "heart": [
+    "Jasmine",
+    "Pomarose",
+    "Akigalawood",
+    "Vanilla"
+   ],
+   "base": [
+    "Vanilla Absolute",
+    "Amber",
+    "Tonka Bean"
+   ],
+   "size": null,
+   "gender": null,
+   "description": null,
+   "hero": false,
+   "image": "/houses/lattafa/sehr-lattafa.jpg",
+   "w": 760,
+   "h": 790
+  },
+  {
+   "slug": "bade-e-al-oud-noble-blush",
+   "name": "Bade'e Al Oud Noble Blush",
+   "arabic": "بديع العود",
+   "top": [
+    "Rose Milk"
+   ],
+   "heart": [
+    "Almond",
+    "Meringue"
+   ],
+   "base": [
+    "Sandalwood",
+    "Vanilla",
+    "Musk"
+   ],
+   "size": null,
+   "gender": null,
+   "description": null,
+   "hero": false,
+   "image": "/houses/lattafa/bade-e-al-oud-noble-blush.jpg",
+   "w": 760,
+   "h": 790
+  },
+  {
+   "slug": "asad-zanzibar",
+   "name": "Asad Zanzibar",
+   "arabic": "أسد",
+   "top": [
+    "Black Pepper",
+    "Sea Lavender"
+   ],
+   "heart": [
+    "Salty Coconut Water",
+    "Iris"
+   ],
+   "base": [
+    "Vanilla",
+    "Incense"
+   ],
+   "size": "100ml",
+   "gender": null,
+   "description": null,
+   "hero": false,
+   "image": "/houses/lattafa/asad-zanzibar.jpg",
+   "w": 760,
+   "h": 790
+  },
+  {
+   "slug": "afeef",
+   "name": "Afeef",
+   "arabic": "عفيف",
+   "top": [
+    "Bergamot",
+    "Pink Pepper",
+    "Peach"
+   ],
+   "heart": [
+    "Jasmine",
+    "Orange Flower",
+    "Tuberose"
+   ],
+   "base": [
+    "Sandalwood",
+    "Amber",
+    "Praline",
+    "Patchouli"
+   ],
+   "size": null,
+   "gender": null,
+   "description": null,
+   "hero": false,
+   "image": "/houses/lattafa/afeef.jpg",
+   "w": 760,
+   "h": 790
+  },
+  {
+   "slug": "the-kingdom-men",
+   "name": "The Kingdom Men",
+   "arabic": "المملكة",
+   "top": [
+    "Sage",
+    "Lavender",
+    "Mint"
+   ],
+   "heart": [
+    "Tobacco",
+    "Vanilla",
+    "orange flower"
+   ],
+   "base": [
+    "Benzoin",
+    "Tonka bean",
+    "Labdanum"
+   ],
+   "size": "100ml",
+   "gender": null,
+   "description": null,
+   "hero": false,
+   "image": "/houses/lattafa/the-kingdom-men.jpg",
+   "w": 760,
+   "h": 790
+  },
+  {
+   "slug": "mayar-natural-intense",
+   "name": "Mayar Natural Intense",
+   "arabic": "ميار",
+   "top": [
+    "Fig",
+    "Coconut Water",
+    "Green Tangerine",
+    "Melon"
+   ],
+   "heart": [
+    "Lotus",
+    "Jasmine",
+    "Water Lily"
+   ],
+   "base": [
+    "Musk",
+    "Sandalwood",
+    "Vanilla",
+    "Amboxan"
+   ],
+   "size": null,
+   "gender": null,
+   "description": null,
+   "hero": false,
+   "image": "/houses/lattafa/mayar-natural-intense.jpg",
+   "w": 760,
+   "h": 790
+  },
+  {
+   "slug": "velvet-musk",
+   "name": "Velvet Musk",
+   "arabic": "فلفت مسك",
+   "top": [],
+   "heart": [],
+   "base": [],
+   "size": null,
+   "gender": null,
+   "description": null,
+   "hero": false,
+   "image": "/houses/lattafa/velvet-musk.jpg",
+   "w": 760,
+   "h": 790
+  },
+  {
+   "slug": "teriaq-intense",
+   "name": "Teriaq Intense",
+   "arabic": "تِرياق",
+   "top": [
+    "Bergamot",
+    "Saffron"
+   ],
+   "heart": [
+    "Plum Liquor",
+    "Cinnamon"
+   ],
+   "base": [
+    "Tonka Bean",
+    "Amber",
+    "Benzoin"
+   ],
+   "size": null,
+   "gender": null,
+   "description": null,
+   "hero": false,
+   "image": "/houses/lattafa/teriaq-intense.jpg",
+   "w": 760,
+   "h": 790
+  },
+  {
+   "slug": "her-confession",
+   "name": "Her Confession",
+   "arabic": null,
+   "top": [
+    "Accord",
+    "Cinnamon",
+    "Mystikal"
+   ],
+   "heart": [
+    "Jasmine",
+    "Tuberose",
+    "Incense",
+    "Mahonial"
+   ],
+   "base": [
+    "Tonka Beans",
+    "Musk",
+    "Vanilla"
+   ],
+   "size": "100ml",
+   "gender": null,
+   "description": null,
+   "hero": false,
+   "image": "/houses/lattafa/her-confession.jpg",
+   "w": 760,
+   "h": 790
+  },
+  {
+   "slug": "khamrah-dukhan",
+   "name": "Khamrah Dukhan",
+   "arabic": "خمرة",
+   "top": [
+    "Mandarin",
+    "Pimento",
+    "Smoked Spices"
+   ],
+   "heart": [
+    "Cistus",
+    "Orange Flower",
+    "Incense",
+    "Patchouli"
+   ],
+   "base": [
+    "Tobacco",
+    "Amber",
+    "Tonka Bean",
+    "Benzoin",
+    "Praline"
+   ],
+   "size": null,
+   "gender": null,
+   "description": null,
+   "hero": false,
+   "image": "/houses/lattafa/khamrah-dukhan.jpg",
+   "w": 760,
+   "h": 790
+  },
+  {
+   "slug": "safwaan-l-autre-musk",
+   "name": "Safwaan L'Autre Musk",
+   "arabic": "صفوان",
+   "top": [
+    "Black Pepper",
+    "Cardamom",
+    "Juniper"
+   ],
+   "heart": [
+    "Cedar Wood",
+    "Ambroxan"
+   ],
+   "base": [
+    "Sandalwood",
+    "Vetiver",
+    "Musk"
+   ],
+   "size": null,
+   "gender": null,
+   "description": null,
+   "hero": false,
+   "image": "/houses/lattafa/safwaan-l-autre-musk.jpg",
+   "w": 760,
+   "h": 790
+  },
+  {
+   "slug": "safwaan-l-autre-oud",
+   "name": "Safwaan L'Autre Oud",
+   "arabic": "صفوان",
+   "top": [
+    "Apple",
+    "Pepper"
+   ],
+   "heart": [
+    "Saffron",
+    "Cashmeran",
+    "Caramel",
+    "Cedarwood",
+    "Moss"
+   ],
+   "base": [
+    "Musk",
+    "Vanilla",
+    "Oud",
+    "Tolu Balsam"
+   ],
+   "size": null,
+   "gender": null,
+   "description": null,
+   "hero": false,
+   "image": "/houses/lattafa/safwaan-l-autre-oud.jpg",
+   "w": 760,
+   "h": 790
+  },
+  {
+   "slug": "ajayeb-dubai",
+   "name": "Ajayeb Dubai",
+   "arabic": null,
+   "top": [
+    "Saffron",
+    "Pineapple"
+   ],
+   "heart": [
+    "Coffee",
+    "Violet Leaves"
+   ],
+   "base": [
+    "Sandalwood",
+    "Vanilla",
+    "Butterscotch"
+   ],
+   "size": "100ml",
+   "gender": null,
+   "description": null,
+   "hero": false,
+   "image": "/houses/lattafa/ajayeb-dubai.jpg",
+   "w": 760,
+   "h": 790
+  },
+  {
+   "slug": "liam",
+   "name": "Liam",
+   "arabic": "ليام",
+   "top": [
+    "Cardamom",
+    "Black Tea",
+    "Fig"
+   ],
+   "heart": [
+    "Iris",
+    "Vetiver",
+    "Labdanum"
+   ],
+   "base": [
+    "Sandalwood",
+    "Vanilla",
+    "Tonka",
+    "Patchouli"
+   ],
+   "size": "100ml",
+   "gender": null,
+   "description": null,
+   "hero": false,
+   "image": "/houses/lattafa/liam.jpg",
+   "w": 760,
+   "h": 790
+  }
+ ],
+ "ard-al-zaafaran": [
+  {
+   "slug": "bareq",
+   "name": "Bareq",
+   "arabic": "بارق",
+   "top": [
+    "Grapefruit",
+    "Bergamot",
+    "Mandarin",
+    "Lemon"
+   ],
+   "heart": [
+    "Sage",
+    "Praline",
+    "Tea"
+   ],
+   "base": [
+    "Oakmoss",
+    "Ambergris"
+   ],
+   "size": "100ml",
+   "gender": null,
+   "description": null,
+   "hero": true,
+   "image": "/houses/ard-al-zaafaran/bareq.jpg",
+   "w": 1241,
+   "h": 1163
+  },
+  {
+   "slug": "bareq-mirage",
+   "name": "Bareq Mirage",
+   "arabic": "بارق",
+   "top": [
+    "Bergamot"
+   ],
+   "heart": [
+    "Orris",
+    "Clary Sage"
+   ],
+   "base": [
+    "Tonka Bean",
+    "Cedar"
+   ],
+   "size": "100ml",
+   "gender": null,
+   "description": null,
+   "hero": true,
+   "image": "/houses/ard-al-zaafaran/bareq-mirage.jpg",
+   "w": 1241,
+   "h": 1163
+  },
+  {
+   "slug": "manaal",
+   "name": "Manaal",
+   "arabic": "مناك",
+   "top": [
+    "Bergamot",
+    "Lavender"
+   ],
+   "heart": [
+    "White Flowers",
+    "Almond",
+    "Pistachio"
+   ],
+   "base": [
+    "Vanilla",
+    "Sandalwood",
+    "Cacao"
+   ],
+   "size": null,
+   "gender": null,
+   "description": null,
+   "hero": true,
+   "image": "/houses/ard-al-zaafaran/manaal.jpg",
+   "w": 1241,
+   "h": 1163
+  },
+  {
+   "slug": "al-batal",
+   "name": "Al Batal",
+   "arabic": "البطل",
+   "top": [
+    "Pineapple",
+    "Cardamom"
+   ],
+   "heart": [
+    "Incense",
+    "Vanilla",
+    "Sage"
+   ],
+   "base": [
+    "Patchouli",
+    "Sandalwood",
+    "Tonka Bean"
+   ],
+   "size": "100ml",
+   "gender": null,
+   "description": null,
+   "hero": true,
+   "image": "/houses/ard-al-zaafaran/al-batal.jpg",
+   "w": 1241,
+   "h": 1163
+  },
+  {
+   "slug": "al-dirgham-limited-edition",
+   "name": "Al Dirgham Limited Edition",
+   "arabic": "الضرغام",
+   "top": [
+    "Bergamot",
+    "Lemon",
+    "Juniper"
+   ],
+   "heart": [
+    "Ginger",
+    "Apple"
+   ],
+   "base": [
+    "Musk",
+    "Cashmeran",
+    "Ambergris",
+    "Tonka Bean",
+    "Sandalwood",
+    "Patchouli",
+    "Cedarwood"
+   ],
+   "size": "100ml",
+   "gender": null,
+   "description": null,
+   "hero": true,
+   "image": "/houses/ard-al-zaafaran/al-dirgham-limited-edition.jpg",
+   "w": 1241,
+   "h": 1163
+  },
+  {
+   "slug": "meethaq",
+   "name": "Meethaq",
+   "arabic": "ميثاق",
+   "top": [
+    "Bergamot",
+    "Lavender"
+   ],
+   "heart": [
+    "Lily of the Valley",
+    "Geranium",
+    "Jasmine"
+   ],
+   "base": [
+    "Tonka Bean",
+    "Vanilla",
+    "Patchouli",
+    "Amber"
+   ],
+   "size": "100ml",
+   "gender": null,
+   "description": null,
+   "hero": true,
+   "image": "/houses/ard-al-zaafaran/meethaq.jpg",
+   "w": 1241,
+   "h": 1163
+  },
+  {
+   "slug": "meethaq-extrait-de-rouge",
+   "name": "Meethaq Extrait De Rouge",
+   "arabic": "ميثاق",
+   "top": [
+    "Lemon",
+    "Mandarin",
+    "Pear",
+    "Orange"
+   ],
+   "heart": [
+    "Orange Blossom",
+    "Rose",
+    "Jasmine",
+    "Almond"
+   ],
+   "base": [
+    "Musk",
+    "Raspberry",
+    "Vanilla",
+    "Vetiver",
+    "Amber"
+   ],
+   "size": "100ml",
+   "gender": null,
+   "description": null,
+   "hero": true,
+   "image": "/houses/ard-al-zaafaran/meethaq-extrait-de-rouge.jpg",
+   "w": 1241,
+   "h": 1163
+  },
+  {
+   "slug": "liwan",
+   "name": "Liwan",
+   "arabic": "ليوان",
+   "top": [
+    "Bergamot",
+    "Pink Pepper",
+    "Pineapple",
+    "Grapefruit"
+   ],
+   "heart": [
+    "Rosemary",
+    "Ylang Ylang",
+    "Osmanthus",
+    "Caramel"
+   ],
+   "base": [
+    "Vetiver",
+    "Patchouli",
+    "Leather",
+    "Musk",
+    "Amber"
+   ],
+   "size": "100ml",
+   "gender": null,
+   "description": null,
+   "hero": true,
+   "image": "/houses/ard-al-zaafaran/liwan.jpg",
+   "w": 1241,
+   "h": 1163
+  },
+  {
+   "slug": "barez-velvety",
+   "name": "Barez Velvety",
+   "arabic": "بارز",
+   "top": [
+    "Apricot",
+    "Blackcurrant",
+    "Bergamot"
+   ],
+   "heart": [
+    "Jasmine",
+    "Rose",
+    "Patchouli"
+   ],
+   "base": [
+    "Musk",
+    "Vanilla",
+    "Ambroxan"
+   ],
+   "size": "100ml",
+   "gender": null,
+   "description": null,
+   "hero": true,
+   "image": "/houses/ard-al-zaafaran/barez-velvety.jpg",
+   "w": 1241,
+   "h": 1163
+  },
+  {
+   "slug": "saheb",
+   "name": "Saheb",
+   "arabic": "صاحب",
+   "top": [
+    "Cassis",
+    "Orange",
+    "Juniper Berries"
+   ],
+   "heart": [
+    "Cardamom",
+    "Jasmine"
+   ],
+   "base": [
+    "Cedarwood",
+    "Vetiver"
+   ],
+   "size": null,
+   "gender": null,
+   "description": null,
+   "hero": true,
+   "image": "/houses/ard-al-zaafaran/saheb.jpg",
+   "w": 1241,
+   "h": 1163
+  },
+  {
+   "slug": "anoud",
+   "name": "Anoud",
+   "arabic": "عنود",
+   "top": [
+    "Marine",
+    "Neroli",
+    "Cactus Flower"
+   ],
+   "heart": [
+    "Jasmin",
+    "Tuberose",
+    "Magnolia"
+   ],
+   "base": [
+    "Patchouli",
+    "Amber",
+    "Cashmeran",
+    "Brown Sugar"
+   ],
+   "size": null,
+   "gender": null,
+   "description": null,
+   "hero": false,
+   "image": "/houses/ard-al-zaafaran/anoud.jpg",
+   "w": 760,
+   "h": 712
+  },
+  {
+   "slug": "marina",
+   "name": "Marina",
+   "arabic": "مارينا",
+   "top": [
+    "Salt",
+    "Lemon",
+    "Davana"
+   ],
+   "heart": [
+    "Lily of Valley",
+    "Iris"
+   ],
+   "base": [
+    "Oakmoss",
+    "Ambergris",
+    "Sandalwood"
+   ],
+   "size": null,
+   "gender": null,
+   "description": null,
+   "hero": false,
+   "image": "/houses/ard-al-zaafaran/marina.jpg",
+   "w": 760,
+   "h": 712
+  },
+  {
+   "slug": "safeer-al-hub-everlasting",
+   "name": "Safeer Al Hub Everlasting",
+   "arabic": "سفير الحب",
+   "top": [
+    "Saffron",
+    "Grapefruit",
+    "Pineapple"
+   ],
+   "heart": [
+    "Jasmine",
+    "Cassis",
+    "Amberwood"
+   ],
+   "base": [
+    "Ambergris",
+    "Caramel"
+   ],
+   "size": "100ml",
+   "gender": null,
+   "description": null,
+   "hero": false,
+   "image": "/houses/ard-al-zaafaran/safeer-al-hub-everlasting.jpg",
+   "w": 760,
+   "h": 712
+  },
+  {
+   "slug": "al-qubah",
+   "name": "Al Qubah",
+   "arabic": "القبة",
+   "top": [
+    "Bergamot",
+    "Grapefruit",
+    "Lavender",
+    "Saffron",
+    "Sage"
+   ],
+   "heart": [
+    "Suede",
+    "Pineapple",
+    "Geranium"
+   ],
+   "base": [
+    "Oakmoss",
+    "Cedarwood",
+    "Patchouli",
+    "Musk",
+    "Vetiver"
+   ],
+   "size": "100ml",
+   "gender": null,
+   "description": null,
+   "hero": false,
+   "image": "/houses/ard-al-zaafaran/al-qubah.jpg",
+   "w": 760,
+   "h": 712
+  },
+  {
+   "slug": "bab-al-hamra",
+   "name": "Bab Al Hamra",
+   "arabic": "باب الحمراء",
+   "top": [
+    "Bergamot",
+    "Pink Pepper"
+   ],
+   "heart": [
+    "Dry Wood"
+   ],
+   "base": [
+    "Vanilla",
+    "Musk"
+   ],
+   "size": null,
+   "gender": null,
+   "description": null,
+   "hero": false,
+   "image": "/houses/ard-al-zaafaran/bab-al-hamra.jpg",
+   "w": 760,
+   "h": 712
+  },
+  {
+   "slug": "alghazal",
+   "name": "Alghazal",
+   "arabic": "الغزال",
+   "top": [
+    "Lavender",
+    "Apple"
+   ],
+   "heart": [
+    "Caramel",
+    "Tuberose"
+   ],
+   "base": [
+    "Vanilla",
+    "Musk"
+   ],
+   "size": "100ml",
+   "gender": null,
+   "description": null,
+   "hero": false,
+   "image": "/houses/ard-al-zaafaran/alghazal.jpg",
+   "w": 760,
+   "h": 712
+  },
+  {
+   "slug": "amiral",
+   "name": "Amiral",
+   "arabic": "أميرال",
+   "top": [
+    "Apple",
+    "Caramel",
+    "Elemi"
+   ],
+   "heart": [
+    "Cinnamon",
+    "Jasmine",
+    "Freesia"
+   ],
+   "base": [
+    "Ambergris",
+    "Oakmoss",
+    "Musk"
+   ],
+   "size": "100ml",
+   "gender": null,
+   "description": null,
+   "hero": false,
+   "image": "/houses/ard-al-zaafaran/amiral.jpg",
+   "w": 760,
+   "h": 712
+  },
+  {
+   "slug": "qidwah",
+   "name": "Qidwah",
+   "arabic": "قدوة",
+   "top": [
+    "Green Notes",
+    "Pepper",
+    "Bergamot"
+   ],
+   "heart": [
+    "Rose",
+    "Jasmine"
+   ],
+   "base": [
+    "Vanilla",
+    "Amber",
+    "Honey",
+    "Musk"
+   ],
+   "size": "85ml",
+   "gender": null,
+   "description": null,
+   "hero": false,
+   "image": "/houses/ard-al-zaafaran/qidwah.jpg",
+   "w": 760,
+   "h": 712
+  },
+  {
+   "slug": "forever",
+   "name": "Forever",
+   "arabic": "فوريفر",
+   "top": [
+    "Pistachio",
+    "Hazelnut",
+    "Cassis"
+   ],
+   "heart": [
+    "Peony",
+    "Lily of the Valley",
+    "Jasmine",
+    "Raspberry"
+   ],
+   "base": [
+    "Vanilla",
+    "Tonka Bean"
+   ],
+   "size": "100ml",
+   "gender": null,
+   "description": null,
+   "hero": false,
+   "image": "/houses/ard-al-zaafaran/forever.jpg",
+   "w": 760,
+   "h": 712
+  },
+  {
+   "slug": "forever-red",
+   "name": "Forever Red",
+   "arabic": "فوريفر",
+   "top": [
+    "Strawberry",
+    "Aloe Vera",
+    "Cassis"
+   ],
+   "heart": [
+    "Jasmin",
+    "Orange Flower",
+    "Sola"
+   ],
+   "base": [
+    "Musk",
+    "Patchouli",
+    "Sandalwood"
+   ],
+   "size": "100ml",
+   "gender": null,
+   "description": null,
+   "hero": false,
+   "image": "/houses/ard-al-zaafaran/forever-red.jpg",
+   "w": 760,
+   "h": 712
+  },
+  {
+   "slug": "al-dirgham-special-edition",
+   "name": "Al Dirgham Special Edition",
+   "arabic": "الضرغام",
+   "top": [
+    "Apple",
+    "Clove",
+    "Cardamom"
+   ],
+   "heart": [
+    "Cinnamon",
+    "Geranium",
+    "Lavender"
+   ],
+   "base": [
+    "Vanilla",
+    "Amber",
+    "Cedarwood"
+   ],
+   "size": "100ml",
+   "gender": null,
+   "description": null,
+   "hero": false,
+   "image": "/houses/ard-al-zaafaran/al-dirgham-special-edition.jpg",
+   "w": 760,
+   "h": 712
+  },
+  {
+   "slug": "ithra-dubai-mango-musk",
+   "name": "Ithra Dubai Mango Musk",
+   "arabic": "إثراء دبي مسك",
+   "top": [
+    "Mango",
+    "Black Pepper"
+   ],
+   "heart": [
+    "Rose"
+   ],
+   "base": [
+    "Oud",
+    "Leather",
+    "Vanilla",
+    "Cashmeran",
+    "Musk"
+   ],
+   "size": null,
+   "gender": null,
+   "description": null,
+   "hero": false,
+   "image": "/houses/ard-al-zaafaran/ithra-dubai-mango-musk.jpg",
+   "w": 760,
+   "h": 712
+  },
+  {
+   "slug": "ithra-dubai-cotton-candy-musk",
+   "name": "Ithra Dubai Cotton Candy Musk",
+   "arabic": "إثراء دبي مسك",
+   "top": [
+    "Peach",
+    "Violet"
+   ],
+   "heart": [
+    "Vanilla",
+    "Sugar",
+    "White Flower"
+   ],
+   "base": [
+    "Musk",
+    "Amber"
+   ],
+   "size": null,
+   "gender": null,
+   "description": null,
+   "hero": false,
+   "image": "/houses/ard-al-zaafaran/ithra-dubai-cotton-candy-musk.jpg",
+   "w": 760,
+   "h": 712
+  },
+  {
+   "slug": "manasib",
+   "name": "Manasib",
+   "arabic": "مناصب",
+   "top": [
+    "Saffron",
+    "Red Fruits"
+   ],
+   "heart": [
+    "Hedione",
+    "Jasmine"
+   ],
+   "base": [
+    "Oakmoss",
+    "Amber"
+   ],
+   "size": "100ml",
+   "gender": null,
+   "description": null,
+   "hero": false,
+   "image": "/houses/ard-al-zaafaran/manasib.jpg",
+   "w": 760,
+   "h": 712
+  },
+  {
+   "slug": "al-hur-so-intense",
+   "name": "Al Hur So Intense",
+   "arabic": "الحر",
+   "top": [
+    "Black Pepper",
+    "Pineapple",
+    "Tobacco"
+   ],
+   "heart": [
+    "Coffee",
+    "Iris",
+    "Patchouli"
+   ],
+   "base": [
+    "Amber",
+    "Vanilla",
+    "Benzoin",
+    "Labdanum"
+   ],
+   "size": "100ml",
+   "gender": null,
+   "description": null,
+   "hero": false,
+   "image": "/houses/ard-al-zaafaran/al-hur-so-intense.jpg",
+   "w": 760,
+   "h": 712
+  },
+  {
+   "slug": "riqqa",
+   "name": "Riqqa",
+   "arabic": "رقة",
+   "top": [
+    "Bergamot",
+    "Cinnamon",
+    "Nutmeg"
+   ],
+   "heart": [
+    "Dates",
+    "Lily of the Valley",
+    "Praline",
+    "Tuberose"
+   ],
+   "base": [
+    "Tonka Bean",
+    "Benzoin",
+    "Myrrh",
+    "Akigalawood",
+    "Vanilla",
+    "Amber"
+   ],
+   "size": null,
+   "gender": null,
+   "description": null,
+   "hero": false,
+   "image": "/houses/ard-al-zaafaran/riqqa.jpg",
+   "w": 760,
+   "h": 712
+  },
+  {
+   "slug": "dar-al-shabaab",
+   "name": "Dar Al Shabaab",
+   "arabic": "دار الشباب",
+   "top": [
+    "Melon",
+    "Grapefruit",
+    "Lemon",
+    "Bergamot",
+    "Apple",
+    "Pineapple"
+   ],
+   "heart": [
+    "Lily of Valley",
+    "Jasmine",
+    "Magnolia",
+    "Geranium",
+    "Lavender"
+   ],
+   "base": [
+    "Leather",
+    "Oakmoss",
+    "Patchouli",
+    "Amber",
+    "Musk"
+   ],
+   "size": "100ml",
+   "gender": null,
+   "description": null,
+   "hero": false,
+   "image": "/houses/ard-al-zaafaran/dar-al-shabaab.jpg",
+   "w": 760,
+   "h": 712
+  },
+  {
+   "slug": "shams-al-emarat-khususi",
+   "name": "Shams Al Emarat Khususi",
+   "arabic": "شمس الإمارات خصوصي",
+   "top": [
+    "Saffron",
+    "Bergamot"
+   ],
+   "heart": [
+    "Violet",
+    "Jasmine",
+    "Lily of the Valley",
+    "Rose"
+   ],
+   "base": [
+    "Vanilla",
+    "Sandalwood",
+    "Amber"
+   ],
+   "size": "100ml",
+   "gender": null,
+   "description": null,
+   "hero": false,
+   "image": "/houses/ard-al-zaafaran/shams-al-emarat-khususi.jpg",
+   "w": 760,
+   "h": 712
+  },
+  {
+   "slug": "shams-al-emarat-khususi-pink-blush",
+   "name": "Shams Al Emarat Khususi Pink Blush",
+   "arabic": "شمس الإمارات خصوصي",
+   "top": [
+    "Raspberry",
+    "Nectarine",
+    "Apple"
+   ],
+   "heart": [
+    "Marshmallow",
+    "Strawberry",
+    "Coconut",
+    "Orange Blossom"
+   ],
+   "base": [
+    "Cream",
+    "Sugar",
+    "Vanilla"
+   ],
+   "size": null,
+   "gender": null,
+   "description": null,
+   "hero": false,
+   "image": "/houses/ard-al-zaafaran/shams-al-emarat-khususi-pink-blush.jpg",
+   "w": 760,
+   "h": 712
+  },
+  {
+   "slug": "daloate-ana",
+   "name": "Daloate Ana",
+   "arabic": "دلوعتي انا",
+   "top": [
+    "Mandarin",
+    "Raspberry",
+    "Neroli"
+   ],
+   "heart": [
+    "Orange Blossom",
+    "Orris"
+   ],
+   "base": [
+    "Ambery",
+    "Myrrh",
+    "Benzoin",
+    "Vanilla"
+   ],
+   "size": null,
+   "gender": null,
+   "description": null,
+   "hero": false,
+   "image": "/houses/ard-al-zaafaran/daloate-ana.jpg",
+   "w": 760,
+   "h": 712
+  }
+ ],
+ "riiffs": [
+  {
+   "slug": "hoor",
+   "name": "HOOR",
+   "arabic": null,
+   "top": [
+    "Quangdong",
+    "Raspberry",
+    "Suede"
+   ],
+   "heart": [
+    "Orange Blossom",
+    "Tonka Bean",
+    "Ginger"
+   ],
+   "base": [
+    "Amber",
+    "Pralines",
+    "Vanilla"
+   ],
+   "size": "100 ml",
+   "gender": null,
+   "description": "Hoor is the moment that enters a room and lifts every gaze a red silhouette crowned with butterfly wings, a gem burning at its heart. It begins with a bright, jubilant spark, deepens into warm radiance, and lingers as a confident, luminous trail. For evenings that turn into stories and for those who write them.",
+   "hero": true,
+   "image": "/houses/riiffs/hoor.jpg",
+   "w": 784,
+   "h": 850
+  },
+  {
+   "slug": "momento",
+   "name": "MOMENTO",
+   "arabic": null,
+   "top": [
+    "Saffron",
+    "Mandarin",
+    "Sugar"
+   ],
+   "heart": [
+    "Tonka Bean",
+    "Damask Rose",
+    "Oud"
+   ],
+   "base": [
+    "Amberwood",
+    "Caramel",
+    "Cedarwood"
+   ],
+   "size": "100 ml",
+   "gender": null,
+   "description": "Momento is a fragrance that captures the essence of unforgettable experiences. It moves like a memory — vibrant, rich, and layered — leaving a trail that lingers long after the moment has passed. Bold yet elegant, it embodies confidence and sophistication, turning every occasion into something timeless and remarkable.",
+   "hero": true,
+   "image": "/houses/riiffs/momento.jpg",
+   "w": 784,
+   "h": 850
+  },
+  {
+   "slug": "freeze",
+   "name": "FREEZE",
+   "arabic": null,
+   "top": [
+    "Snowflakes",
+    "Calabrian Bergamot",
+    "Grapefruit",
+    "Lemon Zest",
+    "Spearmint"
+   ],
+   "heart": [
+    "Iced Ginger",
+    "Tea",
+    "Sage"
+   ],
+   "base": [
+    "Cedarwood",
+    "White Peony",
+    "Ambermax"
+   ],
+   "size": "100 ml",
+   "gender": null,
+   "description": "Freeze is the quiet force of winter frosted glass, crystalline poise. The first inhale bites like icelight: a bright, arctic sparkle that sweeps the mind clean. Then the heart turns blue and weightless sea-fresh air with a whisper of chilled spice and herbs, the feeling of wind over snow.",
+   "hero": true,
+   "image": "/houses/riiffs/freeze.jpg",
+   "w": 784,
+   "h": 850
+  },
+  {
+   "slug": "tahira",
+   "name": "TAHIRA",
+   "arabic": null,
+   "top": [
+    "Dragon Fruit",
+    "Almond"
+   ],
+   "heart": [
+    "Rose de Mai",
+    "Gardenia",
+    "Pralines"
+   ],
+   "base": [
+    "Vanilla Absolute",
+    "Patchouli",
+    "Tonka Bean"
+   ],
+   "size": "100 ml",
+   "gender": null,
+   "description": "At first light, Tahira stirs sea-glass cool, silver-halo bright. It opens with a breath of white petals and rain-washed air, then settles into clean warmth like pressed linen and calm focus. Worn close to the skin, it softens edges and sharpens presence never loud, always luminous. From morning to dusk it keeps its promise of clarity.",
+   "hero": true,
+   "image": "/houses/riiffs/tahira.jpg",
+   "w": 784,
+   "h": 850
+  },
+  {
+   "slug": "royal-tobacco-oud",
+   "name": "ROYAL TOBACCO OUD",
+   "arabic": null,
+   "top": [
+    "Agarwood",
+    "Rose"
+   ],
+   "heart": [
+    "Raspberry",
+    "Saffron",
+    "BRrich"
+   ],
+   "base": [
+    "Amberwood",
+    "Benzoin",
+    "Geranium"
+   ],
+   "size": "100 ml",
+   "gender": null,
+   "description": "“Royal Tobacco Oud” by Riiffs is inspired by the grandeur and sophistication of royal courts. The fragrance captures the essence of luxury and opulence, blending rich tobacco and oud with floral and fruity notes to create a regal scent experience. It's designed for individuals who appreciate bold, complex fragrances that make a statement.",
+   "hero": true,
+   "image": "/houses/riiffs/royal-tobacco-oud.jpg",
+   "w": 784,
+   "h": 850
+  },
+  {
+   "slug": "desert-de-sahara",
+   "name": "DESERT DE SAHARA",
+   "arabic": null,
+   "top": [
+    "Vanilla",
+    "Tobacco",
+    "Cinnamon"
+   ],
+   "heart": [
+    "Cumin",
+    "Bourbon Whiskey"
+   ],
+   "base": [
+    "Saffron"
+   ],
+   "size": "100 ml",
+   "gender": null,
+   "description": "Ana In the heart of the Sahara, where the horizon stretches endlessly and the silence carries a thousand secrets, Desert de Saharah is born. It tells the tale of golden sands shifting with the wind, of nights lit by stars so close they feel within reach. This fragrance embodies the spirit of wanderers who follow no path but their own, guided only by the pulse of freedom. It is mystery wrapped in warmth, elegance carved by time, and the echo of the desert's eternal soul.",
+   "hero": true,
+   "image": "/houses/riiffs/desert-de-sahara.jpg",
+   "w": 784,
+   "h": 850
+  },
+  {
+   "slug": "zenith",
+   "name": "ZENITH",
+   "arabic": null,
+   "top": [
+    "Coconut",
+    "Vanilla",
+    "Whipped Cream"
+   ],
+   "heart": [
+    "Rum",
+    "Saffron"
+   ],
+   "base": [
+    "Tonka Bean",
+    "Cashmeran"
+   ],
+   "size": "100 ml",
+   "gender": null,
+   "description": "Zenith captures the instant the sun stands still overhead clarity sharpened, confidence in full bloom. Gold and glass frame a bright opening that gathers into molten warmth, then settles into quiet authority on the skin. Wear it when the day asks for your best; leave a signature as precise as a compass point.",
+   "hero": true,
+   "image": "/houses/riiffs/zenith.jpg",
+   "w": 784,
+   "h": 850
+  },
+  {
+   "slug": "areebah",
+   "name": "AREEBAH",
+   "arabic": null,
+   "top": [
+    "Saffron",
+    "Tropical Fruits",
+    "Osmanthus"
+   ],
+   "heart": [
+    "Patchouli",
+    "Frangipani",
+    "Oud"
+   ],
+   "base": [
+    "Madagascar Vanilla",
+    "Cedarwood",
+    "Musk"
+   ],
+   "size": "100 ml",
+   "gender": null,
+   "description": "Areebah is a luxurious fragrance that takes you on an olfactory journey, blending exotic spices, florals, and rich woods. Its creation is a testament to timeless elegance, offering an unforgettable scent experience with each spray. Perfect for individuals who seek sophistication and rarity.",
+   "hero": true,
+   "image": "/houses/riiffs/areebah.jpg",
+   "w": 784,
+   "h": 850
+  },
+  {
+   "slug": "elyssia-scarlet",
+   "name": "ELYSSIA Scarlet",
+   "arabic": null,
+   "top": [
+    "Black Cherry",
+    "Pink Pepper"
+   ],
+   "heart": [
+    "Leather",
+    "Cream",
+    "Benzoin"
+   ],
+   "base": [
+    "Vanilla Absolute",
+    "Cashmeran",
+    "Amber",
+    "Iso E Super"
+   ],
+   "size": "100 ml",
+   "gender": null,
+   "description": "Elyssia Scarlet is dusk caught in glass. A flame-toned bottle, a twist of gold, and a medallion that swings like a secret. It starts with a bright scarlet spark, deepens into velvet warmth, and lingers as a slow, glowing trail. Confidence between a whisper and a dare the moment you choose to be unforgettable.",
+   "hero": true,
+   "image": "/houses/riiffs/elyssia-scarlet.jpg",
+   "w": 784,
+   "h": 850
+  },
+  {
+   "slug": "noor",
+   "name": "NOOR",
+   "arabic": null,
+   "top": [
+    "Caramel",
+    "Milk"
+   ],
+   "heart": [
+    "Warm Gourmand",
+    "Lily of valley"
+   ],
+   "base": [
+    "Vanilla",
+    "Praline",
+    "Musk"
+   ],
+   "size": "100 ml",
+   "gender": null,
+   "description": "Noor, meaning “light,” illuminates every moment it touches. This fragrance radiates warmth and elegance, surrounding you with a gentle glow that captivates without effort. It's a scent that turns ordinary moments into something luminous and unforgettable.",
+   "hero": true,
+   "image": "/houses/riiffs/noor.jpg",
+   "w": 784,
+   "h": 850
+  },
+  {
+   "slug": "surge-spectra",
+   "name": "SURGE & SPECTRA",
+   "arabic": null,
+   "top": [
+    "Kumquat",
+    "Pink Pepper",
+    "Grapefruit"
+   ],
+   "heart": [
+    "Narcissus",
+    "Melon",
+    "Orris",
+    "Coconut"
+   ],
+   "base": [
+    "Cedar",
+    "Cashmeran",
+    "Vanilla",
+    "Tonka Bean",
+    "Vetiver"
+   ],
+   "size": "100 ml",
+   "gender": null,
+   "description": "Surge & Spectra by Riiffs embody day and night in a perfect duo. Surge shines with vibrant citrus and tropical warmth, full of energy and light. Spectra reveals a deeper side — sugared florals, spices, and rich amber, wrapping the night in elegance and mystery. Together, they balance freshness and allure, completing the journey of every moment.",
+   "hero": false,
+   "image": "/houses/riiffs/surge-spectra.jpg",
+   "w": 760,
+   "h": 824
+  },
+  {
+   "slug": "stella-luna",
+   "name": "STELLA & LUNA",
+   "arabic": null,
+   "top": [
+    "Grapefruit",
+    "Lemon",
+    "Pink Pepper",
+    "Almond",
+    "Orange Blossom"
+   ],
+   "heart": [
+    "Jasmine",
+    "Tuberose",
+    "Dry Woods",
+    "Sage",
+    "Soft White Florals"
+   ],
+   "base": [
+    "Musk",
+    "Amber",
+    "Soft Leather",
+    "Warm Woods"
+   ],
+   "size": "100 ml",
+   "gender": null,
+   "description": "Two fragrances, one soul — Stella & Luna capture the dance of light and night. Stella glows with sparkling citrus, soft blossoms, and a radiant freshness that feels like daylight wrapped in elegance. When night falls, Luna awakens with deeper florals, warm woods, and a velvety amber embrace, weaving mystery and allure.",
+   "hero": false,
+   "image": "/houses/riiffs/stella-luna.jpg",
+   "w": 760,
+   "h": 824
+  },
+  {
+   "slug": "golden-elixeir",
+   "name": "GOLDEN ELIXEIR",
+   "arabic": null,
+   "top": [
+    "Cinnamon",
+    "Cardamom",
+    "Nutmeg"
+   ],
+   "heart": [
+    "Dates",
+    "Praline",
+    "Plum"
+   ],
+   "base": [
+    "Vanilla",
+    "Musk",
+    "Tonka bean Oud"
+   ],
+   "size": "100 ml",
+   "gender": null,
+   "description": "Golden Elixir Reserve is a fragrance of quiet power and refined sophistication. Picture entering a private lounge filled with exotic spices, rich cognac, and the soft warmth of oud. It's the scent of someone who commands attention without effort—confident, mysterious, and unforgettable.",
+   "hero": false,
+   "image": "/houses/riiffs/golden-elixeir.jpg",
+   "w": 760,
+   "h": 824
+  },
+  {
+   "slug": "golden-elixir-reserve",
+   "name": "GOLDEN ELIXIR RESERVE",
+   "arabic": null,
+   "top": [
+    "Cinnamon",
+    "Cardamom",
+    "Cognac"
+   ],
+   "heart": [
+    "Praline",
+    "Date",
+    "Tonka Bean"
+   ],
+   "base": [
+    "Vanilla",
+    "Musk",
+    "Oud"
+   ],
+   "size": "100 ml",
+   "gender": null,
+   "description": "Golden Elixir is like a warm, amber-lit evening in an old European distillery, where spices dance with sweet notes of praline and dates. It evokes the comfort of fine liqueurs by the fire, a fragrance for those who savor life's indulgent pleasures.",
+   "hero": false,
+   "image": "/houses/riiffs/golden-elixir-reserve.jpg",
+   "w": 760,
+   "h": 824
+  },
+  {
+   "slug": "fleurie-emerald",
+   "name": "FLEURIE EMERALD",
+   "arabic": null,
+   "top": [
+    "Blood Orange",
+    "Lemon Peel",
+    "Lavender"
+   ],
+   "heart": [
+    "Cinnamon",
+    "Licorice",
+    "Anise",
+    "White Flowers"
+   ],
+   "base": [
+    "Caramel",
+    "Vanilla Bean",
+    "Muskz"
+   ],
+   "size": "100 ml",
+   "gender": null,
+   "description": "Fleurie Emerald evokes the sparkle of a lush garden at dawn, where vibrant citrus blossoms mingle with warm cinnamon, sweet licorice, and delicate white flowers. It's a fragrance for someone who radiates elegance, freshness, and quiet confidence. Each spritz feels like a gentle stroll through emerald leaves kissed by morning sunlight.",
+   "hero": false,
+   "image": "/houses/riiffs/fleurie-emerald.jpg",
+   "w": 760,
+   "h": 824
+  },
+  {
+   "slug": "fleurie-violette",
+   "name": "FLEURIE VIOLETTE",
+   "arabic": null,
+   "top": [
+    "white flowers",
+    "rose",
+    "cashmere wood"
+   ],
+   "heart": [
+    "coconut",
+    "vanilla bean"
+   ],
+   "base": [
+    "tonka beans",
+    "musk",
+    "mineral amber"
+   ],
+   "size": "100 ml",
+   "gender": null,
+   "description": "Emperor by Riiffs is a commanding fragrance for the modern man who exudes confidence and elegance. The fragrance settles into a warm and lasting base of musk, vanilla, and cedarwood, leaving a magnetic and unforgettable trail.",
+   "hero": false,
+   "image": "/houses/riiffs/fleurie-violette.jpg",
+   "w": 760,
+   "h": 824
+  },
+  {
+   "slug": "prive-platinum",
+   "name": "PRIVE PLATINUM",
+   "arabic": null,
+   "top": [
+    "Bergamot",
+    "Mandarin Orange"
+   ],
+   "heart": [
+    "Black Currant",
+    "Green Tea"
+   ],
+   "base": [
+    "Sandalwood",
+    "Musk",
+    "Petitgrain",
+    "Galbanum"
+   ],
+   "size": "100 ml",
+   "gender": "Unisex",
+   "description": "Prive Platinum embodies the essence of modern elegance. It opens with a vibrant burst of citrus, leading into a heart of fresh green tea and juicy black currant. The base notes provide a warm and lasting finish, making it suitable for both men and women who appreciate a classic, enduring scent",
+   "hero": false,
+   "image": "/houses/riiffs/prive-platinum.jpg",
+   "w": 760,
+   "h": 824
+  },
+  {
+   "slug": "prive-noir",
+   "name": "PRIVE NOIR",
+   "arabic": null,
+   "top": [
+    "Black Currant",
+    "Pineapple",
+    "Bergamot",
+    "Apple"
+   ],
+   "heart": [
+    "Moroccan Jasmine",
+    "Patchouli",
+    "Birch",
+    "Rose"
+   ],
+   "base": [
+    "Oakmoss",
+    "Musk",
+    "Ambergris",
+    "Vanilla"
+   ],
+   "size": "100 ml",
+   "gender": null,
+   "description": "Prive Noir is a fragrance that tells a story without words. It begins with a spark of brightness that draws attention, then unfolds into a heart of rich, layered complexity. Warm, lingering notes anchor the composition, creating a presence that is both captivating and enigmatic..",
+   "hero": false,
+   "image": "/houses/riiffs/prive-noir.jpg",
+   "w": 760,
+   "h": 824
+  },
+  {
+   "slug": "prive-rose",
+   "name": "PRIVE ROSE",
+   "arabic": null,
+   "top": [
+    "Cassis"
+   ],
+   "heart": [
+    "May Rose",
+    "Freesia"
+   ],
+   "base": [
+    "Vanilla",
+    "Patchouli",
+    "Woody notes",
+    "Ambroxan"
+   ],
+   "size": "100 ml",
+   "gender": null,
+   "description": "Prive Rosé captures the essence of discovery — a whisper of intrigue that follows you through every room. It's for the bold spirit who turns the everyday into something extraordinary, leaving behind a trail of elegance and quiet magnetism that draws attention without a word.",
+   "hero": false,
+   "image": "/houses/riiffs/prive-rose.jpg",
+   "w": 760,
+   "h": 824
+  },
+  {
+   "slug": "prive-oros",
+   "name": "PRIVE OROS",
+   "arabic": null,
+   "top": [
+    "Black Almond",
+    "Coffee",
+    "Bergamot",
+    "Lemon"
+   ],
+   "heart": [
+    "Tuberose",
+    "Jasmine Sambac",
+    "Orange Blossom",
+    "Orris",
+    "Bulgarian Rose"
+   ],
+   "base": [
+    "Vanilla",
+    "Praline",
+    "Tonka Bean",
+    "Sandalwood",
+    "Cocoa",
+    "Musk",
+    "Amber",
+    "Cedar"
+   ],
+   "size": "100 ml",
+   "gender": null,
+   "description": "Prive Oros is a celebration of elegance and golden sophistication. From the moment it unfolds, it wraps you in a warm, inviting presence, glimmering like sunlight on gold. Its character is rich and layered, carrying a sense of refinement that lingers in every gesture.",
+   "hero": false,
+   "image": "/houses/riiffs/prive-oros.jpg",
+   "w": 760,
+   "h": 824
+  },
+  {
+   "slug": "prive-blue",
+   "name": "PRIVE BLUE",
+   "arabic": null,
+   "top": [
+    "Lemon",
+    "Grapefruit"
+   ],
+   "heart": [
+    "Lavender",
+    "Geranium"
+   ],
+   "base": [
+    "Andalwood",
+    "Musk"
+   ],
+   "size": "100 ml",
+   "gender": null,
+   "description": "Prive Blue by Riiffs captures the essence of a serene morning by the sea, where the world feels vast and full of endless possibilities. The breeze carries a refreshing, citrus-infused air, as the soft waves ripple across the shore, leaving traces of calm and clarity in their wake.",
+   "hero": false,
+   "image": "/houses/riiffs/prive-blue.jpg",
+   "w": 760,
+   "h": 824
+  },
+  {
+   "slug": "rose-de-soleil-clat",
+   "name": "ROSE DE SOLEIL ÉCLAT",
+   "arabic": null,
+   "top": [
+    "Mango",
+    "Lemon",
+    "Ginger",
+    "Red Berries"
+   ],
+   "heart": [
+    "Woody Coumarin",
+    "Jasmine"
+   ],
+   "base": [
+    "Musk",
+    "Amber",
+    "Cypriol Oil",
+    "Agerwood"
+   ],
+   "size": "100 ml",
+   "gender": null,
+   "description": "Rose de Soleil Éclat embodies the brilliance of a rising sun, radiating warmth, elegance, and vitality. It tells the story of a woman who moves through the world with grace and confidence, leaving a lasting impression wherever she goes.",
+   "hero": false,
+   "image": "/houses/riiffs/rose-de-soleil-clat.jpg",
+   "w": 760,
+   "h": 824
+  },
+  {
+   "slug": "rose-de-soleil",
+   "name": "ROSE DE SOLEIL",
+   "arabic": null,
+   "top": [
+    "Blood Orange",
+    "Mandarin Orange"
+   ],
+   "heart": [
+    "Honey",
+    "Gardenia",
+    "Orange Blossom",
+    "Jasmine",
+    "Peach"
+   ],
+   "base": [
+    "Beeswax",
+    "Caramel",
+    "Patchouli",
+    "Licorice"
+   ],
+   "size": "100 ml",
+   "gender": null,
+   "description": "A scent born at sunrise—where warmth meets wonder. She is elegance in motion, a radiant mystery that lingers long after she's gone. Rose De Soleil captures the glow of golden mornings and the allure of a woman who lights up every room she enters. Bold yet tender, it's not just a fragrance—it's her signature.",
+   "hero": false,
+   "image": "/houses/riiffs/rose-de-soleil.jpg",
+   "w": 760,
+   "h": 824
+  },
+  {
+   "slug": "inspiro",
+   "name": "INSPIRO",
+   "arabic": null,
+   "top": [
+    "Cardamom",
+    "Lavender"
+   ],
+   "heart": [
+    "Iris",
+    "Tonka Bean",
+    "Amber"
+   ],
+   "base": [
+    "Vanilla",
+    "Musk",
+    "Cedar"
+   ],
+   "size": "100 ml",
+   "gender": "Men",
+   "description": "Inspiro Men is an aromatic fougère fragrance that balances freshness with depth. The notes of cardamom and lavender offer a spicy and herbal opening, leading into a heart of iris, tonka bean, and amber that add floral, sweet, and warm nuances.",
+   "hero": false,
+   "image": "/houses/riiffs/inspiro.jpg",
+   "w": 760,
+   "h": 824
+  },
+  {
+   "slug": "inspiro-2",
+   "name": "INSPIRO",
+   "arabic": null,
+   "top": [
+    "Neroli",
+    "Petitgrain"
+   ],
+   "heart": [
+    "Jasmine",
+    "Peony",
+    "Freesia"
+   ],
+   "base": [
+    "Marshmallow",
+    "White Musk"
+   ],
+   "size": "100 ml",
+   "gender": "Women",
+   "description": "Inspiro Women opens with a burst of bright citrus and refreshing bergamot, creating an invigorating and uplifting start. As it unfolds, the heart reveals an elegant bouquet of rose and jasmine, blending their floral richness for a sophisticated and romantic allure.",
+   "hero": false,
+   "image": "/houses/riiffs/inspiro-2.jpg",
+   "w": 760,
+   "h": 824
+  },
+  {
+   "slug": "costa-de-amalfi",
+   "name": "COSTA DE AMALFI",
+   "arabic": null,
+   "top": [
+    "Citrus",
+    "Lemon",
+    "Green Notes"
+   ],
+   "heart": [
+    "Lavender",
+    "Marine Notes",
+    "Rosemary"
+   ],
+   "base": [
+    "Musk",
+    "Cedarwood",
+    "Amber"
+   ],
+   "size": "100 ml",
+   "gender": null,
+   "description": "With Riiffs Costa de Amalfi, you carry a piece of the Amalfi Coast with you — a fragrance that evokes the sense of freedom, beauty, and vitality found in every corner of this Mediterranean paradise. It's the perfume of endless summers, of breathtaking views, and of moments that leave a lasting impression.",
+   "hero": false,
+   "image": "/houses/riiffs/costa-de-amalfi.jpg",
+   "w": 760,
+   "h": 824
+  },
+  {
+   "slug": "ciao-pour-femme",
+   "name": "CIAO POUR FEMME",
+   "arabic": null,
+   "top": [
+    "Neroli",
+    "Petitgrain"
+   ],
+   "heart": [
+    "Jasmine",
+    "Peony",
+    "Freesia"
+   ],
+   "base": [
+    "Marshmallow",
+    "White Musk"
+   ],
+   "size": "100 ml",
+   "gender": "Women",
+   "description": "Ciao Pour Femme is a celebration of femininity, crafted for the woman who radiates charm and elegance wherever she goes. T As it unfolds, a bouquet of graceful florals blooms at its heart, wrapping the wearer in romance, softness, and allure.l.",
+   "hero": false,
+   "image": "/houses/riiffs/ciao-pour-femme.jpg",
+   "w": 760,
+   "h": 824
+  },
+  {
+   "slug": "imerial-blue",
+   "name": "IMERIAL BLUE",
+   "arabic": null,
+   "top": [
+    "Lemon",
+    "Apple",
+    "Mint"
+   ],
+   "heart": [
+    "Geranium",
+    "Vetiver",
+    "Moss"
+   ],
+   "base": [
+    "Vanilla",
+    "Tonka Bean",
+    "Cedarwood"
+   ],
+   "size": "100 ml",
+   "gender": null,
+   "description": "Imperial Blue opens with a refreshing blend of lemon, crisp apple, and invigorating mint, creating an energizing introduction. The heart reveals the aromatic and slightly spicy notes of geranium and vetiver, complemented by the earthy freshness of moss.",
+   "hero": false,
+   "image": "/houses/riiffs/imerial-blue.jpg",
+   "w": 760,
+   "h": 824
+  },
+  {
+   "slug": "imperial-noir",
+   "name": "IMPERIAL NOIR",
+   "arabic": null,
+   "top": [
+    "Cardamom",
+    "Lavender",
+    "Black Pepper"
+   ],
+   "heart": [
+    "Patchouli"
+   ],
+   "base": [
+    "Tonka Bean",
+    "Vanilla"
+   ],
+   "size": "100 ml",
+   "gender": null,
+   "description": "Imperial Noir is a fragrance that exudes quiet confidence and undeniable presence. Its spicy, aromatic opening gives way to a rich, sophisticated heart, settling into a warm, lasting finish. Perfect for evenings, special occasions, or any moment that calls for subtle power, Imperial Noir leaves a memorable trail of elegance and strength.",
+   "hero": false,
+   "image": "/houses/riiffs/imperial-noir.jpg",
+   "w": 760,
+   "h": 824
+  },
+  {
+   "slug": "imperial-rouge",
+   "name": "IMPERIAL ROUGE",
+   "arabic": null,
+   "top": [
+    "cassis",
+    "tangerine"
+   ],
+   "heart": [
+    "Rose",
+    "Vanilla"
+   ],
+   "base": [
+    "Patchouli",
+    "Musk"
+   ],
+   "size": "100 ml",
+   "gender": null,
+   "description": "Imperial Rouge is a celebration of bold elegance and unapologetic confidence. It wraps you in a radiant aura, commanding attention without demanding it. Wearing it feels like stepping into a glamorous evening where every glance lingers a little longer, every movement exudes grace, and every moment becomes memorable.",
+   "hero": false,
+   "image": "/houses/riiffs/imperial-rouge.jpg",
+   "w": 760,
+   "h": 824
+  }
+ ]
+}
